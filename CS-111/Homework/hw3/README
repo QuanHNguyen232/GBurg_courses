@@ -1,0 +1,119 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+Question 2 (optional questions):
+- integer truncation and rounding: 0.6 and -0.6
+- integer truncation and flooring: -0.6
+- integer truncation and ceiling: 0.6
+- rounding and flooring: 0.6
+- rounding and ceiling: -0.6
+- flooring and ceiling: 0.6 and -0.6
+
+How many different program inputs (i.e. runs) are necessary to demonstrate difference in output for all of these pairs? 2
+
+
+/Accounts/turing/students/s24/nguyqu03
+    3  touch testrm.txt
+    4  rm testrm.txt
+    5  ls .
+    6  ls ..
+    7  rm test3.txt~
+    8  ls
+    9  mv test2.txt ../subdir2
+   10  cp test3.txt ../subdir2
+   11  pwd
+   12  cp /Accounts/turing/students/s24/nguyqu03/test/subdir1/test3.txt /Accounts/turing/students/s24/nguyqu03/test/subdir2/
+   13  cp ~/test/subdir1/test3.txt ~/test/subdir2
+   14  cd
+   15  find . -name *sub*
+   16  grep -Ril "test" test
+   17  grep -Ri "test" test
+   18  clear
+   19  history
+   20  clear
+   21  type ls
+   22  which ls
+   23  pico test3.txt
+   24  cd test
+   25  pico subdir2/test2.txt
+   26  cat subdir2/test2.txt 
+   27  cd subdir2
+   28  wc test2.txt
+   29  echo $((2+2))
+   30  historu
+   31  history
+   32  mkdir hw1
+   33  cd
+   34  mv /Accounts/turing/students/s24/nguyqu03/test/subdir2/hw1/ /Accounts/turing/students/s24/nguyqu03/
+   35  (pwd; history) | cat >> README
+   36  history
+   37  (pwd; history) | cat >> README
+   38  history
+   39  history
+   40  mkdir hw1
+   41  cd hw1
+   42  ls
+   43  ls
+   44  pico README
+   45  cd
+   46  less README
+   47  cd hw1
+   48  less HelloMe.java
+   49  less Hello.java
+   50  cd
+   51  submit111 hw1
+   52  less feedback.txt
+   53  ls hw1
+   54  less feedback.txt
+   55  less hw1/HelloMe.java
+   56  less feedback.txt
+   57  ls hw1
+   58  lss feedback.txt
+   59  less feedbac.txt
+   60  submit111 hw1
+   61  less feedbac.txt
+   62  less feedback.txt
+   63  clear
+   64  submit111 hw1
+   65  less feedback.txt
+   66  ls 
+   67  cp hw1/HelloMe.java  .
+   68  ls 
+   69  submit111 hw1
+   70  less feedback.txt
+   71  mkdir hw2
+   72  history
+   73  clear
+   74  (pwd; history) | cat >> README
+   75  pico README &
+   76  clear
+   77  pico README
+   78  history
+   79  clear
+   80  (pwd; history) | cat >> hw2/README
+   81  pico hw2/README
+   82  cp /Accounts/turing/students/s24/nguyqu03/CelsiusToFahrenheit.java /Accounts/turing/students/s24/nguyqu03/hw2/
+   83  cp Intro.java hw2
+   84  cp EscapeChars.java hw2/
+   85  cp FutureValue.java hw2/
+   86  submit111 hw2
+   87  less feedback.txt
+   88  rm hw2/CelsiusToFahrenheit.java 
+   89  rm CelsiusToFahrenheit.java 
+   90  cp CelsiusToFahrenheit.java hw2/
+   91  submit111 hw2
+   92  less feedback.txt
+   93  rm hw2/CelsiusToFahrenheit.java 
+   94  rm CelsiusToFahrenheit.java 
+   95  cp CelsiusToFahrenheit.java hw2/
+   96  submit111 hw2
+   97  less feedback.txt 
+   98  less feedback.txt 
+   99  less hw2/README
+  100  mkdir hw3
+  101  history 
+  102  (pwd; history) | cat >> hw3/README

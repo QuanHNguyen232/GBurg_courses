@@ -1,0 +1,112 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    3  submit111 la2
+    4  less feedback.txt 
+    5  rm CharacterRectangle.java 
+    6  rm feedback.txt 
+    7  submit111 la2
+    8  less feedback.txt 
+    9  less la2/feedback.txt 
+   10  mkdir hw12
+   11  history 
+   12  (pwd; history) | cat >> hw12/README
+   13  cd  hw12/
+   14  ls
+   15  pico README 
+   16  less README 
+   17  submit111 hw12
+   18  less feedback.txt 
+   19  mkdir la3
+   20  history
+   21  (pwd; history) | cat >> la3/README
+   22  cd la3/
+   23  pico README 
+   24  less README 
+   25  cd la3/
+   26  submit111 la3
+   27  less feedback.txt 
+   28  rm feedback.txt 
+   29  rm ThreePileNimAdvisor.java 
+   30  submit111 la3
+   31  less feedback.txt 
+   32  rm ThreePileNimAdvisor.java 
+   33  submit111 la3
+   34  less feedback.txt 
+   35  mkdir la4
+   36  cd la4/
+   37  history
+   38  (pwd; history) | cat >> la4/README
+   39  cd
+   40  (pwd; history) | cat >> la4/README
+   41  cd la4/
+   42  pico README 
+   43  less README 
+   44  cd la4/
+   45  less Array2DExercises.java 
+   46  submit111 la4
+   47  less feedback.txt 
+   48  rm feedback.txt 
+   49  rm Array2DExercises.java 
+   50  less feedback.txt 
+   51  less Array2DExercises.java 
+   52  pico Array2DExercises.java 
+   53  rm Array2DExercises.java 
+   54  cd la4/
+   55  ls
+   56  rm feedback.txt 
+   57  less Array2DExercises.java 
+   58  submit111 la4
+   59  less feedback.txt 
+   60  less feedback.txt 
+   61  mkdir practice2
+   62  cd practice2/
+   63  history
+   64  (pwd; history) | cat >> practice2/README
+   65  cd
+   66  (pwd; history) | cat >> practice2/README
+   67  cd practice2/
+   68  pico README 
+   69  submit111 practice2
+   70  less feedback.txt 
+   71  less feedback.txt 
+   72  rm feedback.txt 
+   73  rm MaxRepeatLength.java 
+   74  submit111 praactice2
+   75  submit111 practice2
+   76  less feedback.txt 
+   77  pico MaxRepeatLength.java 
+   78  submit111 practice2
+   79  less feedback.txt 
+   80  cd practice2
+   81  pico MaxMinDiff.java 
+   82  pico MaxRepeatLength.java 
+   83  rm MaxRepeatLength.java 
+   84  rm feedback.txt 
+   85  rm MaxMinDiff.java 
+   86  submit111 practice2
+   87  less feedback.txt 
+   88  history
+   89  cd practice2
+   90  rm feedback.txt 
+   91  rm MaxRepeatLength.java 
+   92  submit111 practice2
+   93  less feedback.txt 
+   94  rm feedback.txt 
+   95  rm MaxRepeatLength.java 
+   96  pico MaxRepeatLength.java 
+   97  submit111 practice2
+   98  less feedback.txt 
+   99  less ScannerReplaceChar.java 
+  100  mkdir final
+  101  history
+  102  (pwd; history) | cat >> final/README

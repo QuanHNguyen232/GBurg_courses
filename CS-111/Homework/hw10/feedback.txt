@@ -1,0 +1,73 @@
+Testing initiated. Thu Apr  8 14:59:53 EDT 2021
+README submitted.
+DiceHistogram.java submitted.
+ChompGame.java submitted.
+Chomp.java submitted.
+Compilation of all java files succeeded.
+Testing ChompGame:
+JUnit version 4.11
+.That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+
+
+
+
+That is not a legal chomp position.
+
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+
+
+
+
+That is not a legal chomp position.
+
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+That is not a legal chomp position.
+
+
+
+
+
+That is not a legal chomp position.
+
+
+
+Time: 0.017
+
+OK (1 test)
+
+Testing Chomp:
+JUnit version 4.11
+.
+Time: 2.122
+
+OK (1 test)
+
+Testing DiceHistogram:
+JUnit version 4.11
+.
+Time: 1.017
+
+OK (1 test)
+
+Testing completed. Thu Apr  8 14:59:58 EDT 2021

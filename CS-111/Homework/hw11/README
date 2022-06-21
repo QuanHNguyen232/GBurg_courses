@@ -1,0 +1,112 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    8  history
+    9  (pwd; history) | cat >> hw10/README
+   10  pico hw10/README 
+   11  less hw10/README 
+   12  cp DiceHistogram.java hw10/
+   13  cp Chomp.java hw10/
+   14  cp ChompGame.java hw10/
+   15  submit111 hw10/
+   16  less feedback.txt 
+   17  rm Chomp.java 
+   18  rm ChompGame.java 
+   19  rm hw10/Chomp.java 
+   20  rm hw10/ChompGame.java 
+   21  cp Chomp.java hw10/
+   22  cp ChompGame.java hw10/
+   23  submit111 hw10/
+   24  less feedback.txt 
+   25  less feedback.txt 
+   26  pico hw10/ChompGame.java 
+   27  less hw10/ChompGame.java 
+   28  pico ChompGame.java 
+   29  submit111 hw10/
+   30  less feedback.txt 
+   31  less hw10/ChompGame.java 
+   32  pico hw10/ChompGame.java 
+   33  submit111 hw10/
+   34  less feedback.txt 
+   35  cd hw10/
+   36  ls
+   37  less ChompGame.java 
+   38  submit111 hw10
+   39  less feedback.txt 
+   40  cd
+   41  mkdir practice1
+   42  history
+   43  (pwd; history) | cat >> practice1/README
+   44  cd practice1/
+   45  pico R
+   46  pico README 
+   47  ls
+   48  less README 
+   49  cd
+   50  mkdir pq2
+   51  cd practice1/
+   52  submit111 practice1
+   53  ls
+   54  less feedback.txt 
+   55  cd
+   56  history
+   57  (pwd; history) | cat >> pq2/README
+   58  cd pq2/
+   59  pico README 
+   60  less README 
+   61  cd practice1/
+   62  rm BigFibonacci.java 
+   63  submit111 practice1
+   64  less feedback.txt 
+   65  pico BigFibonacci.java 
+   66  pico BigFibonacci.java 
+   67  cd practice1/
+   68  pico BigFibonacci.java
+   69  less BigFibonacci.java
+   70  pico BigFibonacci.java
+   71  submit111 practice1
+   72  less feedback.txt 
+   73  less feedback.txt 
+   74  cd practice1/
+   75  rm BigFibonacci.java
+   76  rm BigFibonacci.java.save 
+   77  rm feedback.txt 
+   78  less BigFibonacci.java 
+   79  pico BigFibonacci.java 
+   80  submit111 practice1
+   81  ls
+   82  less feedback.txt 
+   83  cd practice1
+   84  ls
+   85  less feedback.txt 
+   86  rm BigFibonacci.java 
+   87  cd practice1/
+   88  submit111 practice1
+   89  less feedback.txt 
+   90  less feedback.txt 
+   91  pico BigFibonacci.java 
+   92  submit111 practice1
+   93  less feedback.txt 
+   94  cd pq2/
+   95  ls
+   96  less README 
+   97  cd pq2/
+   98  submit111 pq2
+   99  less feedback.txt 
+  100  less pq2/feedback.txt 
+  101  mkdir hw11
+  102  cd hw11
+  103  history
+  104  (pwd; history) | cat >> hw11/README
+  105  (pwd; history) | cat >> hw11/README
+  106  cd
+  107  (pwd; history) | cat >> hw11/README

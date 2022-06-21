@@ -1,0 +1,109 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+/Accounts/turing/students/s24/nguyqu03
+    2  history
+    3  mkdir pq1
+    4  (pwd; history) | cat >> pq1/README
+    5  pico pq1/README 
+    6  clear
+    7  cp Collatz.java pq1/
+    8  less pq1/README 
+    9  less pq1/Collatz.java 
+   10  submit111 pq1
+   11  less feedback.txt 
+   12  mkdir hw6
+   13  history
+   14  (pwd; history) | cat >> hw6/README
+   15  less hw6/README 
+   16  pico hw6/README 
+   17  less hw6/README 
+   18  cp PigTurn hw6/
+   19  cp PigTurn.java hw6/
+   20  cp PigTurn2.java hw6/
+   21  cp PigSolitaireGame.java hw6/
+   22  submit111 hw6/
+   23  less feedback.txt 
+   24  less feedback.txt 
+   25  mkdir hw7
+   26  cp PigAdvantage.java hw7/
+   27  cp AveragePigTurns.java hw7/
+   28  cp PigComputerGame.java hw7/
+   29  history 
+   30  (pwd; history) | cat >> hw7/README
+   31  less hw7/README 
+   32  pico hw7/README 
+   33  less hw7/README 
+   34  submit111 hw7/
+   35  less feedback.txt 
+   36  less feedback.txt 
+   37  rm hw7/PigAdvantage.java 
+   38  rm PigAdvantage.java 
+   39  cp PigAdvantage.java hw7/
+   40  submit111 hw7/
+   41  less feedback.txt 
+   42  less feedback.txt 
+   43  clear
+   44  less feedback.txt 
+   45  less feedback.txt 
+   46  less feedback.txt 
+   47  mkdir midterm
+   48  cp Midterm.java midterm/
+   49  historu
+   50  history
+   51  (pwd; history) | cat >> midterm/README
+   52  pico midterm/README 
+   53  less midterm/README 
+   54  submit111 midterm/
+   55  less feedback.txt 
+   56  less feedback.txt 
+   57  history
+   58  history
+   59  mkdir hw8
+   60  cp PigGame.java hw8/
+   61  cp Statistics.java hw8/
+   62  (pwd; history) | cat >> hw8/README
+   63  pico hw8/README 
+   64  less hw8/README 
+   65  submit111 hw8/
+   66  less feedback.txt 
+   67  less feedback.txt 
+   68  less feedback.txt 
+   69  less feedback.txt 
+   70  less feedback.txt 
+   71  mkdir hw9
+   72  history
+   73  (pwd; history) | cat >> hw9/README
+   74  cp GCD.java hw9/
+   75  cp Divisors.java hw9/
+   76  cp MagicSquare.java hw9/
+   77  pico hw9/README 
+   78  less hw9/README 
+   79  submit111 hw9/
+   80  less feedback.txt 
+   81  less feedback.txt 
+   82  submit111 hw9/
+   83  less feedback.txt 
+   84  rm hw9/GCD.java 
+   85  rm GCD.java 
+   86  cp GCD.java hw9/
+   87  submit111 hw9/
+   88  less feedback.txt 
+   89  rm hw9/MagicSquare.java 
+   90  rm MagicSquare.java 
+   91  cp MagicSquare.java hw9/
+   92  less MagicSquare.java 
+   93  submit111 hw9/
+   94  less feedback.txt 
+   95  less feedback.txt 
+   96  ls
+   97  ls
+   98  javadoc -d doc Card.java Deck.java
+   99  mkdir hw10
+  100  history
+  101  (pwd; history) | cat >> hw10/README

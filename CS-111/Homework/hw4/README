@@ -1,0 +1,109 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+/Accounts/turing/students/s24/nguyqu03
+    4  pico test3.txt
+    5  cd test
+    6  pico subdir2/test2.txt
+    7  cat subdir2/test2.txt 
+    8  cd subdir2
+    9  wc test2.txt
+   10  echo $((2+2))
+   11  historu
+   12  history
+   13  mkdir hw1
+   14  cd
+   15  mv /Accounts/turing/students/s24/nguyqu03/test/subdir2/hw1/ /Accounts/turing/students/s24/nguyqu03/
+   16  (pwd; history) | cat >> README
+   17  history
+   18  (pwd; history) | cat >> README
+   19  history
+   20  history
+   21  mkdir hw1
+   22  cd hw1
+   23  ls
+   24  ls
+   25  pico README
+   26  cd
+   27  less README
+   28  cd hw1
+   29  less HelloMe.java
+   30  less Hello.java
+   31  cd
+   32  submit111 hw1
+   33  less feedback.txt
+   34  ls hw1
+   35  less feedback.txt
+   36  less hw1/HelloMe.java
+   37  less feedback.txt
+   38  ls hw1
+   39  lss feedback.txt
+   40  less feedbac.txt
+   41  submit111 hw1
+   42  less feedbac.txt
+   43  less feedback.txt
+   44  clear
+   45  submit111 hw1
+   46  less feedback.txt
+   47  ls 
+   48  cp hw1/HelloMe.java  .
+   49  ls 
+   50  submit111 hw1
+   51  less feedback.txt
+   52  mkdir hw2
+   53  history
+   54  clear
+   55  (pwd; history) | cat >> README
+   56  pico README &
+   57  clear
+   58  pico README
+   59  history
+   60  clear
+   61  (pwd; history) | cat >> hw2/README
+   62  pico hw2/README
+   63  cp /Accounts/turing/students/s24/nguyqu03/CelsiusToFahrenheit.java /Accounts/turing/students/s24/nguyqu03/hw2/
+   64  cp Intro.java hw2
+   65  cp EscapeChars.java hw2/
+   66  cp FutureValue.java hw2/
+   67  submit111 hw2
+   68  less feedback.txt
+   69  rm hw2/CelsiusToFahrenheit.java 
+   70  rm CelsiusToFahrenheit.java 
+   71  cp CelsiusToFahrenheit.java hw2/
+   72  submit111 hw2
+   73  less feedback.txt
+   74  rm hw2/CelsiusToFahrenheit.java 
+   75  rm CelsiusToFahrenheit.java 
+   76  cp CelsiusToFahrenheit.java hw2/
+   77  submit111 hw2
+   78  less feedback.txt 
+   79  less feedback.txt 
+   80  less hw2/README
+   81  mkdir hw3
+   82  history 
+   83  (pwd; history) | cat >> hw3/README
+   84  pico hw3/README 
+   85  pico hw3/README 
+   86  cp Division.java hw3/
+   87  cp DoubleToInt.java hw3/
+   88  cp WindChill.java hw3/
+   89  cp PigAdvisor.java hw3/
+   90  less hw3/README.save 
+   91  rm hw3/README.save 
+   92  less hw3/README 
+   93  less hw3/Division.java 
+   94  history
+   95  submit111 hw3
+   96  less feedback.txt 
+   97  history
+   98  less feedback.txt 
+   99  less hw3/WindChill.java 
+  100  less feedback.txt 
+  101  history
+  102  mkdir hw4
+  103  (pwd; history) | cat >> hw4/README

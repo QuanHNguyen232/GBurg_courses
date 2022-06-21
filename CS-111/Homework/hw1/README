@@ -1,0 +1,232 @@
+The Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+1. Read Chapter 1
+2. Bash tutorial:
+/Accounts/turing/students/s24/nguyqu03
+    1  yppasswd
+    2  yppasswd
+    3  gedit Hello.java &
+    4  javac Hello.java
+    5  java Hello
+    6  gedit Hello.java &
+    7  javac Hello.java
+    8  java Hello
+    9  gedit Hello.java &
+   10  (pwd; history) | cat >> README
+/Accounts/turing/students/s24/nguyqu03
+   13  pico Hello.java
+   14  javac Hello.java
+   15  java Hello
+   16  pico Hello.java
+   17  javac Hello.java
+   18  java Hello
+   19  pico Hello.java
+   20  javac Hello
+   21  javac Hello.java
+   22  java Hello
+   23  whoami
+   24  date
+   25  pwd
+   26  man pwd
+   27  history
+   28  clear
+   29  hooami
+   30  whoami
+   31  ls
+   32  mkdir public_html
+   33  ls
+   34  ls -a
+   35  ls -a -l
+   36  history
+   37  clear
+   38  history
+   39  whoami
+   40  date
+   41  pwd
+   42  clear
+   43  man pwd
+   44  man pwd
+   45  history
+   46  clear
+   47  history
+   48  date
+   49  man pwd
+   50  man pwd
+   51  clear
+   52  hooami
+   53  whoami
+   54  ls
+   55  mkdir public_html
+   56  ls -a
+   57  ls -a -l
+   58  ls -al
+   59  mkdir test
+   60  mkdir test/subdir1
+   61  cd test
+   62  mkdir subdir2
+   63  mkdir subdir3
+   64  rmdir subdir3
+   65  cd
+   66  ls test
+   67  cd test/subdir1
+   68  touch test.txt
+   69  ls
+   70  cat > test2.txt
+   71  cat > test2.txt
+   72  history
+   73  cd test/subdir1
+   74  cat > test2.txt
+   75  gedit test3.txt &
+   76  clear
+   77  cat test3.txt
+   78  cat test2.txt
+   79  less test3.txt
+   80  touch testrm.txt
+   81  rm testrm.txt
+   82  ls .
+   83  ls ..
+   84  rm test3.txt~
+   85  ls
+   86  mv test2.txt ../subdir2
+   87  cp test3.txt ../subdir2
+   88  pwd
+   89  cp /Accounts/turing/students/s24/nguyqu03/test/subdir1/test3.txt /Accounts/turing/students/s24/nguyqu03/test/subdir2/
+   90  cp ~/test/subdir1/test3.txt ~/test/subdir2
+   91  cd
+   92  find . -name *sub*
+   93  grep -Ril "test" test
+   94  grep -Ri "test" test
+   95  clear
+   96  history
+   97  clear
+   98  type ls
+   99  which ls
+  100  pico test3.txt
+  101  cd test
+  102  pico subdir2/test2.txt
+  103  cat subdir2/test2.txt 
+  104  cd subdir2
+  105  wc test2.txt
+  106  echo $((2+2))
+  107  historu
+  108  history
+  109  mkdir hw1
+  110  cd
+  111  mv /Accounts/turing/students/s24/nguyqu03/test/subdir2/hw1/ /Accounts/turing/students/s24/nguyqu03/
+  112  (pwd; history) | cat >> README
+/Accounts/turing/students/s24/nguyqu03
+   15  java Hello
+   16  pico Hello.java
+   17  javac Hello.java
+   18  java Hello
+   19  pico Hello.java
+   20  javac Hello
+   21  javac Hello.java
+   22  java Hello
+   23  whoami
+   24  date
+   25  pwd
+   26  man pwd
+   27  history
+   28  clear
+   29  hooami
+   30  whoami
+   31  ls
+   32  mkdir public_html
+   33  ls
+   34  ls -a
+   35  ls -a -l
+   36  history
+   37  clear
+   38  history
+   39  whoami
+   40  date
+   41  pwd
+   42  clear
+   43  man pwd
+   44  man pwd
+   45  history
+   46  clear
+   47  history
+   48  date
+   49  man pwd
+   50  man pwd
+   51  clear
+   52  hooami
+   53  whoami
+   54  ls
+   55  mkdir public_html
+   56  ls -a
+   57  ls -a -l
+   58  ls -al
+   59  mkdir test
+   60  mkdir test/subdir1
+   61  cd test
+   62  mkdir subdir2
+   63  mkdir subdir3
+   64  rmdir subdir3
+   65  cd
+   66  ls test
+   67  cd test/subdir1
+   68  touch test.txt
+   69  ls
+   70  cat > test2.txt
+   71  cat > test2.txt
+   72  history
+   73  cd test/subdir1
+   74  cat > test2.txt
+   75  gedit test3.txt &
+   76  clear
+   77  cat test3.txt
+   78  cat test2.txt
+   79  less test3.txt
+   80  touch testrm.txt
+   81  rm testrm.txt
+   82  ls .
+   83  ls ..
+   84  rm test3.txt~
+   85  ls
+   86  mv test2.txt ../subdir2
+   87  cp test3.txt ../subdir2
+   88  pwd
+   89  cp /Accounts/turing/students/s24/nguyqu03/test/subdir1/test3.txt /Accounts/turing/students/s24/nguyqu03/test/subdir2/
+   90  cp ~/test/subdir1/test3.txt ~/test/subdir2
+   91  cd
+   92  find . -name *sub*
+   93  grep -Ril "test" test
+   94  grep -Ri "test" test
+   95  clear
+   96  history
+   97  clear
+   98  type ls
+   99  which ls
+  100  pico test3.txt
+  101  cd test
+  102  pico subdir2/test2.txt
+  103  cat subdir2/test2.txt 
+  104  cd subdir2
+  105  wc test2.txt
+  106  echo $((2+2))
+  107  historu
+  108  history
+  109  mkdir hw1
+  110  cd
+  111  mv /Accounts/turing/students/s24/nguyqu03/test/subdir2/hw1/ /Accounts/turing/students/s24/nguyqu03/
+  112  (pwd; history) | cat >> README
+  113  history
+  114  (pwd; history) | cat >> README
+
+5. -Compiler is used to translate the source code, which is high level programming language to low level programming language: bytecode.
+   -Interpreter implements JVM to convert bytecode file into OS-compatible machine code.
+
+6. -Javac (compiler) is a command that is used to compile source file (.java) into bytecode file (.class).
+   -We use java command (interpreter) to execute a bytecode file.
+   -Java Virtual Machine (JVM) enables computer to run Java programs and other programs that are written in other languages that are compiled to Java bytecode. JVM acts as an interpreter that interprets bytecode into machine language
+
+7. -Syntax error (compile error): errors that programmers may encounter when writing a source code (editing stage) such as lack of quotation mark, brace, or semiconlon at the end of statment, or som errors such as mispelled a command, and so on. When having this error
+   -Logic error: errors that do not return the intended output due to mistakes in source code. This error occurs in compilation and execution stage

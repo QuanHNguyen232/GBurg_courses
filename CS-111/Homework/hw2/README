@@ -1,0 +1,109 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+/Accounts/turing/students/s24/nguyqu03
+    8  ls -al
+    9  mkdir test
+   10  mkdir test/subdir1
+   11  cd test
+   12  mkdir subdir2
+   13  mkdir subdir3
+   14  rmdir subdir3
+   15  cd
+   16  ls test
+   17  cd test/subdir1
+   18  touch test.txt
+   19  ls
+   20  cat > test2.txt
+   21  cat > test2.txt
+   22  history
+   23  cd test/subdir1
+   24  cat > test2.txt
+   25  gedit test3.txt &
+   26  clear
+   27  cat test3.txt
+   28  cat test2.txt
+   29  less test3.txt
+   30  touch testrm.txt
+   31  rm testrm.txt
+   32  ls .
+   33  ls ..
+   34  rm test3.txt~
+   35  ls
+   36  mv test2.txt ../subdir2
+   37  cp test3.txt ../subdir2
+   38  pwd
+   39  cp /Accounts/turing/students/s24/nguyqu03/test/subdir1/test3.txt /Accounts/turing/students/s24/nguyqu03/test/subdir2/
+   40  cp ~/test/subdir1/test3.txt ~/test/subdir2
+   41  cd
+   42  find . -name *sub*
+   43  grep -Ril "test" test
+   44  grep -Ri "test" test
+   45  clear
+   46  history
+   47  clear
+   48  type ls
+   49  which ls
+   50  pico test3.txt
+   51  cd test
+   52  pico subdir2/test2.txt
+   53  cat subdir2/test2.txt 
+   54  cd subdir2
+   55  wc test2.txt
+   56  echo $((2+2))
+   57  historu
+   58  history
+   59  mkdir hw1
+   60  cd
+   61  mv /Accounts/turing/students/s24/nguyqu03/test/subdir2/hw1/ /Accounts/turing/students/s24/nguyqu03/
+   62  (pwd; history) | cat >> README
+   63  history
+   64  (pwd; history) | cat >> README
+   65  history
+   66  history
+   67  mkdir hw1
+   68  cd hw1
+   69  ls
+   70  ls
+   71  pico README
+   72  cd
+   73  less README
+   74  cd hw1
+   75  less HelloMe.java
+   76  less Hello.java
+   77  cd
+   78  submit111 hw1
+   79  less feedback.txt
+   80  ls hw1
+   81  less feedback.txt
+   82  less hw1/HelloMe.java
+   83  less feedback.txt
+   84  ls hw1
+   85  lss feedback.txt
+   86  less feedbac.txt
+   87  submit111 hw1
+   88  less feedbac.txt
+   89  less feedback.txt
+   90  clear
+   91  submit111 hw1
+   92  less feedback.txt
+   93  ls 
+   94  cp hw1/HelloMe.java  .
+   95  ls 
+   96  submit111 hw1
+   97  less feedback.txt
+   98  mkdir hw2
+   99  history
+  100  clear
+  101  (pwd; history) | cat >> README
+  102  pico README &
+  103  clear
+  104  pico README
+  105  history
+  106  clear
+  107  (pwd; history) | cat >> hw2/README
