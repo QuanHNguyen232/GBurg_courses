@@ -1,0 +1,418 @@
+\documentclass[10pt]{article}
+\pagestyle{plain} \setlength{\textwidth}{12cm}
+\setlength{\oddsidemargin}{2cm} \setlength{\evensidemargin}{2cm}
+\setlength{\textheight}{23cm}
+\usepackage{amssymb,latexsym,amsmath,amsthm,verbatim,calc}
+\usepackage{graphicx,epsfig,epstopdf,amssymb,color,makeidx,float,caption,sidecap}
+
+\begin{document}
+\title{Math 212 take-home exam}
+\author{Quan Nguyen}
+\maketitle
+
+\bigskip
+\noindent
+{\bf Honor Pledge:}
+\par
+\noindent I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code.
+\par
+\bigskip
+\noindent Quan Nguyen
+
+\bigskip
+\noindent
+
+\section*{Question 1}
+$$ \begin{bmatrix} -3 & k \\ -1 & -1 \end{bmatrix}. $$
+\subsection*{(a)}
+\noindent The characteristic polynomial is:
+\begin{align*}
+    det(A -\lambda I) &= det
+    \begin{bmatrix}
+        -3-\lambda & k \\
+        -1 & -1-\lambda
+    \end{bmatrix} \\
+    &= (-3-\lambda)(-1-\lambda) + k \\
+    &= \lambda^2 + 4\lambda + 3 + k.
+\end{align*}
+\noindent Matrix $A$ has only one eigenvalue of multiplicity of 2 if $\lambda^2 + 4\lambda + 3 + k = 0$ and $\lambda$ has one value. Thus $k$ must equal to 1:
+\begin{align*}
+    \lambda^2 + 4\lambda + 3 + k &= 0 \\
+    \lambda^2 + 4\lambda + 4 &= 0 \\
+    (\lambda + 2)^2 &= 0.
+\end{align*}
+\noindent Therefore, when $k=1$, matrix $A$ has single eigenvalue -2 with multiplicity of 2.
+
+
+\subsection*{(b)}
+\noindent With $k=1$, the matrix $A$ will be:
+\begin{equation*}
+    A = \begin{bmatrix}
+        -3 & 1 \\
+        -1 & -1
+    \end{bmatrix}.
+\end{equation*}
+
+\noindent From (a), we know that the only eigenvalue of $A$ is -2. Let $\Vec{v_1}$ be the eigenvector corresponding for that eigenvalue:
+\begin{align*}
+    A\Vec{v_1} &= -2\Vec{v_1} \\
+    (A+2I)\Vec{v_1} &= \Vec{0} \\
+    \begin{bmatrix}
+        -1 & 1 \\
+        -1 & 1
+    \end{bmatrix} \Vec{v_1} &= \Vec{0}.
+\end{align*}
+
+\noindent Let $a, b$ be entries of $\Vec{v_1}$. The eigenvector equations are:
+\begin{align*}
+    -a + b &= 0 \\
+    -a + b &= 0.
+\end{align*}
+\noindent Both of these equations yield $a=b$, so eigenvectors corresponding to -2 can be a scalar multiple of:
+\begin{equation*}
+    \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\end{equation*}
+
+\noindent We have $\Vec{v_1} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ is the only eigenvector corresponding to eigenvalue -2, so there is no basis of eigenvectors for matrix $A$ when $k=1$. \par
+
+\noindent To form a Jordan basis, we need to find another vector. Let's call it $\Vec{v_2}$. If we choose any vector $\Vec{w}$ independent from $\Vec{v_1}$, knowing that $(A-\lambda I)\Vec{w}$  will be a scalar multiple of $\Vec{v_1}$, then we can get $\Vec{v_2}$ by scaling appropriately $\Vec{w}$. \par
+\noindent Let's take:
+\begin{equation*}
+    \Vec{w} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
+\end{equation*}
+\noindent We must show that $(A-\lambda I)\Vec{w} = \Vec{v_1}$. Then we compute:
+\begin{align*}
+    (A+2I)\Vec{w} &=
+    \begin{bmatrix}
+        -1 & 1 \\
+        -1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} \\
+    &= \Vec{v_1}.
+\end{align*}
+
+\noindent So we take $\Vec{v_2} = \Vec{w}$. Therefore, the Jordan basis will be:
+\begin{equation*}
+    \mathcal{B} = \left\{
+    \begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix}
+    \right\}.
+\end{equation*}
+
+
+
+\section*{Question 2}
+$$A = 
+\begin{bmatrix}
+    \frac{3}{4} & \frac{1}{4} \\
+    \frac{1}{4} & \frac{3}{4}
+\end{bmatrix}.$$
+
+\subsection*{(a)}
+\noindent The characteristic polynomial is:
+\begin{equation*}
+    det(A-\lambda I) = \left(\frac{3}{4} -\lambda \right)^2 - \frac{1}{16}.
+\end{equation*}
+
+\noindent The eigenvalues of $A$ are:
+\begin{align*}
+    det(A-\lambda I) = \left(\frac{3}{4} -\lambda \right)^2 - \frac{1}{16} &= 0 \\
+    \left(\frac{3}{4} -\lambda \right)^2 &= \frac{1}{16} \\
+    (2\lambda -1)(\lambda -1) &= 0.
+\end{align*}
+
+\noindent So we have two distinct eigenvalues $\frac{1}{2}$ and 1.
+
+\noindent For eigenvalue $\frac{1}{2}$, the corresponding eigenvector, let it be $\Vec{v_1}$, is:
+\begin{align*}
+    \left(A- \frac{1}{2}I \right) \Vec{v_1} &= \Vec{0} \\
+    \begin{bmatrix}
+        \frac{1}{4} & \frac{1}{4} \\
+        \frac{1}{4} & \frac{1}{4}
+    \end{bmatrix} \Vec{v_1} &= \Vec{0}.
+\end{align*}
+\noindent Let $a, b$ be entries of $\Vec{v_1}$. The eigenvector equations are:
+\begin{align*}
+    \frac{1}{4}a + \frac{1}{4}b &= 0 \\
+    \frac{1}{4}a + \frac{1}{4}b &= 0.
+\end{align*}
+\noindent Both of these equations yield $a=-b$, so eigenvectors corresponding to $\frac{1}{2}$ can be a scalar multiple of:
+\begin{equation*}
+    \Vec{v_1} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.
+\end{equation*}
+
+\noindent For eigenvalue 1, the corresponding eigenvector, let's call it $\Vec{v_2}$, is:
+\begin{align*}
+    \left(A- I \right) \Vec{v_2} &= \Vec{0} \\
+    \begin{bmatrix}
+        -\frac{1}{4} & \frac{1}{4} \\
+        \frac{1}{4} & -\frac{1}{4}
+    \end{bmatrix} \Vec{v_2} &= \Vec{0}.
+\end{align*}
+\noindent Let $c, d$ be entries of $\Vec{v_2}$. The eigenvector equations are:
+\begin{align*}
+    -\frac{1}{4}c + \frac{1}{4}d &= 0 \\
+    \frac{1}{4}c - \frac{1}{4}d &= 0.
+\end{align*}
+\noindent Both of these equations yield $c=d$, so eigenvectors corresponding to 1 can be a scalar multiple of:
+\begin{equation*}
+    \Vec{v_2} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\end{equation*}
+
+\noindent Since $A$ is a 2x2 matrix that has 2 distinct eigenvalues with corresponding eigenvectors, those corresponding eigenvectors form a basis of eigenvectors that span in $\mathbb{R}^2$.
+
+\subsection*{(b)}
+\noindent Let $M$ be a 2x2 matrix similar to $A$, so $A = PMP^{-1}$ with columns of $P$ be a basis of eigenvectors, and $M$ be diagonal matrix with entries are eigenvalues since there is a basis of eigenvectors. \par
+\begin{equation*}
+    P = \begin{bmatrix}
+        1 & 1 \\
+        -1 & 1
+    \end{bmatrix}.
+\end{equation*}
+and 
+\begin{equation*}
+    P^{-1} = \frac{1}{2}
+    \begin{bmatrix}
+        1 & -1 \\
+        1 & 1
+    \end{bmatrix}.
+\end{equation*}
+
+\begin{equation*}
+    M = \begin{bmatrix}
+        \frac{1}{2} & 0 \\
+        0 & 1
+    \end{bmatrix}.
+\end{equation*}
+
+\noindent Then:
+\begin{align*}
+    A^k &= PM^kP^{-1} \\
+    &= \frac{1}{2}
+    \begin{bmatrix}
+        1 & 1 \\
+        -1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{1}{2^k} & 0 \\
+        0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & -1 \\
+        1 & 1
+    \end{bmatrix} \\
+    &= \frac{1}{2}
+    \begin{bmatrix}
+        1 & 1 \\
+        -1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{1}{2^k} & \frac{-1}{2^k} \\
+        1 & 1
+    \end{bmatrix} \\
+    &= \frac{1}{2}
+    \begin{bmatrix}
+        \frac{1}{2^k}+1 & \frac{-1}{2^k}+1 \\
+        \frac{-1}{2^k}+1 & \frac{1}{2^k}+1
+    \end{bmatrix}.
+\end{align*}
+
+
+
+\subsection*{(c)}
+
+\begin{equation*}
+    A^k\Vec{x} = \frac{1}{2}
+    \begin{bmatrix}
+        \frac{1}{2^k}+1 & \frac{-1}{2^k}+1 \\
+        \frac{-1}{2^k}+1 & \frac{1}{2^k}+1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix} =
+    \frac{1}{2}
+    \begin{bmatrix}
+        \frac{1}{2^k}+1 \\
+        \frac{-1}{2^k}+1
+    \end{bmatrix}.
+\end{equation*}
+
+\noindent If $k$ is very large, then, $\frac{1}{2^k}$ approaches 0, so we have $A^k\Vec{x}$ with large $k$ will be:
+\begin{equation*}
+    A^k\Vec{x} = \frac{1}{2}
+    \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}.
+\end{equation*}
+
+
+
+\section*{Question 3}
+\noindent Let matrix $A$ be:
+$$A = 
+\begin{bmatrix}
+    0 & \frac{49}{50} & \frac{12}{25} \\
+    \frac{1}{2} & 0 & 0 \\
+    0 & \frac{1}{2} & 0
+\end{bmatrix}.$$
+
+\subsection*{(a)}
+\noindent The proportion of juveniles survive each year to become adults the following year is $\frac{1}{2}$.
+
+
+\subsection*{(b)}
+
+\begin{align*}
+    \begin{bmatrix}
+        0 & \frac{49}{50} & \frac{12}{25} \\
+        \frac{1}{2} & 0 & 0 \\
+        0 & \frac{1}{2} & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        \text{juveniles this year} \\
+        \text{adults this year} \\
+        \text{seniors this year}
+    \end{bmatrix} &= 
+    \begin{bmatrix}
+        \text{juveniles next year} \\
+        \text{adults next year} \\
+        \text{seniors next year}
+    \end{bmatrix}\\ &=
+    \begin{bmatrix}
+        \frac{49}{50} \text{ adults this year} + \frac{12}{25} \text{ seniors this year} \\
+        \frac{1}{2} \text{ juveniles this year} \\
+        \frac{1}{2} \text{ adults this year}
+    \end{bmatrix}.
+\end{align*}
+
+\noindent Therefore, the total number of offspring seniors has each year, to appear as juveniles next year is $\left(\frac{12}{25}\cdot \text{ number of seniors this year}\right)$. The average number of offspring each senior has will be:
+$$\frac{\left(\frac{12}{25}\cdot \text{ number of seniors this year}\right)}{\text{ number of seniors this year}} = \frac{12}{25}.$$
+
+
+
+
+\subsection*{(c)}
+\noindent Commands I used in Cocalc:
+\begin{itemize}
+    \item To create matrix $A$: \par
+    A = matrix(QQ, [
+    [0, 49/50, 12/25],
+    [1/2, 0, 0],
+    [0, 1/2, 0] ] ). \par
+    To see matrix $A$: show(A).
+    \item To find eigenvalues of $A$: show(A.eigenvectors\_right()).
+\end{itemize}
+
+\noindent In total, $A$ has 3 eigenvalues which are: $$\frac{4}{5}, -\frac{3}{10}, -\frac{1}{2}.$$
+
+
+
+\subsection*{(d)}
+\noindent From (c), we have the absolute values of 3 eigenvectors are all less than 1, so in the long run, the population of this organism will approach to 0.
+
+
+\section*{Question 4}
+
+\noindent Basis of $V$:
+$$\mathcal{B} = \left\{ 
+\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix},
+\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
+\right\}.$$
+
+\begin{itemize}
+    \item
+    \begin{align*}
+        T\left(\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\right)
+        &= 
+        \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+        \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
+        = \begin{bmatrix} 1 & 0 \\ 3 & 0 \end{bmatrix}.
+    \end{align*}
+    \noindent The $\mathcal{B}$-coordinate vector is: $\begin{bmatrix} 1 \\ 0 \\ 3 \\ 0 \end{bmatrix}$.
+    
+    \item
+    \begin{align*}
+        T\left(\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\right)
+        &= 
+        \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+        \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}
+        = \begin{bmatrix} 0 & 1 \\ 0 & 3 \end{bmatrix}.
+    \end{align*}
+    \noindent The $\mathcal{B}$-coordinate vector is: $\begin{bmatrix} 0 \\ 1 \\ 0 \\ 3 \end{bmatrix}$.
+    
+    \item
+    \begin{align*}
+        T\left(\begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}\right)
+        &= 
+        \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+        \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}
+        = \begin{bmatrix} 2 & 0 \\ 4 & 0 \end{bmatrix}.
+    \end{align*}
+    \noindent The $\mathcal{B}$-coordinate vector is: $\begin{bmatrix} 2 \\ 0 \\ 4 \\ 0 \end{bmatrix}$.
+    
+    \item
+    \begin{align*}
+        T\left(\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}\right)
+        &= 
+        \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+        \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
+        = \begin{bmatrix} 0 & 2 \\ 0 & 4 \end{bmatrix}.
+    \end{align*}
+    \noindent The $\mathcal{B}$-coordinate vector is: $\begin{bmatrix} 0 \\ 2 \\ 0 \\ 4 \end{bmatrix}$.
+\end{itemize}
+
+\noindent Therefore, the $\mathcal{B}$-matrix for the linear transformation $T$:
+
+\begin{equation*}
+    [T]_{\mathcal{B}} =
+    \begin{bmatrix}
+    1 & 0 & 2 & 0 \\
+    0 & 1 & 0 & 2 \\
+    3 & 0 & 4 & 0\\
+    0 & 3 & 0 & 4
+    \end{bmatrix}.
+\end{equation*}
+
+
+
+\section*{Question 5}
+\noindent Let $\Vec{v_1}$ be eigenvector for eigenvalue 1 and $\Vec{v_2}$ be eigenvector for eigenvalue 2. \par
+\noindent Since $A$ is a 2x2 matrix with 2 distinct eigenvalue, $\Vec{v_1}, \Vec{v_2}$ form a basis of eigenvectors in $\mathbb{R}^2$. \par
+\noindent Let $\Vec{u}$ be any nonzero vector in $\mathbb{R}^2$ and is not itself an eigenvector for eigenvalue 2. Then $\Vec{u}$ can be expressed as:
+$$\Vec{u} = c_1\Vec{v_1} + c_2\Vec{v_2} \text{ for some scalars } c_1, c_2 \text{ and } c_1\neq 0. $$
+
+\noindent Note that since $\Vec{v_2}$ be eigenvector corresponding for eigenvalue 2, we have:
+\begin{align*}
+    A\Vec{v_2} &= 2\Vec{v_2} \text{ then}\\
+    (A - 2I) \Vec{v_2} &= \Vec{0}.
+\end{align*}
+
+\noindent We want to show that the vector $(A - 2I)\Vec{u}$ is a multiple of $\Vec{v_1}$:
+
+\begin{align*}
+    (A - 2I)\Vec{u} &= (A - 2I)(c_1\Vec{v_1} + c_2\Vec{v_2}) \\
+    &= c_1A\Vec{v_1} - 2c_1\Vec{v_1} + c_2(A- 2I)\Vec{v_2} \\
+    &= c_1\Vec{v_1} - 2c_1\Vec{v_1} \\
+    &= c_1\Vec{v_1}(1-2) = -c_1\Vec{v_1}.
+\end{align*}
+
+\noindent Therefore, $(A - 2I)\Vec{u}$ is a multiple of $\Vec{v_1}$ which means that $(A - 2I)\Vec{u}$ is an eigenvector for eigenvalue 1.
+
+
+
+
+
+
+\end{document} 

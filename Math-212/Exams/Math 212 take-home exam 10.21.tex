@@ -1,0 +1,609 @@
+\documentclass[10pt]{article}
+\pagestyle{plain} \setlength{\textwidth}{12cm}
+\setlength{\oddsidemargin}{2cm} \setlength{\evensidemargin}{2cm}
+\setlength{\textheight}{23cm}
+\usepackage{amssymb,latexsym,amsmath,amsthm,verbatim,calc}
+\usepackage{graphicx,epsfig,epstopdf,amssymb,color,makeidx,float,caption,sidecap}
+
+\begin{document}
+\title{Math 212 take-home exam}
+\author{Quan Nguyen}
+\maketitle
+
+\bigskip
+\noindent
+{\bf Honor Pledge:}
+\par
+\noindent I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code.
+\par
+\bigskip
+\noindent Quan Nguyen
+
+\bigskip
+\noindent
+
+\section*{Question 1}
+\begin{equation*}
+    A = 
+    \begin{bmatrix}
+        3 & -2  & -2 \\
+        0 & 2 & -4 \\
+        1 & -2 & 2 
+    \end{bmatrix}
+\end{equation*}
+\noindent Now we need to find the RREF of $A$: \par
+\noindent Replace R3 with R1-3R3 and multiplied R2 by $\frac{1}{2}$:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -2  & -2 \\
+        0 & 1 & -2 \\
+        0 & 4 & -8 
+    \end{bmatrix}
+\end{equation*}
+\noindent Multiplied R3 by $\frac{1}{4}$:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -2  & -2 \\
+        0 & 1 & -2 \\
+        0 & 1 & -2 
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R3 with R2-R3:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -2  & -2 \\
+        0 & 1 & -2 \\
+        0 & 0 & 0 
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R1 with R1+2R2:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & 0 & -6 \\
+        0 & 1 & -2 \\
+        0 & 0 & 0 
+    \end{bmatrix}
+\end{equation*}
+\noindent Multiplied R1 with $\frac{1}{3}$
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 0 & -2 \\
+        0 & 1 & -2 \\
+        0 & 0 & 0 
+    \end{bmatrix}
+\end{equation*}
+
+\subsection*{a}
+We have: $det(A) = -a_{31}\cdot det(A_{31}) + a_{32}\cdot det(A_{32}) - a_{33}\cdot det(A_{33}) = 0$. \par
+\noindent Since $det(A) = 0$, $A$ is not invertible.
+
+\subsection*{b}
+\noindent From RREF of $A$, we can find the basis for null of $A$:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 0 & -2 \\
+        0 & 1 & -2 \\
+        0 & 0 & 0 
+    \end{bmatrix}
+\end{equation*}
+\noindent We have a linear system:
+\begin{align*}
+    x_1 - 2x_3 &= 0 \\
+    x_2 - 2x_3 &= 0 \\
+    x_3 &\text{ free.}
+\end{align*}
+\noindent Therefore, we have this vector:
+\begin{equation*}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        2x_3 \\
+        2x_3 \\
+        x_3
+    \end{bmatrix}
+    = x_3
+    \begin{bmatrix}
+        2 \\
+        2 \\
+        1
+    \end{bmatrix}
+\end{equation*}
+\noindent So, the basis of null $A$:
+\begin{align*}
+    Nul(A) = Span\left\{
+    \begin{bmatrix}
+        2 \\
+        2 \\
+        1
+    \end{bmatrix}
+    \right\}
+\end{align*}
+
+
+\subsection*{c}
+\noindent Assume we have:
+\begin{equation*}
+    A\Vec{x} = \Vec{b}
+\end{equation*}
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -2 & -2 \\
+        0 & 2 & -4 \\
+        1 & -2 & 2
+    \end{bmatrix}
+    \Vec{x}=
+    \begin{bmatrix}
+        2 \\
+        4 \\
+        -2
+    \end{bmatrix}
+\end{equation*}
+\noindent If there is at least a solution for $\Vec{x}$, then $\Vec{b}$ is in column space of $A$:
+\noindent Turn that equation into augmented matrix:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -2 & -2 & 2 \\
+        0 & 2 & -4 & 4 \\
+        1 & -2 & 2 & -2
+    \end{bmatrix}
+\end{equation*}
+\noindent Multiplied R1 by $\frac{1}{3}$:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -\frac{2}{3} & -\frac{2}{3} & \frac{2}{3} \\
+        0 & 2 & -4 & 4 \\
+        1 & -2 & 2 & -2
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R3 with R3-R1:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -\frac{2}{3} & -\frac{2}{3} & \frac{2}{3} \\
+        0 & 2 & -4 & 4 \\
+        0 & -\frac{4}{3} & \frac{8}{3} & -\frac{8}{3}
+    \end{bmatrix}
+\end{equation*}
+\noindent Multiplied R2 by $\frac{1}{2}$
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -\frac{2}{3} & -\frac{2}{3} & \frac{2}{3} \\
+        0 & 1 & -2 & 2 \\
+        0 & -\frac{4}{3} & \frac{8}{3} & -\frac{8}{3}
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R3 with $\frac{4}{3}$R2 + R3:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -\frac{2}{3} & -\frac{2}{3} & \frac{2}{3} \\
+        0 & 1 & -2 & 2 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R1 with $\frac{2}{3}$R2 + R1:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 0 & -2 & 2 \\
+        0 & 1 & -2 & 2 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+\end{equation*}
+\noindent From the augmented matrix right above, it is obvious that the it is consistent. Therefore, $\Vec{b}$ is in column space of $A$.
+
+
+\section*{Question 2}
+\subsection*{a}
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+\end{equation*}
+\begin{equation*}
+    A^{-1}=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+\end{equation*}
+
+
+\subsection*{b}
+\noindent Impossible. Because there are more columns than rows, so there can't be pivot in each column. Thus, the columns can't be independent.
+
+
+\subsection*{c}
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{equation*}
+
+\subsection*{d}
+\begin{equation*}
+    A=
+    \left\{
+    \begin{bmatrix}
+        1 \\
+        0 \\
+        0
+    \end{bmatrix};
+    \begin{bmatrix}
+        0 \\
+        1 \\
+        0
+    \end{bmatrix};
+    \begin{bmatrix}
+        0 \\
+        0 \\
+        1
+    \end{bmatrix}
+    \right\}
+\end{equation*}
+
+
+\subsection*{e}
+\noindent Impossible. The matrix for linear transformation from $\mathbb{R}^4$ to $\mathbb{R}^4$ must be a 4x4 matrix (a square matrix). If that matrix is onto, it has pivot in every row. Since that matrix is a square, it also has pivot in every column. Therefore, if that matrix is onto for a linear transformation, it also one-to-one.
+
+
+
+\subsection*{f}
+\noindent Impossible. Because $det(A^2) = det(A)\cdot det(A) = \left(det(A) \right)^2$. \par
+\noindent We know $\left(det(A) \right)^2 \geq 0$, so $\left(det(A) \right)^2$ can't equal to -1.
+
+
+\section*{Question 3}
+
+\subsection*{a}
+\noindent $B$ is a basis because:
+\begin{itemize}
+    \item 
+    $
+        \begin{bmatrix}
+            1 \\
+            1
+        \end{bmatrix};
+        \begin{bmatrix}
+            1 \\
+            -1
+        \end{bmatrix}
+    $ are independent.
+    \item $
+        \begin{bmatrix}
+            1 \\
+            1
+        \end{bmatrix};
+        \begin{bmatrix}
+            1 \\
+            -1
+        \end{bmatrix}
+    $ span in $\mathbb{R}^2$.
+\end{itemize}
+
+
+\subsection*{b}
+\begin{align*}
+    \Vec{x}
+    &=
+    \begin{bmatrix}
+        1 & 1 \\
+        1 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \Vec{x}
+    \end{bmatrix}_B \\
+    &=
+    \begin{bmatrix}
+        1 & 1 \\
+        1 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        2 \\
+        5
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+        2 + 5 \\
+        2 - 5
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+        7 \\
+        -3
+    \end{bmatrix}
+\end{align*}
+
+
+\subsection*{c}
+\noindent Let $ 
+    \begin{bmatrix}
+        x
+    \end{bmatrix}_B =
+    \begin{bmatrix}
+        c_1 \\
+        c_2
+    \end{bmatrix}
+$
+\noindent We have the $B$-coordinates $c_1, c_2$ of $\Vec{x}$ satisfy:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 1 \\
+        1 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        c_1 \\
+        c_2
+    \end{bmatrix} =
+    \begin{bmatrix}
+        2 \\
+        0
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Turn it into augmented matrix:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 1 & 2 \\
+        1 & -1 & 0
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R2 with R1-R2:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 1 & 2 \\
+        0 & 2 & 2
+    \end{bmatrix}
+\end{equation*}
+\noindent Multiply R2 by $\frac{1}{2}$
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 1 & 2 \\
+        0 & 1 & 1
+    \end{bmatrix}
+\end{equation*}
+\noindent Replace R1 with R1-R2:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 0 & 1 \\
+        0 & 1 & 1
+    \end{bmatrix}
+\end{equation*}
+\noindent Convert it into linear equation:
+\begin{align*}
+    c_1 = 1 \\
+    c_2 = 1
+\end{align*}
+\noindent Therefore, $
+\begin{bmatrix}
+        x
+\end{bmatrix}_B =
+\begin{bmatrix}
+    1 \\
+    1
+\end{bmatrix}
+$.
+
+\subsection*{d}
+\begin{itemize}
+    \item 
+    \begin{equation*}
+        A
+        \begin{bmatrix}
+            1 \\
+            1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            2 & 1 \\
+            1 & 2
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 \\
+            1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            2 + 1 \\
+            1 + 2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            3 \\
+            3
+        \end{bmatrix}
+        = 3
+        \begin{bmatrix}
+            1 \\
+            1
+        \end{bmatrix}
+    \end{equation*}
+    \item
+        \begin{equation*}
+        A
+        \begin{bmatrix}
+            1 \\
+            -1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            2 & 1 \\
+            1 & 2
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 \\
+            -1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            2-1 \\
+            1-2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            1 \\
+            -1
+        \end{bmatrix}
+    \end{equation*}
+\end{itemize}
+
+
+
+\subsection*{e}
+\begin{align*}
+    A^{10}
+    \begin{bmatrix}
+        2 \\
+        0
+    \end{bmatrix}
+    &=
+    A^{10}
+    \left(
+    \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        1 \\
+        -1
+    \end{bmatrix}
+    \right) \\
+    &=
+    A^{10}
+    \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    +
+    A^{10}
+    \begin{bmatrix}
+        1 \\
+        -1
+    \end{bmatrix} \\
+    &=
+    3^{10}
+    \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        1 \\
+        -1
+    \end{bmatrix} \\
+    &=
+    59049
+    \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        1 \\
+        -1
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+        59049 + 1 \\
+        59049 - 1
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+        59050 \\
+        59048
+    \end{bmatrix}
+\end{align*}
+
+
+
+\section*{Question 4}
+\noindent $B$ is the subspace of $H$ which means that:
+\begin{itemize}
+    \item $\Vec{b_1}$ and $\Vec{b_2}$ are independent.
+    \item $\Vec{b_1}$ and $\Vec{b_2}$ span in $\mathbb{R}^n$
+\end{itemize}
+
+\noindent We need to prove that $S = \{\Vec{b_1}+ \Vec{b_2}, \Vec{b_2} \}$ is a basis of $H$:
+\begin{itemize}
+    \item \noindent Prove that $Span\left\{ \Vec{b_1}+ \Vec{b_2}, \Vec{b_2} \right\} = \mathbb{R}^n$:
+    \begin{itemize}
+        \item We have $H$ is some subspace of $\mathbb{R}^n$. Therefore $\Vec{b_1} + \Vec{b_2}$ is also in $H$ and spans in $\mathbb{R}^n$. \par
+    \end{itemize}
+    \item Prove that $\Vec{b_1}+ \Vec{b_2}$ and $\Vec{b_2}$ are independent (Prove by contradiction):
+    \begin{itemize}
+        \item Assume that $\Vec{b_1}+ \Vec{b_2}$ and $\Vec{b_2}$ are dependent. Thus, $\Vec{b_1}+ \Vec{b_2} = k \cdot \Vec{b_2}$ for scalar $k$.
+        \item Then, we have $\Vec{b_1} = (k-1) \Vec{b_2}$ which means that $\Vec{b_1}$ and $\Vec{b_2}$ are not independent. However, $\Vec{b_1}$ and $\Vec{b_2}$ must be independent since $B = \{\Vec{b_1}, \Vec{b_2} \}$ is a basis for $H$.
+        \item Therefore, $\Vec{b_1}+ \Vec{b_2}$ and $\Vec{b_2}$ are independent.
+    \end{itemize}
+\end{itemize}
+
+\noindent In conclusion, $S = \{\Vec{b_1}+ \Vec{b_2}, \Vec{b_2} \}$ is a basis for $H$.
+
+% \noindent Having , we have:
+% \begin{itemize}
+%     \item The spanning set of $\left\{ \Vec{b_1} + \Vec{b_2}; \Vec{b_2} \right\}$ spans in $\mathbb{R}^n$
+% \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Question 5}
+\noindent I used these following commands:
+\noindent Create matrix $A$: \par
+A = matrix([ \par
+[1, 0, 1, -1], \par
+[0, -1, 1, 1], \par
+[-1, 1, 0, 1], \par
+[1,  1, -1, 0] ] ) \par
+\noindent  View $A$ using show(A):
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        1 & 0 & 1 & -1 \\
+        0 & -1 & 1 & 1 \\
+        -1 & 1 & 0 & 1 \\
+        1 & 1 & -1 & 0
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Find $A^{-1}$: show(A.inverse()):
+\begin{equation*}
+    A^{-1}=
+    \begin{bmatrix}
+        \frac{1}{5} & \frac{2}{5} & -\frac{1}{5} & \frac{3}{5} \\
+        \frac{2}{5} & -\frac{1}{5} & \frac{3}{5} & \frac{1}{5} \\
+        \frac{3}{5} & \frac{1}{5} & \frac{2}{5} & -\frac{1}{5} \\
+        -\frac{1}{5} & \frac{3}{5} & \frac{1}{5} & \frac{2}{5}
+    \end{bmatrix}
+\end{equation*}
+
+
+\noindent Find $A^{9}$: show(A\^{}9):
+\begin{equation*}
+    A^{9}=
+    \begin{bmatrix}
+        17 & 32 & -71 & 23 \\
+        32 & -225 & 153 & 41 \\
+        23 & 41 & 8 & -71 \\
+        -71 & 153 & -89 & 8
+    \end{bmatrix}
+\end{equation*}
+
+
+\end{document} 

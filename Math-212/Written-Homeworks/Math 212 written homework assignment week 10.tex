@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+\pagestyle{plain} \setlength{\textwidth}{12cm}
+\setlength{\oddsidemargin}{2cm} \setlength{\evensidemargin}{2cm}
+\setlength{\textheight}{23cm}
+\usepackage{amssymb,latexsym,amsmath,amsthm,verbatim,calc}
+\usepackage{graphicx,epsfig,epstopdf,amssymb,color,makeidx,float,caption,sidecap}
+
+\begin{document}
+\title{Math 212 written homework assignment week 10}
+\author{Quan Nguyen}
+\maketitle
+
+\bigskip
+\noindent
+{\bf Acknowledgements and sources of help}:
+\begin{itemize}
+    \item Professor Ben Ken
+    \item Ben (PLA)
+\end{itemize}
+
+\bigskip
+\noindent
+
+\section*{Problem 1}
+\noindent From using show(A.eigenvectors\_right()), I have these results:
+\begin{itemize}
+    \item Eigenvalues: $\frac{1}{3}$
+    \item Multiplicities: 1
+    \item Eigenvectors:
+    \begin{equation*}
+        \begin{bmatrix}
+            1 \\ -\frac{1}{6} \\ -\frac{5}{3} \\ -\frac{1}{6} \\ 1
+        \end{bmatrix}
+    \end{equation*}
+\end{itemize}
+
+
+\section*{Problem 2}
+
+\subsection*{a}
+\noindent Given from the question:
+\begin{itemize}
+    \item  $\lambda$ is the only eigenvalue of A.
+    \item The corresponding eigenspace has dimension 1.
+    \item $\Vec{v}$ is an eigenvector.
+\end{itemize}
+\noindent From the eigenspace, we know that there exists only one eigenvector for the given $\lambda$. Therefore, $\Vec{v}$ must be the only eigenvector in the eigenspace. Thus, $\Vec{w}$ is not a eigenvector.
+
+\subsection*{b}
+\noindent If $(A-\lambda I)\Vec{w}$ is an eigenvector, we need to show that $A(A-\lambda I)\Vec{w} = constant (A- \lambda I) \Vec{w}$. \par
+\noindent From the left hand side, we have:
+\begin{align*}
+    A(A-\lambda I)\Vec{w}
+    &= A(A\Vec{w}-\lambda I\Vec{w}) \\
+    &= A(c_1 \Vec{v} + c_2 \Vec{w} - \lambda \Vec{w}) \\
+    &= c_1 A\Vec{v} + c_2 A\Vec{w} - \lambda A\Vec{w} \\
+    &= c_1\lambda \Vec{v} + c_2(c_1\Vec{v} + c_2\Vec{w}) -\lambda (c_1\Vec{v} + c_2\Vec{w}) \\
+    &= c_1c_2 \Vec{v} + c_2^2 \Vec{w} - c_2\lambda \Vec{w} \\
+    &= c_2 (c_1\Vec{v} + c_2\Vec{w} - \lambda \Vec{w}) \\
+    &= c_2 (A\Vec{w}- \lambda \Vec{w} ) \\
+    &= c_2 (A -\lambda I)\Vec{w}
+\end{align*}
+\noindent We know that $c_2$ is a constant, so $c_2 (A -\lambda I)\Vec{w}$ can be written as $ constant (A -\lambda I)\Vec{w}$ \par
+\noindent Therefore, we prove that $A(A-\lambda I)\Vec{w} = constant (A- \lambda I) \Vec{w}$.
+
+\subsection*{c}
+\noindent From (b), we proved that $(A-\lambda I)\Vec{w}$ is an eigenvector for $A$. \par
+\noindent However, we are given that $\lambda$ is the only eigenvalue and $\Vec{v}$ is the only eigenvector since the eigenspace for $\lambda$ has dimension 1. \par
+\noindent Therefore, any other eigenvectors of $A$ are multiple of $\Vec{v}$, which means that $(A-\lambda I)\Vec{w}$ is a multiplication of $\Vec{v}$.
+
+
+\subsection*{d}
+\begin{itemize}
+    \item We are given that $B=\{\Vec{v}, \Vec{w}\}$ is the basis for $\mathbb{R}^2$, so if $\Vec{u}\in \mathbb{R}^2$, $\Vec{u}$ can be expressed as $\Vec{u} = a\Vec{v} + b\Vec{w}$ for any value $a, b$. (1)
+    \item We are given that $\Vec{v}$ is the eigenvector of $A$, so we have:
+    \begin{align*}
+        A\Vec{v} &= \lambda \Vec{v} \\
+        (A - \lambda I) \Vec{v} &= \Vec{0} \text{ (2)} \\
+    \end{align*}
+    \item From (b), we know that $(A-\lambda I)\Vec{w}$ is an eigenvector for $A$, so we have:
+    \begin{align*}
+        A(A-\lambda I)\Vec{w} &= \lambda (A-\lambda I)\Vec{w} \\
+        (A\Vec{w} - \lambda \Vec{w})(A-\lambda I) &= \Vec{0} \\
+        A^2 \Vec{w} - 2A\lambda \Vec{w} + \lambda^2 I \Vec{w} &= \Vec{0} \\
+        (A - \lambda I)^2 \Vec{w} &= \Vec{0} \text{ (3)}
+    \end{align*}
+\end{itemize}
+
+\noindent If we have $\Vec{u}\in \mathbb{R}^2$, we need to show that $(A - \lambda I)^2\Vec{u} = \Vec{0}$ \par
+\noindent From the left hand side, we have:
+\begin{align*}
+    (A - \lambda I)^2\Vec{u}
+    &= (A - \lambda I)^2 (a\Vec{v} + b\Vec{w}) \\
+    &= a(A - \lambda I)^2 \Vec{v} + b(A - \lambda I)^2 \Vec{w} \\
+    &= a(A-\lambda I)\Vec{0} + b\Vec{0} \\
+    &= \Vec{0}
+\end{align*}
+
+\noindent In conclusion, if $\Vec{u}\in \mathbb{R}^2$ is any vector, we must have $(A - \lambda I)^2\Vec{u} = \Vec{0}$
+
+\end{document} 

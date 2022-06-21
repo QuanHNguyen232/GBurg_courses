@@ -1,0 +1,297 @@
+\documentclass[10pt]{article}
+\pagestyle{plain} \setlength{\textwidth}{12cm}
+\setlength{\oddsidemargin}{2cm} \setlength{\evensidemargin}{2cm}
+\setlength{\textheight}{23cm}
+\usepackage{amssymb,latexsym,amsmath,amsthm,verbatim,calc}
+\usepackage{graphicx,epsfig,epstopdf,amssymb,color,makeidx,float,caption,sidecap}
+
+\begin{document}
+\title{Math 212 take-home exam}
+\author{Quan Nguyen}
+\maketitle
+
+\bigskip
+\noindent
+{\bf Honor Pledge:}
+\par
+\noindent I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code.
+\par
+\bigskip
+\noindent Quan Nguyen
+
+\bigskip
+\noindent
+
+\section*{Question 1}
+\begin{align*}
+    3x_1 - 9x_2 &= 12 \\
+    x_1 - 3x_2 &= 4
+\end{align*}
+
+\subsection*{(a)}
+\noindent Write the system above as an augmented matrix:
+\begin{equation*}
+    \begin{bmatrix}
+        3 & -9 && 12 \\
+        1 & -3 && 4
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Change R1 into $\frac{1}{3}$R1:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -3 && 4 \\
+        1 & -3 && 4
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Alternate R2 with R1-R2:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -3 && 4 \\
+        0 & 0 && 0
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Turn the augmented matrix back to the system:
+\begin{align*}
+    x_1 - 3x_2 &= 4 \\
+    0 &= 0
+\end{align*}
+
+\noindent This means that, the solution set of this system is:
+\begin{align*}
+    x_1 &= 3x_2 + 4 \\
+    x_2 &\text{ is free}
+\end{align*}
+
+\noindent The parametric vector form of the solution set is:
+\begin{equation*}
+    \begin{bmatrix}
+        3x_2 + 4 \\
+        x_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        3x_2 \\
+        x_2
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        4 \\
+        0
+    \end{bmatrix}
+    =
+    x_2
+    \begin{bmatrix}
+        3 \\
+        1
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        4 \\
+        0
+    \end{bmatrix}
+\end{equation*}
+
+
+\subsection*{(b)}
+\noindent From the parametric vector form above, I can easily find the solutions of the system by plugging in any values of $x_2$.
+\begin{itemize}
+    \item If $x_2 = 0$, the solution is $(4, 0)$.
+    \item If $x_2 = 1$, the solution is $(7, 1)$.
+\end{itemize}
+
+
+
+\subsection*{(c)}
+\noindent The value of $x_1$ and $x_2$ that are not a solution of this system is: $(0, 0)$.
+
+\section*{Question 2}
+\noindent The given matrix equation:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -3 & -5 && -a \\
+        2 & 4 & -2 && 1 \\
+        0 & 5 & 4 && 2a
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -a \\
+        1 \\
+        2a
+    \end{bmatrix}
+\end{equation*}
+
+
+\noindent Write the matrix equation as augmented matrix:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -3 & -5 && -a \\
+        2 & 4 & -2 && 1 \\
+        0 & 5 & 4 && 2a
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Now I turn it into REF by these following steps:
+\par
+\noindent Replace R2 with $\frac{1}{2}$R2:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & -3 & -5 && -a \\
+        1 & 2 & -1 && \frac{1}{2} \\
+        0 & 5 & 4 && 2a
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Switch R2 and R1 and replace R2 with R2-R1:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 2 & -1 && \frac{1}{2} \\
+        0 & 5 & 4 && \frac{1}{2} + a \\
+        0 & 5 & 4 && 2a
+    \end{bmatrix}
+\end{equation*}
+
+\noindent Replace R3 with R3-R2:
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 2 & -1 && \frac{1}{2} \\
+        0 & 1 & \frac{4}{5} && \frac{\frac{1}{2} + a}{5} \\
+        0 & 0 & 0 && a - \frac{1}{2}
+    \end{bmatrix}
+\end{equation*}
+
+
+\noindent Turn it back to the linear system:
+
+\begin{align*}
+    x_1 + 2x_2 - x_3 &= \frac{1}{2} \\
+    2x_2 + \frac{8}{5}x_3 &= \frac{1 + 2a}{5} \\
+    0 &= a - \frac{1}{2}
+\end{align*}
+
+\noindent The system above is only consistent when the third row is $0=0$: \par
+\noindent So:
+\begin{align*}
+    a - \frac{1}{2} &= 0 \\
+    a &= \frac{1}{2}
+\end{align*}
+
+\noindent In conclusion, $a = \frac{1}{2}$ will make the given matrix equation consistent.
+
+\section*{Question 3}
+\subsection*{(a)}
+\begin{equation*}
+    \begin{bmatrix}
+        1 \\
+        0
+    \end{bmatrix};
+    \begin{bmatrix}
+        0 \\
+        1
+    \end{bmatrix}
+\end{equation*}
+
+\subsection*{(b)}
+\noindent It is impossible because 2 vectors can only span in $R^2$ or create a plane in $R^3$.
+
+
+\subsection*{(c)}
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}
+\end{equation*}
+
+
+\subsection*{(d)}
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        a_{1,1} & a_{1,2} & a_{1,3} \\
+        a_{2,1} & a_{2,2} & a_{2,3}
+    \end{bmatrix}
+\end{equation*}
+\noindent It is impossible because if $A$ is viewed as one-to-one linear transformation, the RREF of 2x3 matrix A has to have a pivot in each column (3 pivots). However, $A$ has only 2 rows, which means that it can has only 2 pivots.
+
+
+
+
+
+\section*{Question 4s}
+\subsection*{(a)}
+
+\noindent False.
+\noindent Counterexample:
+\begin{equation*}
+    A=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+\end{equation*}
+\noindent Columns of A is independent since there is a pivot in each column.
+
+\begin{equation*}
+    A^c=
+    \begin{bmatrix}
+        1 & 0
+    \end{bmatrix}
+\end{equation*}
+\noindent Columns of A is not independent since there is only a pivot in the first column out of two columns.
+
+\subsection*{(b)}
+
+\noindent True.
+\par
+\noindent Because given columns of A, for all cases from Theorem 7, Theorem 8, and Theorem 9, the reduction of the last row does not affect these columns. For example:
+\begin{itemize}
+    \item Theorem 7, the column 3 is the linear combination of the other 2 columns even the last row is removed:
+    \begin{equation*}
+        A=
+        \begin{bmatrix}
+            1 & 0 & 1 \\
+            0 & 1 & 1 \\
+        \end{bmatrix};
+        A^c=
+        \begin{bmatrix}
+            1 & 0 & 1 \\
+        \end{bmatrix}
+    \end{equation*}
+    \item Theorem 8, columns of A is dependent when there are more vectors than entries, so removing the last row keeps less entries than before.
+    \item Theorem 9, by removing the last row, vector $\Vec{0}$ is still $\Vec{0}$, but from $R^m$ to $R^{m-1}$
+\end{itemize}
+
+
+\section*{Question 5}
+\noindent I used these following commands to find the solution of the system:
+\begin{itemize}
+    \item Create matrix A:
+    \par
+    A = matrix(4, 5, [\par
+[-2, 1, -1, 0, -1],\par
+[3, -2, 2, 4, 0],\par
+[-3, 1, 1, 7, -3],\par
+[2, 0, 4, 1, 1]])
+    \item View that matrix: show(A)
+    \item View the RREF of matrix A: show(A.rref())
+\end{itemize}
+
+\noindent The unique solution I got is:
+\begin{itemize}
+    \item $x_1 = -2$
+    \item $x_2 = \frac{-7}{2}$
+    \item $x_3 = \frac{3}{2}$
+    \item $x_4 = -1$
+\end{itemize}
+
+\end{document} 
