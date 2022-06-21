@@ -1,0 +1,11 @@
+
+public class draft {
+
+	public static void main(String[] args) {
+		int x = 8;
+		// 1000
+		int y = x>>1;
+		System.out.println(y);
+	}
+
+}

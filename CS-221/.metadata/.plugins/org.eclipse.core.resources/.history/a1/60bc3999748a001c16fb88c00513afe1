@@ -1,0 +1,13 @@
+
+public class draft {
+
+	public static void main(String[] args) {
+		int x = 3;
+		// 1000
+		for (int i = 0; i < 8; i++) {
+			int y = (x << i & 1);
+			System.out.println(y);			
+		}
+	}
+
+}

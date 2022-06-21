@@ -1,0 +1,125 @@
+
+public class BitwiseOps {
+
+	public static void main(String[] args) {
+		String name = null;
+		// replace with '&' to force both conditions
+		if (name != null && name.length() > 1) {
+			System.out.println(name.length());
+		}
+		System.out.println("Done");
+
+		
+		int n = 6;	// 0110
+		int m = 5;	// 0101
+//		n & m		// 0100 -> 4 bitwise AND
+//		n | m		// 0111 -> 7 bitwise OR
+//		n ^ m		// 0011 -> 3 bitwise XOR (different but not same)
+//		~n			1111001 -> -7 bitwise NOT
+		
+		System.out.println(n & m);
+		System.out.println(n | m);
+		System.out.println(n ^ m);
+		System.out.println(~n);
+		
+		
+		// BITMAPPED Flags
+		final int FLAG_NONE = 0;
+		final int FLAG_ACTIVE = 1;	// 0001
+		final int FLAG_VISIBLE = 2;	// 0010
+		final int FLAG_REVERSE = 4;	// 0100
+		final int FLAG_GREEN = 8;	// 1000
+		
+		int flags = FLAG_ACTIVE | FLAG_GREEN | FLAG_VISIBLE;	// bitwise OR works at a '+'
+		// 0001
+		// 1000
+		// 0010
+		// 1011	result
+		
+		System.out.println(flags);
+
+		// 1011
+		// 0001
+		// 0001	result
+		if ((flags & FLAG_ACTIVE) != 0) {
+			System.out.println("Active");
+		}
+		
+
+		// 1011
+		// 0100
+		// 0000	result
+		if ((flags & FLAG_REVERSE) != 0) {
+			System.out.println("REVERSE");
+		}
+		
+		
+		// shift operators
+		int t = 1;
+		
+		System.out.println(t);
+		// left shift operator (shift bits left) (fill in with 0)
+		// 0001
+		// 0010	result (shift by one)
+		System.out.println(t << 1);	// = multiply by 2
+		
+		
+		// right shift (fill in with 1)
+		System.out.println(t >> 1);	// = integer division
+		
+		// ...00000010
+		// ...11111101 + 1
+		// ...11111110 -> -2
+		t = -2;
+		// ...11111111 -> -1
+		System.out.println(t >> 1);
+		
+		// >> arithmetic shift right (asr)
+		// fill in the left side with the sign
+		
+		// >>> logical shift right: fill with 0
+		System.out.println(t >>> 1);
+		
+		
+		int x = -5;
+		
+		// use shift and bitwise operator to print binary of x, one bit at a time
+		/*
+		 * 		xxxx
+		 * 	&	0001
+		 * 
+		 * 		xxxx
+		 *  &	0010
+		 * 
+		 */
+		for (int i = 31; i >= 0; i--) {
+			int mask = 1 << i;	// move a one to the bit I'm working on
+			int bit = (x & mask) >>> i;
+			System.out.print(bit);
+		}
+		System.out.println();
+		
+		printX_ToBin(x);
+		
+		
+		
+	}
+	public static void printX_ToBin(int x) {
+		String s = "";
+		while (x>0) {
+//			System.out.println(x + "\t" + (x%2));
+			System.out.print(x%2 + "");
+			s = s + String.valueOf(x%2);
+			x = x >> 1;
+		}
+		System.out.println();
+		
+		
+		
+		for (int i = s.length()-1; i >=0 ; i--) {
+			System.out.print("-"+s.charAt(i));
+		}
+		System.out.println("end");
+
+	}
+}

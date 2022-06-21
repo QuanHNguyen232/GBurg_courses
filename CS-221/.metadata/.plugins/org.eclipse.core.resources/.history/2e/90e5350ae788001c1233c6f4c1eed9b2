@@ -1,0 +1,58 @@
+
+public class BitwiseOps {
+
+	public static void main(String[] args) {
+		String name = null;
+		// replace with '&' to force both conditions
+		if (name != null && name.length() > 1) {
+			System.out.println(name.length());
+		}
+		System.out.println("Done");
+
+		
+		int n = 6;	// 0110
+		int m = 5;	// 0101
+//		n & m		// 0100 -> 4 bitwise AND
+//		n | m		// 0111 -> 7 bitwise OR
+//		n ^ m		// 0011 -> 3 bitwise XOR (different but not same)
+//		~n			1111001 -> -7 bitwise NOT
+		
+		System.out.println(n & m);
+		System.out.println(n | m);
+		System.out.println(n ^ m);
+		System.out.println(~n);
+		
+		
+		// BITMAPPED Flags
+		final int FLAG_NONE = 0;
+		final int FLAG_ACTIVE = 1;	// 0001
+		final int FLAG_VISIBLE = 2;	// 0010
+		final int FLAG_REVERSE = 4;	// 0100
+		final int FLAG_GREEN = 8;	// 1000
+		
+		int flags = FLAG_ACTIVE | FLAG_GREEN | FLAG_VISIBLE;	// bitwise OR works at a '+'
+		// 0001
+		// 1000
+		// 0010
+		// 1011	result
+		
+		System.out.println(flags);
+
+		// 1011
+		// 0001
+		// 0001	result
+		if ((flags & FLAG_ACTIVE) != 0) {
+			System.out.println("Active");
+		}
+		
+
+		// 1011
+		// 0100
+		// 0000	result
+		if ((flags & FLAG_REVERSE) != 0) {
+			System.out.println("REVERSE");
+		}
+		
+	}
+
+}
