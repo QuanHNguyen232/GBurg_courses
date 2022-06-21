@@ -1,0 +1,51 @@
+package draft;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class draft1 {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		
+		List<Integer> a = new ArrayList<Integer>();
+		a.add(1);
+		a.add(2);
+		a.add(3);
+		a.add(5);
+		List<Integer> b = new ArrayList<Integer>();
+		b.add(2);
+		b.add(4);
+		b.add(6);
+		System.out.println(merge(a, b));
+	}
+	
+	public static List<Integer> merge(List<Integer> nums1, List<Integer> nums2) {
+        List<Integer> result = new ArrayList<Integer>();
+        int i=0, j=0;
+        while (i < nums1.size() && j < nums2.size()) {
+        	// nums1 < nums2
+        	if (nums1.get(i) <= nums2.get(j)) {
+        		result.add(nums1.get(i));
+        		i++;
+        	}
+        	else {
+        		result.add(nums2.get(j));
+        		j++;
+        	}
+        }
+        if (i < nums1.size()) {
+        	for (; i<nums1.size(); i++) {
+        		result.add(nums1.get(i));
+        	}
+        }
+        if (j < nums2.size()) {
+        	for (; j < nums2.size(); j++) {
+        		result.add(nums2.get(j));
+        	}
+        }
+        
+        return result;
+    }
+}

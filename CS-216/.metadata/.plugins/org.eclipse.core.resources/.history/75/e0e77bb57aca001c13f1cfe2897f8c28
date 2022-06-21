@@ -1,0 +1,32 @@
+package draft;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class draft1 {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		
+		int n=100;
+		while (n > 0) {
+			System.out.print(n % 3);
+			n /= 3;
+		}
+		
+	}
+	
+	public static List<Integer> merge(List<Integer> nums1, List<Integer> nums2) {
+        List<Integer> result = new ArrayList<Integer>();
+        int i=0, j=0;
+        while (true) {
+        	if (nums1.get(i) >= nums2.get(j)) {
+        		
+        	}
+        }
+        
+        
+        return result;
+    }
+}

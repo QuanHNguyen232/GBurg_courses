@@ -1,0 +1,37 @@
+package draft;
+
+public class node <T extends Comparable<T>>{
+	private node<T> leftNode;
+	private node<T> rightNode;
+	private T data;
+	
+	public node (T data) {
+		this.data = data;
+		leftNode = null;
+		rightNode = null;
+	}
+	
+	public node<T> getLeftNode() {
+		return leftNode;
+	}
+
+	public void setLeftNode(node<T> leftNode) {
+		this.leftNode = leftNode;
+	}
+
+	public node<T> getRightNode() {
+		return rightNode;
+	}
+
+	public void setRightNode(node<T> rightNode) {
+		this.rightNode = rightNode;
+	}
+
+	public T getData() {
+		return data;
+	}
+	
+	public int compare(node<T> other) {
+		return this.data.compareTo(other.getData());
+	}
+}

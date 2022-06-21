@@ -1,0 +1,10 @@
+package draft;
+
+public class binary_tree<T extends Comparable<T>> {
+	private node<T> head;
+	
+	
+	// constructor
+	public binary_tree () {}
+
+}

@@ -1,0 +1,44 @@
+package draft;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class draft1 {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		
+		List<Integer> a = new ArrayList<Integer>();
+		a.add(1);
+		a.add(3);
+		a.add(5);
+		a.add(6);
+		a.add(7);
+		List<Integer> b = new ArrayList<Integer>();
+		b.add(2);
+		b.add(4);
+		b.add(6);
+		System.out.println(merge(a, b));
+	}
+	
+	public static List<Integer> merge(List<Integer> tA, List<Integer> tB) {
+        List<Integer> result = new ArrayList<Integer>();
+        
+//        Collections.sort(tA);	// O(n log n)
+        
+        for (Integer b : tB) {
+        	for (Integer a : tA) {
+        		if (a <= b)  result.add(a);       		
+        		
+        	}
+        	
+        	result.add(0);
+        }
+        
+        return result;
+    }
+	
+	
+}

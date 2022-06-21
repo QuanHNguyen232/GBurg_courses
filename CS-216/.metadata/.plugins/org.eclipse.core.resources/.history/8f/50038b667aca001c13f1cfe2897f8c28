@@ -1,0 +1,31 @@
+package draft;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Random;
+import java.util.Stack;
+
+public class draft1 {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		
+		int n=100;
+		while (n > 0) {
+			System.out.print(n % 3);
+			n /= 3;
+		}
+		
+	}
+	
+	public static int name(int n) {
+		if (n<=0) {
+			return 0;
+		}
+		if (n == 1) {
+			return 2;
+		}
+		return name(n-1) + name(n-2);
+	}
+}

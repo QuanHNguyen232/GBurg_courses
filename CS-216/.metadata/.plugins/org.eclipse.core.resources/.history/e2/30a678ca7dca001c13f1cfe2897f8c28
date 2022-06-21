@@ -1,0 +1,13 @@
+package draft;
+
+public class node <T extends Comparable<T>>{
+	private node<T> leftNode;
+	private node<T> rightNode;
+	private T data;
+	
+	public node (T data) {
+		this.data = data;
+		leftNode = null;
+		rightNode = null;
+	}
+}
