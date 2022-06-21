@@ -1,0 +1,11 @@
+Testing initiated. Mon May  3 11:36:25 EDT 2021
+Array2DExercises.java submitted.
+Compilation of all java files succeeded.
+Testing Array2DExercises:
+JUnit version 4.11
+...
+Time: 0.02
+
+OK (3 tests)
+
+Testing completed. Mon May  3 11:36:27 EDT 2021

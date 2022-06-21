@@ -1,0 +1,114 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    4  (pwd; history) | cat >> pq2/README
+    5  cd pq2/
+    6  pico README 
+    7  less README 
+    8  cd practice1/
+    9  rm BigFibonacci.java 
+   10  submit111 practice1
+   11  less feedback.txt 
+   12  pico BigFibonacci.java 
+   13  pico BigFibonacci.java 
+   14  cd practice1/
+   15  pico BigFibonacci.java
+   16  less BigFibonacci.java
+   17  pico BigFibonacci.java
+   18  submit111 practice1
+   19  less feedback.txt 
+   20  less feedback.txt 
+   21  cd practice1/
+   22  rm BigFibonacci.java
+   23  rm BigFibonacci.java.save 
+   24  rm feedback.txt 
+   25  less BigFibonacci.java 
+   26  pico BigFibonacci.java 
+   27  submit111 practice1
+   28  ls
+   29  less feedback.txt 
+   30  cd practice1
+   31  ls
+   32  less feedback.txt 
+   33  rm BigFibonacci.java 
+   34  cd practice1/
+   35  submit111 practice1
+   36  less feedback.txt 
+   37  less feedback.txt 
+   38  pico BigFibonacci.java 
+   39  submit111 practice1
+   40  less feedback.txt 
+   41  cd pq2/
+   42  ls
+   43  less README 
+   44  cd pq2/
+   45  submit111 pq2
+   46  less feedback.txt 
+   47  less pq2/feedback.txt 
+   48  mkdir hw11
+   49  cd hw11
+   50  history
+   51  (pwd; history) | cat >> hw11/README
+   52  (pwd; history) | cat >> hw11/README
+   53  cd
+   54  (pwd; history) | cat >> hw11/README
+   55  cd hw11/
+   56  pico README 
+   57  less README 
+   58  submit111 hw11
+   59  less feedback.txt 
+   60  rm BigFraction.java 
+   61  cd hw11
+   62  less feedback.txt 
+   63  ls
+   64  rm feedback.txt 
+   65  cd hw11
+   66  submit111 hw11
+   67  less feedback.txt 
+   68  mkdir dp
+   69  history
+   70  (pwd; history) | cat >> dp/README
+   71  cd dp/
+   72  ls
+   73  pico README 
+   74  less README 
+   75  submit111 dp
+   76  less feedback.txt 
+   77  pq/less feedback.txt 
+   78  cd dp
+   79  less feedback.txt 
+   80  pico DPFun.java 
+   81  submit111 dp
+   82  less feedback.txt 
+   83  rm dp/DPFun.java 
+   84  cd dp/
+   85  submit111 dp
+   86  less feedback.txt 
+   87  pico DPFun.java 
+   88  submit111 dp
+   89  less feedback.txt 
+   90  mkdir la1
+   91  cd la1/
+   92  history
+   93  (pwd; history) | cat >> la1/README
+   94  cd
+   95  (pwd; history) | cat >> la1/README
+   96  cd la1/
+   97  pico README 
+   98  less README 
+   99  submit111 la1
+  100  less feedback.txt 
+  101  mkdir la2
+  102  history
+  103  (pwd; history) | cat >> la2/README

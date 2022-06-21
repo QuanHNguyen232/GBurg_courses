@@ -1,0 +1,112 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    7  cd
+    8  mkdir pq2
+    9  cd practice1/
+   10  submit111 practice1
+   11  ls
+   12  less feedback.txt 
+   13  cd
+   14  history
+   15  (pwd; history) | cat >> pq2/README
+   16  cd pq2/
+   17  pico README 
+   18  less README 
+   19  cd practice1/
+   20  rm BigFibonacci.java 
+   21  submit111 practice1
+   22  less feedback.txt 
+   23  pico BigFibonacci.java 
+   24  pico BigFibonacci.java 
+   25  cd practice1/
+   26  pico BigFibonacci.java
+   27  less BigFibonacci.java
+   28  pico BigFibonacci.java
+   29  submit111 practice1
+   30  less feedback.txt 
+   31  less feedback.txt 
+   32  cd practice1/
+   33  rm BigFibonacci.java
+   34  rm BigFibonacci.java.save 
+   35  rm feedback.txt 
+   36  less BigFibonacci.java 
+   37  pico BigFibonacci.java 
+   38  submit111 practice1
+   39  ls
+   40  less feedback.txt 
+   41  cd practice1
+   42  ls
+   43  less feedback.txt 
+   44  rm BigFibonacci.java 
+   45  cd practice1/
+   46  submit111 practice1
+   47  less feedback.txt 
+   48  less feedback.txt 
+   49  pico BigFibonacci.java 
+   50  submit111 practice1
+   51  less feedback.txt 
+   52  cd pq2/
+   53  ls
+   54  less README 
+   55  cd pq2/
+   56  submit111 pq2
+   57  less feedback.txt 
+   58  less pq2/feedback.txt 
+   59  mkdir hw11
+   60  cd hw11
+   61  history
+   62  (pwd; history) | cat >> hw11/README
+   63  (pwd; history) | cat >> hw11/README
+   64  cd
+   65  (pwd; history) | cat >> hw11/README
+   66  cd hw11/
+   67  pico README 
+   68  less README 
+   69  submit111 hw11
+   70  less feedback.txt 
+   71  rm BigFraction.java 
+   72  cd hw11
+   73  less feedback.txt 
+   74  ls
+   75  rm feedback.txt 
+   76  cd hw11
+   77  submit111 hw11
+   78  less feedback.txt 
+   79  mkdir dp
+   80  history
+   81  (pwd; history) | cat >> dp/README
+   82  cd dp/
+   83  ls
+   84  pico README 
+   85  less README 
+   86  submit111 dp
+   87  less feedback.txt 
+   88  pq/less feedback.txt 
+   89  cd dp
+   90  less feedback.txt 
+   91  pico DPFun.java 
+   92  submit111 dp
+   93  less feedback.txt 
+   94  rm dp/DPFun.java 
+   95  cd dp/
+   96  submit111 dp
+   97  less feedback.txt 
+   98  pico DPFun.java 
+   99  submit111 dp
+  100  less feedback.txt 
+  101  mkdir la1
+  102  cd la1/
+  103  history
+  104  (pwd; history) | cat >> la1/README
+  105  cd
+  106  (pwd; history) | cat >> la1/README

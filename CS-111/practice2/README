@@ -1,0 +1,110 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    6  less README 
+    7  submit111 dp
+    8  less feedback.txt 
+    9  pq/less feedback.txt 
+   10  cd dp
+   11  less feedback.txt 
+   12  pico DPFun.java 
+   13  submit111 dp
+   14  less feedback.txt 
+   15  rm dp/DPFun.java 
+   16  cd dp/
+   17  submit111 dp
+   18  less feedback.txt 
+   19  pico DPFun.java 
+   20  submit111 dp
+   21  less feedback.txt 
+   22  mkdir la1
+   23  cd la1/
+   24  history
+   25  (pwd; history) | cat >> la1/README
+   26  cd
+   27  (pwd; history) | cat >> la1/README
+   28  cd la1/
+   29  pico README 
+   30  less README 
+   31  submit111 la1
+   32  less feedback.txt 
+   33  mkdir la2
+   34  history
+   35  (pwd; history) | cat >> la2/README
+   36  cd la2/
+   37  ls
+   38  pico README 
+   39  less README 
+   40  cd la2/
+   41  submit111 CharacterRectangle.java 
+   42  submit111 la2
+   43  less feedback.txt 
+   44  rm CharacterRectangle.java 
+   45  rm feedback.txt 
+   46  submit111 la2
+   47  less feedback.txt 
+   48  less la2/feedback.txt 
+   49  mkdir hw12
+   50  history 
+   51  (pwd; history) | cat >> hw12/README
+   52  cd  hw12/
+   53  ls
+   54  pico README 
+   55  less README 
+   56  submit111 hw12
+   57  less feedback.txt 
+   58  mkdir la3
+   59  history
+   60  (pwd; history) | cat >> la3/README
+   61  cd la3/
+   62  pico README 
+   63  less README 
+   64  cd la3/
+   65  submit111 la3
+   66  less feedback.txt 
+   67  rm feedback.txt 
+   68  rm ThreePileNimAdvisor.java 
+   69  submit111 la3
+   70  less feedback.txt 
+   71  rm ThreePileNimAdvisor.java 
+   72  submit111 la3
+   73  less feedback.txt 
+   74  mkdir la4
+   75  cd la4/
+   76  history
+   77  (pwd; history) | cat >> la4/README
+   78  cd
+   79  (pwd; history) | cat >> la4/README
+   80  cd la4/
+   81  pico README 
+   82  less README 
+   83  cd la4/
+   84  less Array2DExercises.java 
+   85  submit111 la4
+   86  less feedback.txt 
+   87  rm feedback.txt 
+   88  rm Array2DExercises.java 
+   89  less feedback.txt 
+   90  less Array2DExercises.java 
+   91  pico Array2DExercises.java 
+   92  rm Array2DExercises.java 
+   93  cd la4/
+   94  ls
+   95  rm feedback.txt 
+   96  less Array2DExercises.java 
+   97  submit111 la4
+   98  less feedback.txt 
+   99  less feedback.txt 
+  100  mkdir practice2
+  101  cd practice2/
+  102  history
+  103  (pwd; history) | cat >> practice2/README
+  104  cd
+  105  (pwd; history) | cat >> practice2/README

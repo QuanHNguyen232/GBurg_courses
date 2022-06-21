@@ -1,0 +1,110 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    6  less hw4/Flip5.java 
+    7  pico hw4/Flip5.java 
+    8  submit111 hw4/
+    9  less feedback.txt 
+   10  less hw4/Flip5.java 
+   11  less feedback.txt 
+   12  less hw4/Flip5.java 
+   13  submit111 hw4/
+   14  less feedback.txt 
+   15  less hw4/Flip5.java 
+   16  pico hw4/Flip5.java 
+   17  less hw4/Flip5.java 
+   18  submit111 hw4/
+   19  less feedback.txt 
+   20  clear
+   21  rm hw4/Flip5.java 
+   22  rm F
+   23  rm Flip5.java 
+   24  less Flip5.java 
+   25  pico Flip5.java 
+   26  less Flip5.java 
+   27  pico Flip5.java 
+   28  cp Flip5.java hw4/
+   29  rm hw4/Flip5.java.save 
+   30  less hw4/Flip5.java 
+   31  submit111 hw4/
+   32  less feedback.txt 
+   33  submit111 hw4/
+   34  less feedback.txt 
+   35  submit111 hw4/
+   36  less feedback.txt 
+   37  submit111 hw4/
+   38  less feedback.txt 
+   39  clear
+   40  submit111 hw4/
+   41  less feedback.txt 
+   42  less feedback.txt 
+   43  mkdir hw5
+   44  cp ChuckALuck.java hw5/
+   45  cp Username.java hw5/
+   46  cp PentagonArea.java hw5/
+   47  history
+   48  clear
+   49  (pwd; history) | cat >> hw5/README
+   50  pico hw5/README 
+   51  less hw5/README 
+   52  submit111 hw5/
+   53  less feedback.txt 
+   54  less feedback.txt 
+   55  less feedback.txt 
+   56  history
+   57  mkdir pq1
+   58  (pwd; history) | cat >> pq1/README
+   59  pico pq1/README 
+   60  clear
+   61  cp Collatz.java pq1/
+   62  less pq1/README 
+   63  less pq1/Collatz.java 
+   64  submit111 pq1
+   65  less feedback.txt 
+   66  mkdir hw6
+   67  history
+   68  (pwd; history) | cat >> hw6/README
+   69  less hw6/README 
+   70  pico hw6/README 
+   71  less hw6/README 
+   72  cp PigTurn hw6/
+   73  cp PigTurn.java hw6/
+   74  cp PigTurn2.java hw6/
+   75  cp PigSolitaireGame.java hw6/
+   76  submit111 hw6/
+   77  less feedback.txt 
+   78  less feedback.txt 
+   79  mkdir hw7
+   80  cp PigAdvantage.java hw7/
+   81  cp AveragePigTurns.java hw7/
+   82  cp PigComputerGame.java hw7/
+   83  history 
+   84  (pwd; history) | cat >> hw7/README
+   85  less hw7/README 
+   86  pico hw7/README 
+   87  less hw7/README 
+   88  submit111 hw7/
+   89  less feedback.txt 
+   90  less feedback.txt 
+   91  rm hw7/PigAdvantage.java 
+   92  rm PigAdvantage.java 
+   93  cp PigAdvantage.java hw7/
+   94  submit111 hw7/
+   95  less feedback.txt 
+   96  less feedback.txt 
+   97  clear
+   98  less feedback.txt 
+   99  less feedback.txt 
+  100  less feedback.txt 
+  101  mkdir midterm
+  102  cp Midterm.java midterm/
+  103  historu
+  104  history
+  105  (pwd; history) | cat >> midterm/README

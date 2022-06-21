@@ -1,0 +1,111 @@
+Honor Pledge:
+"I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code."
+Signature: Quan Nguyen
+
+Name: Quan Nguyen
+Student ID: 6116885
+
+
+
+
+/Accounts/turing/students/s24/nguyqu03
+    8  history
+    9  (pwd; history) | cat >> midterm/README
+   10  pico midterm/README 
+   11  less midterm/README 
+   12  submit111 midterm/
+   13  less feedback.txt 
+   14  less feedback.txt 
+   15  history
+   16  history
+   17  mkdir hw8
+   18  cp PigGame.java hw8/
+   19  cp Statistics.java hw8/
+   20  (pwd; history) | cat >> hw8/README
+   21  pico hw8/README 
+   22  less hw8/README 
+   23  submit111 hw8/
+   24  less feedback.txt 
+   25  less feedback.txt 
+   26  less feedback.txt 
+   27  less feedback.txt 
+   28  less feedback.txt 
+   29  mkdir hw9
+   30  history
+   31  (pwd; history) | cat >> hw9/README
+   32  cp GCD.java hw9/
+   33  cp Divisors.java hw9/
+   34  cp MagicSquare.java hw9/
+   35  pico hw9/README 
+   36  less hw9/README 
+   37  submit111 hw9/
+   38  less feedback.txt 
+   39  less feedback.txt 
+   40  submit111 hw9/
+   41  less feedback.txt 
+   42  rm hw9/GCD.java 
+   43  rm GCD.java 
+   44  cp GCD.java hw9/
+   45  submit111 hw9/
+   46  less feedback.txt 
+   47  rm hw9/MagicSquare.java 
+   48  rm MagicSquare.java 
+   49  cp MagicSquare.java hw9/
+   50  less MagicSquare.java 
+   51  submit111 hw9/
+   52  less feedback.txt 
+   53  less feedback.txt 
+   54  ls
+   55  ls
+   56  javadoc -d doc Card.java Deck.java
+   57  mkdir hw10
+   58  history
+   59  (pwd; history) | cat >> hw10/README
+   60  pico hw10/README 
+   61  less hw10/README 
+   62  cp DiceHistogram.java hw10/
+   63  cp Chomp.java hw10/
+   64  cp ChompGame.java hw10/
+   65  submit111 hw10/
+   66  less feedback.txt 
+   67  rm Chomp.java 
+   68  rm ChompGame.java 
+   69  rm hw10/Chomp.java 
+   70  rm hw10/ChompGame.java 
+   71  cp Chomp.java hw10/
+   72  cp ChompGame.java hw10/
+   73  submit111 hw10/
+   74  less feedback.txt 
+   75  less feedback.txt 
+   76  pico hw10/ChompGame.java 
+   77  less hw10/ChompGame.java 
+   78  pico ChompGame.java 
+   79  submit111 hw10/
+   80  less feedback.txt 
+   81  less hw10/ChompGame.java 
+   82  pico hw10/ChompGame.java 
+   83  submit111 hw10/
+   84  less feedback.txt 
+   85  cd hw10/
+   86  ls
+   87  less ChompGame.java 
+   88  submit111 hw10
+   89  less feedback.txt 
+   90  cd
+   91  mkdir practice1
+   92  history
+   93  (pwd; history) | cat >> practice1/README
+   94  cd practice1/
+   95  pico R
+   96  pico README 
+   97  ls
+   98  less README 
+   99  cd
+  100  mkdir pq2
+  101  cd practice1/
+  102  submit111 practice1
+  103  ls
+  104  less feedback.txt 
+  105  cd
+  106  history
+  107  (pwd; history) | cat >> pq2/README

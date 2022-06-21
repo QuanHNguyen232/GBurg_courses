@@ -1,0 +1,19 @@
+Testing initiated. Mon Apr 12 11:22:58 EDT 2021
+Creature.java submitted.
+CreatureFight.java submitted.
+Compilation of all java files succeeded.
+Testing CreatureFight:
+JUnit version 4.11
+.
+Time: 0.017
+
+OK (1 test)
+
+Testing Creature:
+JUnit version 4.11
+....
+Time: 0.02
+
+OK (4 tests)
+
+Testing completed. Mon Apr 12 11:23:00 EDT 2021
