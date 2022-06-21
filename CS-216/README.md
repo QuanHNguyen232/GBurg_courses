@@ -9,13 +9,13 @@ Textbook:
 
 #### HWs comment
 1. [HW1: Linked lists](#HW1-Linked-lists)
-2. [HW2: Priority queue and binary search tree](#HW2:-Priority-queue-and-binary-search-tree)
-3. [HW3: Hash tables](#HW3:-Hash-tables)
-4. [HW4: AVL trees](#HW4:-AVL-trees)
-5. [HW5: Graph theory](#HW5:-Graph-theory)
-6. [HW6: Graph code](#HW6:-Graph-code)
-7. [HW7: Graph paths](#HW7:-Graph-paths)
-8. [HW8: Weighted graphs](#HW8:-Weighted-graphs)
+2. [HW2: Priority queue and binary search tree](#HW2-Priority-queue-and-binary-search-tree)
+3. [HW3: Hash tables](#HW3-Hash-tables)
+4. [HW4: AVL trees](#HW4-AVL-trees)
+5. [HW5: Graph theory](#HW5-Graph-theory)
+6. [HW6: Graph code](#HW6-Graph-code)
+7. [HW7: Graph paths](#HW7-Graph-paths)
+8. [HW8: Weighted graphs](#HW8-Weighted-graphs)
 
 
 ## HW1: Linked lists
