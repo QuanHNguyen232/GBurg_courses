@@ -8,7 +8,7 @@ Textbook:
 
 
 #### HWs comment
-1. [HW1: Linked lists](#HW1:-Linked-lists)
+1. [HW1: Linked lists](#HW1-Linked-lists)
 2. [HW2: Priority queue and binary search tree](#HW2:-Priority-queue-and-binary-search-tree)
 3. [HW3: Hash tables](#HW3:-Hash-tables)
 4. [HW4: AVL trees](#HW4:-AVL-trees)
