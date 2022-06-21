@@ -1,0 +1,21 @@
+Java has 2 output stream: standard (out) and error (err)
+	-out: is buffered type, it will print when strings are all concatenated
+	-err: print immediately when errors happend
+	
+	
+------------------
+Object hiearrchy
+-Object
+	-Throwable (can throw anything like this in catch from try-catch)
+		-Exception
+			-RuntimeException
+				-ArithmeticException
+				-NullPointerException
+				-(Array)IndexOutOfBoundsException
+				-IllegalArgumentException
+			-IOException
+				-FileNotFoundException
+		-Error
+
+-Error, RuntimeException (ArithmeticException, NullPointer, IllegalArgumentException,...) are UNCHECKED exception
+-Exception, IOException, FileNotFoundException are CHECKED exception, which requires us to find a way to deal with that exception

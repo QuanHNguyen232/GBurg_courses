@@ -1,0 +1,14 @@
+Scene:
+	-IntroPane:
+		-BorderPane:
+			-textArea
+			-(top): FlowPane:
+				-Label
+				-TextField
+				-Button
+
+BorderPane structure: https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html -> setTop, ...
+GridPane structure:
+x| 0 | 1 |
+0|0,0|1,0|
+1|0,1|1,1|

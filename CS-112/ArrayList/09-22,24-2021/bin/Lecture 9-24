@@ -1,0 +1,26 @@
+s.equals("") is different from s == "quit"
+s == "quit" check if they are the same object
+s.equals("") check value only
+
+------------------------------
+4 types of modifier descending in restricted level:
+- private
+- protected
+- (default)/package: accessible within the package
+- public
+
+------------------------------
+keyword: final
+- on fields: prevent change value
+- on method: prevent override
+- on class: prevent subclass
+
+------------------------------
+ArrayList:
+- Only used for OBJECTS OR ARRAYS
+- NO OUT OF BOUND exception like array ?? Eg: ArrayList size = 1, can't get(2) //index
+- Declare:
+	+ArrayList<Double> arrDouble = new ArrayList<Double>(); OR
+	+ArrayList<Double> arrDouble = new ArrayList();
+- Remove: can be index or object in array
+	+ for integer arrayList, the parameter will be the default of index => can't do it with FOREACH loop

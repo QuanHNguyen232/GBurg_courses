@@ -1,0 +1,3 @@
+RGB color includes red, green, blue, alpha:
+	-double: from 0.0 -> 1.0
+	-int: from 0 -> 255

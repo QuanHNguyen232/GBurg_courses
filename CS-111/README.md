@@ -1,4 +1,4 @@
-# CS111
+# CS111 Spring 2020
 
 Instructor: [Prof. Todd Neller](http://cs.gettysburg.edu/~tneller/)
 

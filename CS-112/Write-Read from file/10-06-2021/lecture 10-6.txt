@@ -1,0 +1,27 @@
+Abstract class (if exists abstract method -> class must be an abstract ???):
+	-cannot create instance
+	-force subclass to modify the abstract method
+
+Interfaces:
+	-key word: public interface
+	-can have STATIC fields, CONSTANT, STATIC methods, ABSTRACT methods, DEFAULT methods (non-abstract)
+	-can't have: data fields, constructors
+	-E.g:
+	public interface Editable(){
+		public abstract void edit(); 
+	}
+	
+	When create a class:
+	public class MyShape implements Editable, Comparable, etc. {
+		public void edit() {
+		
+		}
+	} 
+	
+	-E.g2: Editable e = new MyShape();
+		-> e has edit() method; e instanceof MyShape
+	-E.g3: 10-15-2021
+		
+Side Note: operator: && vs &: if the first statement false:
+	- && does not check the 2nd
+	- & forces to check the 2nd
