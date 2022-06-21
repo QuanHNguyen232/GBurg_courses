@@ -1,0 +1,376 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{graphicx}
+\usepackage{pst-solides3d}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{calc}
+\usepackage{amssymb}
+\usepackage{natbib}
+
+
+%%Formatting
+\topmargin -.2in
+\textheight 9.2in
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.5in
+\parskip .1in
+
+\pagestyle{empty}
+
+\begin{document}
+
+\hrule
+\vspace{.2cm}
+
+{\Large \noindent Math 112 Honors
+\hfill
+B\'ela Bajnok}
+
+\vspace{.3cm}
+\hrule
+
+{\Large \noindent 
+Exam 3
+\hfill
+Fall 2020}
+
+\vspace{.3cm}
+\hrule
+
+\noindent NAME:  Quan Nguyen
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent Write and sign the full Honor Pledge here:
+
+\vspace{2mm}
+
+I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code. \par
+
+Quan Nguyen
+
+\vspace{8mm}
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent {\bf General instructions -- Please read!}
+
+\begin{itemize}
+  
+\item The purpose of this exam is to give you an opportunity to explore a complex and challenging question, gain a fuller view of calculus and its applications, and develop some creative writing, problem solving, and research skills.
+
+\item  {\bf All your assertions must be completely and fully justified.} At the same time, you should aim to be as concise as possible; avoid overly lengthy arguments and unnecessary components.  Your grade will be based on both mathematical accuracy and clarity of presentation.
+
+\item 
+Your finished exam should read as an article, consisting of complete sentences, thorough explanations, and exhibit correct grammar and punctuation.
+
+\item I encourage you to prepare your exam using LaTeX.  However, you may use instead other typesetting programs that you like, and you may use hand-writing or hand-drawing for some parts of your exam.  In any case, {\bf the final version that you submit must be in PDF format.}  
+
+\item It is acceptable (and even encouraged) to discuss the exams with other students in your class or with the PLA.  However,  {\bf  you must individually write up all parts of your exams.}
+
+\item {\bf You may use the text, your notes, and your homework, but no other sources.}
+ 
+\item You must write out a complete, honest, and detailed acknowledgment of all assistance you received and all resources you used (including other people) on all written work submitted for a grade.
+
+\item Submit your exam to me by email at bbajnok@gettysburg.edu by the deadline announced in class.
+
+
+
+
+
+
+
+\end{itemize}
+
+\noindent {\bf Good luck!}
+
+
+\newpage
+
+\begin{center}
+
+{\Large Different Viewpoints} 
+
+\end{center}
+
+\vspace*{.2in}
+
+
+\noindent  
+A three-dimensional object is given with the following views: its front view is a square, its side view is a triangle, and its top view is a circle.
+
+1.  Describe the object precisely in terms of its cross sections with respect to a particular direction.  (This is a standard question during job interviews at certain companies such as Microsoft.)  Note that there are two different objects with the given views---describe both.
+
+2.  Find the volume of both objects in terms of the radius of the top view circle.
+
+
+\newpage
+
+\begin{center}
+\underline {\Large {My work} }
+\end{center}
+
+\section*{Case 1:}
+    
+    \begin{enumerate}
+        \item Describe \par
+    
+    Viewing from the top, the object has circle shape with $r$ as its radius.
+    
+    From the front, that object looks like a square whose side lengths are the same as the diameter of the circle: $2r$, so the size of that square is $2r$ x $2r$.
+    
+    The cross section of this object is a equilateral triangle (side view on $xz$ plane) because its height $OS$ is a midperpendicular line to the base with $O$ is the center of the based circle. As the cross section moves away from the origin and along the $y$-axis, its height remains the same as the square's height ($OS=2r$), but its base becomes smaller depending on the circle.
+    \par
+    
+
+    %------------------------------------------
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[tdplot_main_coords, scale =1]
+        \draw[thick,->] (-5,0,0) -- (5,0,0) node[below left]{$x$};
+        \draw[thick,->] (0,-5,0) -- (0,5,0) node[below left]{$y$};
+        \draw[thick,->] (0,0,-2) -- (0,0,7) node[below left]{$z$};
+        \draw (0,0,0) node[below left, color=gray]{$O$};
+        \draw (0,3,0) node[below right]{$r$};
+        \draw (0,-3,0) node[above left]{$-r$};
+        \draw (0,0,6) node[above right]{S$(0,0,2r)$};
+        \draw (3,0,0) node[below right]{$r$};
+        
+        % The base
+	    \draw[dashed,color=gray] (0,-3,0) arc (270:90:3 and 3);
+	    \draw[semithick] (0,-3,0) arc (-90:90:3 and 3);
+	    
+	    % The square
+	    \draw[semithick] (0,-3,0) -- (0,-3,6);
+	    \draw[semithick] (0,3,0) -- (0,3,6);
+	    \draw[semithick] (0,-3,6) -- (0,3,6);
+	    
+	    % Triangles
+	    \filldraw[draw=black, fill=gray, opacity=0.2] (3,0,0) -- (-3,0,0) -- (0,0,6);
+	    \filldraw[draw=black, fill=gray, opacity=0.6] (2.5981,1.5,0) -- (-2.5981,1.5,0) -- (0,1.5,6);
+	    \draw[semithick] (0,1.5,0) -- (0,1.5,6);
+	    \draw[draw=gray, thick] (2.5981,1.5,0) -- (0,1.5,0);
+	    \draw[dashed, draw=gray, thin] (2.5981,1.5,0) -- (2.5981,0,0);
+	    \draw (0,1.5,0) node[above right]{B($0,y,0$)};
+	    \draw (2.5981,1.5,0) node[below right]{A($x,y,0$)};
+	    \draw (-2.5981,1.5,0) node[above right]{C($-x,y,0$)};
+	    
+        
+        %--------DRAFT---------
+        %\draw[dashed,color=gray] (0,0) arc (-90:90:0.5 and 1.5);% right half of the left ellipse
+        %\draw[semithick] (0,0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
+    	%\draw[semithick] (0,0,0) -- (0,4,1);% bottom line
+	    %\draw[semithick] (0,0,3) -- (0,4,2);% top line
+	    %\draw[semithick] (0,4,1.5) ellipse (0.166 and 0.5);% right ellipse
+	    %\draw[semithick] (0,0,0) ellipse (2.5 and 4);
+	    %\draw (-1,1.5) node {$\varnothing d_1$};
+	    %\draw (3.3,1.5) node {$\varnothing d_2$};
+	    %\draw[|-,semithick] (0,-0.5) -- (4,-0.5);
+	    %\draw[|->,semithick] (4,-0.5) -- (4.5,-0.5);
+	    %\draw (0,-1) node {$x=0$};
+	    %\draw (4,-1) node {$x=l$};
+        
+    \end{tikzpicture}
+    %------------------------
+    
+    \item Volume \par
+    \begin{itemize}
+    \item The length of cross section's base: \par
+    Here is the equation of the circle on $xy$ plane:
+    \begin{align*}
+        x^2+y^2&=r^2 \\
+        \Longleftrightarrow
+        x^2&=r^2-y^2 \\
+        \Longleftrightarrow
+        x&=\pm \sqrt{r^2-y^2}\\
+    \end{align*}
+    $\Longrightarrow$ $x$ is also the equation to find the length of $AB$. The length of AB must be positive, so the length of AB has the equation: $|x|=\sqrt{r^2-y^2}$.\par
+    
+    However, the cross section's base (triangle's base) is equal to the length of $AC$. Since the triangle is equilateral, $AC$ is equal to $2AB$. Thus, the length of the triangle's base $AC$ is: $$2|x|=2\sqrt{r^2-y^2}$$
+    
+    \item Area of the cross section (triangle):
+    \begin{align*}
+        \text{A}(y) &=\frac{1}{2}\left(\text{height}\cdot\text{base} \right)\\
+        &=\frac{1}{2}\left(OS\cdot AC\right)\\
+        &=\frac{1}{2}\left(2r\cdot 2\sqrt{r^2-y^2} \right)\\
+        &= 2r\sqrt{r^2-y^2}\\
+    \end{align*}
+    
+    \item Volume of the object: \par
+    Since the object is symmetric about $z$-axis on $yz$ plane, the object's volume from $-r \to 0$ is equal to object's volume from $0\to r$ on $y$-axis. \par
+    \begin{align*}
+    \mathrm{V}(y) = \int_{-r}^r \mathrm{A}(y)\; \mathrm{d}y
+    &=2 \int_{0}^r \mathrm{A}(y)\; \mathrm{d}y \\
+    &=2 \int_{0}^r 2r\sqrt{r^2-y^2} \; \mathrm{d}y\\
+    &=4r \int_{0}^r \sqrt{r^2-y^2} \; \mathrm{d}y
+    \end{align*}
+    
+    I let $y=r\sin{t}$ because when squaring both sides of the equation, $``y"\to ``y^2"$ and $``r\sin{t}"\to ``r^2\sin^2{t}"$. Then leave $r^2$ as factor, $1-\sin^2{t}=\cos^2{t}$ which cancels the square root: \par
+    \begin{equation*}
+        y=r\sin{t}\\
+        \Longleftrightarrow
+        \begin{cases}
+            \mathrm{d}y = r \cos{t}\; \mathrm{d}t\\
+            t=\arcsin{\frac{y}{r}}
+        \end{cases}
+    \end{equation*}
+    
+    
+    \begin{align*}
+    \mathrm{V}(y) &= 4r \int_{0}^r \sqrt{r^2-y^2} \; \mathrm{d}y \\
+    \Longrightarrow \mathrm{V}(y)&= 4r \int_{0}^r r\cos{t}\cdot\sqrt{r^2-r^2\sin^2{t}} \; \mathrm{d}t \\
+    &= 4r \int_{0}^r r\cos{t}\cdot \sqrt{r^2 \left(1-\sin^2{t}\right)} \; \mathrm{d}t \\
+    &= 4r \int_{0}^r r\cos{t}\cdot\sqrt{r^2 \cos^2{t}} \; \mathrm{d}t \\
+    &= 4r \int_{0}^r r\cos{t}\cdot r \cos{t} \; \mathrm{d}t \\
+    &= 4r \int_{0}^r r^2 \cos^2{t}\; \mathrm{d}t \\
+    &= 4r^3 \int_{0}^r \cos^2{t}\; \mathrm{d}t \\
+    &= 4r^3 \int_{0}^r \frac{1+\cos{2t}}{2}\; \mathrm{d}t \\
+    &= 2r^3\int_{0}^r 1\; \mathrm{d}t +2r^3 \int_{0}^r \cos{2t}\; \mathrm{d}t \\
+    &= 2r^3\int_{0}^r 1\; \mathrm{d}t
+    +r^3 \int_{0}^r 2\cos{2t}\; \mathrm{d}t \\
+    &= \left(2r^3 t \right)_0^r
+    +\left(r^3 \sin{2t} \right)_0^r \\
+    &= \left(2r^3 \arcsin{\frac{y}{r}}
+    \right)_0^r
+    +\left[r^3 \sin{\left( 2\arcsin{\frac{y}{r}} \right)} \right]_0^r \\
+    &= \left(2r^3\cdot \frac{\pi}{2}-0 \right)
+    +\left(0-0 \right) \\
+    &= \pi r^3 \\
+    \end{align*}
+    
+    In summary, the volume of the object that has triangle cross sections is $\pi r^3$.
+    
+    \end{itemize}
+
+    
+    \end{enumerate}
+
+    
+    \vspace{2cm}
+\newpage
+\section*{Case 2:}
+    
+    \begin{enumerate}
+        \item Describe \par
+        Viewing from the top, the object has circle shape with $r$ as its radius, which is the same as Case 1.
+        
+        However, from the front in Case 2, the object now is a equilateral triangle. The triangle has base length of $2r$ (equal to diameter of the based circle) and height of $2r$ so that it can create a $2r$ x $2r$ square when viewing from the side. The triangle is equilateral because its height is also $Oz$-axis, which is midperpendicular to the base.
+        
+        The cross section of this object is a square (side view) with the size of $2r$ x $2r$ on the $xz$ plane as I explained above. That cross section when moving away from origin $O$, along the $y$-axis, it loses square shape because its height decrease steadily due to triangle's side while its base decrease exponentially due to the circle.
+        \par
+    
+    %--------------------------
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[tdplot_main_coords, scale =1]
+    \draw[thick,->] (-5,0,0) -- (5,0,0) node[below left]{$x$};
+    \draw[thick,->] (0,-5,0) -- (0,5,0) node[below left]{$y$};
+    \draw[thick,->] (0,0,-2) -- (0,0,7) node[below left]{$z$};
+        
+    % The base
+	\draw[dashed,color=gray] (0,-3,0) arc (270:90:3 and 3);
+	\draw[semithick] (0,-3,0) arc (-90:90:3 and 3);
+    \draw (0,0,0) node[below left]{$O$};
+    \draw (0,3,0) node[above right]{B($0,r,0$)};
+    \draw (0,-3,0) node[above left]{$-r$};
+    \draw (0,0,6) node[left]{A($0,0,2r$)};
+	
+	% The triangle
+	\draw[semithick] (0,-3,0) -- (0,0,6);
+	\draw[semithick] (0,3,0) -- (0,0,6);
+
+	% Squares
+	\filldraw[draw=black, fill=gray, opacity=0.2] (3,0,0) -- (-3,0,0) -- (-3,0,6) -- (3,0,6);
+	\filldraw[draw=black, fill=gray, opacity=0.6] (2.5981,1.5,0) -- (-2.5981,1.5,0) -- (-2.5981,1.5,3) -- (2.5981,1.5,3);
+	\draw[semithick] (-2.5981,1.5,0) -- (2.5981,1.5,0);
+	\draw[semithick] (0,1.5,0) -- (0,1.5,3);
+
+    \end{tikzpicture}
+    %----------------------------
+    
+    
+    \item Volume \par
+    \begin{itemize}
+    \item Height of the cross section:\par
+    
+    Because the triangle (on $yz$ plane) is symmetric about $z$-axis, the change in cross section's height from $O\to -r$ is the same as that from $O\to r$, so I only need to find the equation of the line $AB$ (from $O\to r$).
+    
+    The general formula of linear line $AB$: $$z = my + b$$ \par
+    The $z$ intercept of the line $AB$ on $yz$ plane is $A(0,0,2r)$, and the $y$ intercept is $B(0,r,0)$. Plug these two coordinations into the general formula, I have a system of two equations:
+    \begin{equation*}
+    \begin{cases}
+        2r=0 + b\\
+        0=rm+b
+    \end{cases} \\
+    \Longleftrightarrow
+    \begin{cases}
+        b=2r\\
+        m=-2
+    \end{cases}
+    \end{equation*}
+    Therefore, the equation for height of square is:
+    $$z=-2y+2r$$
+    
+    \par
+    \item Equation for base of the cross section (on $xy$ plane), same as in Case 1:
+    $$2x=2\sqrt{r^2-y^2}$$ \par
+    \item Area of cross section (rectangle): 
+    \begin{align*}
+        \mathrm{A}(y)&=\text{height} \cdot \text{base}\\
+        &=z\cdot 2x \\
+        &=\left(-2y+2r\right)\cdot 2\sqrt{r^2-y^2}\\
+        &= 4\left(r-y\right)\sqrt{r^2-y^2}\\
+        &= 4r\sqrt{r^2-y^2}-4y\sqrt{r^2-y^2}
+    \end{align*}
+    
+    \item Volume of the object (similar to Case 1):. \par
+    \begin{align*}
+    \mathrm{V}(y) = \int_{-r}^r \mathrm{A}(y)\; \mathrm{d}y
+    &=2 \int_{0}^r \mathrm{A}(y)\; \mathrm{d}y \\
+    &=2 \int_{0}^r\left( 4r\sqrt{r^2-y^2}-4y\sqrt{r^2-y^2}\right) \; \mathrm{d}y\\
+    &=2\cdot 4r \int_{0}^r \sqrt{r^2-y^2}\; \mathrm{d}y
+    - 8\int_{0}^r y\sqrt{r^2-y^2} \; \mathrm{d}y\\
+    &=2\pi r^3
+    - 8\int_{0}^r y\sqrt{r^2-y^2} \; \mathrm{d}y
+    \quad \left(4r \int_{0}^r \sqrt{r^2-y^2} \; \mathrm{d}y=\pi r^3\right)
+    \end{align*}
+    
+    Assuming that:
+    \begin{align*}
+        &t=\sqrt{r^2-y^2}\\
+        \Longrightarrow &t^2 = r^2-y^2\\
+        \Longrightarrow &2t\; \mathrm{d}t = -2y\;\mathrm{d}y\\
+        \Longrightarrow &t\; \mathrm{d}t = -y\;\mathrm{d}y\\
+    \end{align*}
+    
+    \begin{align*}
+        \mathrm{V}(y) &=2\pi r^3
+        - 8\int_{0}^r y\sqrt{r^2-y^2} \; \mathrm{d}y\\
+        \Longrightarrow \mathrm{V}(y)
+        &=2\pi r^3
+        + 8\int_{0}^r t^2 \; \mathrm{d}t\\
+        &=2\pi r^3
+        + 8\left(\frac{t^3}{3}\right)_0^r\\
+        &=2\pi r^3
+        + \frac{8}{3}\left[\left(r^2-y^2 \right) \sqrt{r^2-y^2}\right]_0^r \\
+        &=2\pi r^3
+        + \frac{8}{3}\left(0 -r^2 \sqrt{r^2} \right) \\
+        &=2\pi r^3- \frac{8}{3}r^3\\
+        &=2r^3 \left(\pi -\frac{4}{3}\right)
+    \end{align*}
+
+        \end{itemize}
+    
+    In summary, the volume of the object that has rectangle cross sections is $ 2r^3\left(\pi -\frac{4}{3}\right)$.
+    
+    \end{enumerate}
+
+    
+
+
+
+\end{document}

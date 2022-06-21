@@ -1,0 +1,357 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+
+%%Formatting
+\topmargin -.2in
+\textheight 9.2in
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.5in
+\parskip .1in
+
+\pgfplotsset{width=10cm,compat=1.9}
+
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\hrule
+\vspace{.2cm}
+
+{\Large \noindent Math 112 Honors
+\hfill
+B\'ela Bajnok}
+
+\vspace{.3cm}
+\hrule
+
+{\Large \noindent 
+Exam 4
+\hfill
+Fall 2020}
+
+\vspace{.3cm}
+\hrule
+
+\noindent NAME:  Quan Nguyen
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent Write and sign the full Honor Pledge here:
+
+\vspace{2mm}
+
+I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code. \par
+
+Quan Nguyen
+
+\vspace{8mm}
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent {\bf General instructions -- Please read!}
+
+\begin{itemize}
+  
+\item The purpose of this exam is to give you an opportunity to explore a complex and challenging question, gain a fuller view of calculus and its applications, and develop some creative writing, problem solving, and research skills.
+
+\item  {\bf All your assertions must be completely and fully justified.} At the same time, you should aim to be as concise as possible; avoid overly lengthy arguments and unnecessary components.  Your grade will be based on both mathematical accuracy and clarity of presentation.
+
+\item 
+Your finished exam should read as an article, consisting of complete sentences, thorough explanations, and exhibit correct grammar and punctuation.
+
+\item I encourage you to prepare your exam using LaTeX.  However, you may use instead other typesetting programs that you like, and you may use hand-writing or hand-drawing for some parts of your exam.  In any case, {\bf the final version that you submit must be in PDF format.}  
+
+\item It is acceptable (and even encouraged) to discuss the exams with other students in your class or with the PLA.  However,  {\bf  you must individually write up all parts of your exams.}
+
+\item {\bf You may use the text, your notes, and your homework, but no other sources.}
+ 
+\item You must write out a complete, honest, and detailed acknowledgment of all assistance you received and all resources you used (including other people) on all written work submitted for a grade.
+
+\item Submit your exam to me by email at bbajnok@gettysburg.edu by the deadline announced in class.
+
+
+
+
+
+
+
+\end{itemize}
+
+\noindent {\bf Good luck!}
+
+
+\newpage
+
+\begin{center}
+
+{\Large Probability -- Prove Your Ability} 
+
+\end{center}
+
+\vspace*{.2in}
+
+
+\noindent  A certain university mathematics department offers, among others, a course on Combinatorics, a course on Probability, and a course on Statistics.  On a certain day, exams are given in each class, with a maximum possible score of 10 points in each; while in Combinatorics and Probability the achievable scores were all integers, in Statistics all values between 0 and 10 were possible.  The instructors gather the following information:
+
+\begin{itemize}
+  \item In the Combinatorics class, the scores were as follows:
+  
+$$1, 3, 4, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 10.$$
+
+\item In the Probability class, for each integer value of $n$ between 0 and 10, inclusive, the number of students who scored $n$ points was $(15n-n^2)/2$.
+
+\item In the Statistics class, the number of students earning $x$ points (with $x$ between 0 and 10) could be approximated by the formula
+
+$$63 \cdot \mathrm{e}^{-(x-7)^2/4}.$$
+
+\end{itemize}
+
+Answer the following questions for each of the three classes.  Use histograms, Riemann sums, or definite integrals as you see fit.
+
+
+\begin{enumerate}
+
+\item  How many students scored a 7?
+
+\item  How many students scored a 7 or higher?
+
+\item  How many students took the exam?
+
+\item  What was the mode (the ``most frequent'' score)?
+
+\item  What is the probability that a ``randomly'' selected student scored a 7 or higher?
+
+\item  What was the mean (the ``average'' score)?
+
+\item  What was the median (the ``middle'' score)?
+
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+    \underline {\Large {My work} }
+\end{center}
+
+Some formulas and conventions that I use in this exam:
+\begin{itemize}
+    \item The mean score (average score):
+    $$=\frac{\text{Total scores}}{\text{Total number of student}}$$
+    \item The probability: 
+    $$=\frac{\text{Number of student scored a 7 or higher}}{\text{Total number of student took exam}}$$
+    \item All numbers are rounded to the nearest one.
+    \item The total number of student taking the exam is equal to the total frequency of all scores from 0 to 10.
+    \item All numbers with decimal are rounded to the nearest one.
+\end{itemize}
+
+
+\section*{Combinatorics class}
+    \begin{center}
+    \begin{tabular}{l | c*{10}r}
+        Score &0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 \\
+        \hline
+        Frequency &0 &1 &0 &1 &1 &2 &3 &5 &4 &2 &1
+    \end{tabular}
+    \end{center}
+
+
+    \begin{enumerate}
+        \item Number of students scored a 7: $5$.
+        
+        \item Number of students scored a 7 or higher: $12$.\par
+        Explain: 5 students scored a 7; 4 students scored a 8; 2 students scored a 9; 1 students scored a 10.
+        
+        \item Number of students took the exam: 20. \par
+        Explain: The number of students took the exam is equal to the total frequency of all scores from $1 \to 10$
+        
+        \item The most frequent score: $7$ \par
+        Explain: The highest frequency is 5. The score with 5 in frequency is 7.
+        
+        \item Probability = $\frac{12}{20}= \frac{3}{5}$.
+        
+        \item The mean score = $\frac{1\cdot 1+3\cdot 1+4\cdot 1+5\cdot 2+6\cdot 3+7\cdot 5+8\cdot 4+9\cdot 2+10\cdot 1}{20}=
+        \frac{131}{20} = 6.55$.
+        
+        \item There are 20 numbers in total, so the middle number will be a number that is in the middle of 10th and 11th number counting from score of $0\to 10$ \par
+        The middle = $\frac{7+7}{2} = 7$
+        
+        \begin{center}
+            \begin{tabular}{l | c|c|c|c|c|c|c|c|c|c |r}
+                Score & 1 & 3 & 4 & 5 & \dots & 6 & 7 & 7 & 7 & \dots & 10 \\
+                \hline
+                &1st &2nd &3rd &4th &\dots &8th &9th &10th &11th &\dots &20th \\
+            \end{tabular}
+        \end{center}
+        
+        \vspace{0.5cm}
+
+        %Column chart
+        % Why still lose 10th column ???
+        %\begin{tikzpicture}
+        %\begin{axis}[
+		%    xlabel=Score,
+	    %    ylabel=Frequency,
+	    %    xmin=0, xmax=10,
+	    %    ymin=0, ymax=6,
+	    %    enlargelimits=0.0,
+	    %    legend columns=-1,
+        %	ybar interval=1,
+        %]
+        %\addplot 
+        %	coordinates {(0, 0) (1, 1) (2, 0) (3, 1) (4, 1) (5, 2) (6, 3) (7, 5) (8, 4) (9, 2) (10, 1)};
+        %\end{axis}
+        %\end{tikzpicture}
+
+    \end{enumerate}
+    
+\section*{Probability class}
+The general equation to calculate number of students (frequency) who scored n points: $$f(n)=\frac{15n-n^2}{2}$$ \par
+    \begin{center}
+    \begin{tabular}{l | c*{10}r}
+        Score ($n$) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+        \hline
+        Frequency ($f(n)$)
+        &0 &7 &13 &18 &22 &25 &27 &28 &28 &27 &25 \\
+    \end{tabular}
+\end{center}
+
+% Notice: $\int_0^{10}\frac{15n-n^2}{2}\; \mathrm{d}n=208$ without $(-0.5 \to 0)$ and $(10 \to 10.5)$
+
+    \begin{enumerate}
+        \item Number of students scored a 7: 28.
+        
+        \item Number of students scored a 7 or higher: 108.\par
+        $$\sum_{x=7}^{10}\frac{15x-x^2}{2}=108$$
+        
+        \item 
+        Number of students took the exam: 220.\par
+        $$\sum_{x=0}^{10}\frac{15x-x^2}{2}=220$$
+            
+        
+        \item The most frequent score is 7 and 8. \par
+        Explain: 28 students scored 7 and 28 students scored 8. 28 was also the most frequent score.
+        
+
+        \item Probability: $$=\;\frac{108}{220}\;=\;\frac{27}{55}$$
+        
+        \item The mean:
+        $$=\frac{0+(1\cdot 7)+(2\cdot 13)+(3\cdot 18)+\cdots+(8\cdot 28)+(9\cdot 27)+(10\cdot 25)}{220}
+        =\frac{25}{4}
+        =6.25$$
+        
+        \item There are 220 students taking the exam, so the middle number will be a number that is in the middle of 110th and 111th number counting from score of $0 \to 10$\par
+        The middle: $$=\frac{6+6}{2}=6$$
+        
+        \begin{center}
+            \begin{tabular}{l |c|c|c|c|c|c|c|c|c|c|c| r}
+                Score & 1 & 1 & 1 & 1 & \dots & 6 & 6 & 6 & 7 & \dots & 10 \\
+                \hline
+                &1st &2nd &3rd &4th &\dots &110th &111th &112th &113th &\dots &220th \\
+            \end{tabular}
+        \end{center}
+        
+    \end{enumerate}
+    
+
+\vspace{5cm}
+
+
+%\begin{tikzpicture}
+%\begin{axis}[
+%    axis lines = left,
+%    xlabel = $Score$,
+%    ylabel = {$Frequency$},
+%]
+%
+% How to move legend away from the line ???
+%\addplot[
+%    color=blue,
+%    mark=square,
+%    ]
+%    coordinates {(0, 0) (1, 7) (2, 13) (3, 18) (4, 22) (5, 25) (6, 27) (7, 28) (8, 28) (9, 27) (10, 25)};
+%    \addlegendentry{$\frac{15x-x^2}{2}$}
+
+%\end{axis}
+%\end{tikzpicture}
+
+\newpage
+\section*{Statistic class}
+The general equation to calculate number of students (frequency) who scored $x$ points: $$f(x)=63e^{\frac{ -\left(x-7 \right)^2}{4}} $$ \par
+\begin{center}
+    \begin{tabular}{l | c*{10}r}
+        Score ($x$) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+        \hline
+        Frequency &0 &0 &0 &1 &7 &24 &49 &62 &49 &24 &7 \\
+    \end{tabular}
+\end{center}
+
+    \begin{enumerate}
+        \item Number of students scored a 7: $$\int_{6.5}^{7.5} f(x)\;\mathrm{d}x = 61.7=62
+        \qquad (\text{rounded to the nearest 1})$$. \par
+
+        \item Number of students scored a 7 or higher (equal to sum number of students scored 7, 8, 9, and 10): 
+        \begin{align*}
+        &\int_{6.5}^{7.5} f(x)\;\mathrm{d}x 
+        + \int_{7.5}^{8.5} f(x)\;\mathrm{d}x
+        + \int_{8.5}^{9.5} f(x)\;\mathrm{d}x
+        + \int_{9.5}^{10} f(x)\;\mathrm{d}x \\
+        =\quad& \int_{6.5}^{10} f(x)\;\mathrm{d}x \\
+        =\quad& 138.7 \\
+        =\quad& 139 \qquad (\text{rounded to the nearest 1})
+        \end{align*}
+
+        \item Number of students took the exam (equal to total number of students scored from $0\to 10$):
+        \begin{align*}
+            &\int_{0}^{0.5} f(x)\;\mathrm{d}x 
+            + \int_{0.5}^{1.5} f(x)\;\mathrm{d}x 
+            +\cdots
+            + \int_{8.5}^{9.5} f(x)\;\mathrm{d}x
+            + \int_{9.5}^{10} f(x)\;\mathrm{d}x \\
+            =\quad&\int_{0}^{10} f(x)\;\mathrm{d}x \\
+            =\quad& 219.5 \\
+            =\quad& 220 \qquad (\text{rounded to the nearest 1})
+        \end{align*}
+        
+        
+        \item The most frequent score: 7. Because the highest frequency was 62 and 62 students scored 7.
+        
+        \item Probability:
+        $$\left(\int_{6.5}^{10} f(x)\;\mathrm{d}x \right) 
+        \;\div 
+        \left(\int_{0}^{10} f(x)\;\mathrm{d}x \right)
+        = \frac{139}{220}$$
+
+        
+        \item The mean:
+        \begin{align*}
+            &=\left( \int_0^{10}x\cdot f(x) \;\mathrm{d} x\right)
+            \div
+            \left(\int_0^{10} f(x) \;\mathrm{d}x \right) \\
+            &= \frac{1}{220} \int_0^{10}x\cdot f(x) \;\mathrm{d}x \\
+            &= 6.93
+        \end{align*}
+        
+
+        \item There are 220 students taking the exam, so the middle number will be a number that is in the middle of 110th and 111th number counting from score of $0 \to 10$. \par
+        The middle $$=\frac{7+7}{2}= 7 $$
+        
+        \begin{center}
+            \begin{tabular}{l | c|c|c|c|c|c|c|c|c|c |r}
+                Score & 3 & 4 & 4 & 4 & 4 & \dots & 7 & 7 & \dots & 10 \\
+                \hline
+                &1st &2nd &3rd &4th &5th &\dots &110th &111th &\dots & 220th \\
+            \end{tabular}
+        \end{center}
+        
+    \end{enumerate}
+
+
+\end{document}

@@ -1,6 +1,4 @@
-# DS-325-Applied-Data-Science
-
-Took in Spring 2022 semester at Gettysburg College.
+# DS325 Spring 2022
 
 Instructor: Prof. James Puckett
 

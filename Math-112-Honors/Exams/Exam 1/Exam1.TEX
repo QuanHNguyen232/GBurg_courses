@@ -1,0 +1,305 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cases} 
+
+
+
+%%Formatting
+\topmargin -.2in
+\textheight 9.2in
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.5in
+\parskip .1in
+
+\pagestyle{empty}
+
+\begin{document}
+
+\hrule
+\vspace{.2cm}
+
+{\Large \noindent Math 112 Honors
+\hfill
+B\'ela Bajnok}
+
+\vspace{.3cm}
+\hrule
+
+{\Large \noindent 
+Exam 1
+\hfill
+Due: 11:59 PM, September 10, 2020}
+
+\vspace{.3cm}
+\hrule
+
+\noindent NAME:  Quan Nguyen
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent Write and sign the full Honor Pledge here:
+
+\vspace{2mm}
+
+I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code.\par
+\par
+Quan Nguyen
+
+\vspace{8mm}
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent {\bf General instructions -- Please read!}
+
+\begin{itemize}
+  
+\item The purpose of this exam is to give you an opportunity to explore a complex and challenging question, gain a fuller view of calculus and its applications, and develop some creative writing, problem solving, and research skills.
+
+\item  {\bf All your assertions must be completely and fully justified.} At the same time, you should aim to be as concise as possible; avoid overly lengthy arguments and unnecessary components.  Your grade will be based on both mathematical accuracy and clarity of presentation.
+
+\item 
+Your finished exam should read as an article, consisting of complete sentences, thorough explanations, and exhibit correct grammar and punctuation.
+
+\item I encourage you to prepare your exam using LaTeX.  However, you may use instead other typesetting programs that you like, and you may use hand-writing or hand-drawing for some parts of your exam.  In any case, {\bf the final version that you submit must be in PDF format.}  
+
+\item It is acceptable (and even encouraged) to discuss the exams with other students in your class or with the PLA.  However,  {\bf  you must individually write up all parts of your exams.}
+
+\item {\bf You may use the text, your notes, and your homework, but no other sources.}
+ 
+\item You must write out a complete, honest, and detailed acknowledgment of all assistance you received and all resources you used (including other people) on all written work submitted for a grade.
+
+\item Submit your exam to me by email at bbajnok@gettysburg.edu.  {\bf Your completed exam is due not later than 11:59 PM, September 10, 2020.}
+
+
+
+
+
+
+
+\end{itemize}
+
+\noindent {\bf Good luck!}
+
+
+\newpage
+
+\begin{center}
+
+{\Large Mathematical Survivor} 
+
+\end{center}
+
+\vspace*{.2in}
+
+\noindent This game begins with $n$ people on an island.  The people are numbered 1 through $n$.  Each day, the remaining islanders vote on whether the remaining islander with the highest number can stay on the island.  If half or more of them say the person with the highest number must leave, then that person leaves the island and the game continues.  Otherwise, the game ends and the remaining islanders split a million dollars equally.  Assume the islanders act independently, are perfectly rational, and will vote in whatever way will give them the most money at the end.  How long will the game last and how many people will remain on the island at the end?
+
+
+\begin{enumerate}
+  
+\item Work out the details of the game for small values of $n$, such as $n=1, 2, 3, \dots, 10$.  In each case, determine how long the game lasts and the number of people left on the island at the end.
+
+\item Suppose that $n=100$.  Determine how long the game lasts and the number of people left on the island at the end.
+
+\item Answer the questions for a general $n$.  Give your answers as functions of $n$.
+
+\item Verify that your general answer agrees with your answers for small values of $n$ that you determined earlier. 
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\underline{\Large{My Work}}
+\end{center}
+
+In this game, I assume that:
+\begin{itemize}
+    \item Person number 1, 2, 3, etc. will be called as 1st, 2nd, 3rd, etc.
+    \item Assuming that every people choose the optimal choice, so they can win most money, for example: 1st chooses the person with biggest number to leave, or person with biggest number definitely votes itself to stay because it absolutely wants to win the award.
+    \item Stay vote will be written as "S". Leave vote will be written as "L".
+\end{itemize}
+
+\textbf{Question 1}
+\begin{itemize}
+    \item When n=1:\\
+    1st day: 1st(S) \\
+    $\Longrightarrow$ \textbf{1 day; 1 winner.}
+    
+    \item When n=2:\\
+    1st day: 1st(L); 2nd(S) \\
+    2nd day: 1st(S) \\
+    $\Longrightarrow$ \textbf{1 day; 1 winner.}
+    
+    \item When n=3:\\
+    1st day: 1st(L); 2nd(S); 3rd(S) \\
+    $\Longrightarrow$ \textbf{1 day; 3 winners.}\\
+    
+    \item When n=4:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(S) \\
+    2nd day: 1st(L); 2nd(S); 3rd(S) \\
+    $\Longrightarrow$ \textbf{2 days; 3 winners.}
+    
+    \item When n=5:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(S/L); 5th(S) \\
+    2nd day: 1st(L); 2nd(L); 3rd(L); 4th(S) \\
+    3rd day: 1st(L); 2nd(S); 3rd(S) \\
+    $\Longrightarrow$ \textbf{3 days; 3 winners.}
+    
+    \item When n=6:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(S/L); 5th(S/L); 6th(S) \\
+    2nd day: 1st(L); 2nd(L); 3rd(L); 4th(S/L); 5th(S) \\
+    3rd day: 1st(L); 2nd(L); 3rd(L); 4th(S) \\
+    4th day: 1st(L); 2nd(S); 3rd(S) \\
+    $\Longrightarrow$ \textbf{4 days; 3 winners.}
+    
+    \item When n=7:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(S); 5th(S); 6th(S); 7th(S) \\
+    $\Longrightarrow$ \textbf{1 day; 7 winners.}\\
+    
+    \item When n=8:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S) \\
+    2nd day: 1st(L); 2nd(L); 3rd(L); 4th(S); 5th(S); 6th(S); 7th(S) \\
+    $\Longrightarrow$ \textbf{2 days; 7 winners.}
+    
+    \item When n=9:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S/L); 9th(S) \\
+    2nd day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S) \\
+    3rd day: 1st(L); 2nd(L); 3rd(L); 4th(S); 5th(S); 6th(S); 7th(S) \\
+    $\Longrightarrow$ \textbf{3 days; 7 winners.}
+    
+    \item When n=10:\\
+    1st day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S/L); 9th(S/L); 10th(S) \\
+    2nd day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S/L); 9th(S) \\
+    3rd day: 1st(L); 2nd(L); 3rd(L); 4th(L); 5th(L); 6th(L); 7th(L); 8th(S) \\
+    4th day: 1st(L); 2nd(L); 3rd(L); 4th(S); 5th(S); 6th(S); 7th(S) \\
+    $\Longrightarrow$ \textbf{4 days; 7 winners.}
+    
+\end{itemize}
+\underline{Explanation}:
+\begin{itemize}
+    \item n= 3: 2nd must choose S, so there are 2 S votes and 1 L vote. Thus, all 3 people win the game together. If 2nd does not vote S, it will be eliminated in the next day (same as n=2).
+    
+    \item n= 4, 5, 6: whatever 4th, 5th, and 6th vote, the first 3 people definitely want them to leave the island, so they can earn the most money as possible.
+    
+    \item n= 7: (Similar to n= 3) 4th, 5th, 6th, and 7th must vote S and all 7 people win the game together, or they have to leave the island.
+    
+    \item n= 8, 9, 10: (Similar to n= 4, 5, 6) 8th, 9th, and 10th have to leave whatever they vote.
+
+
+\end{itemize}
+
+
+\textbf{Question 3}
+
+\begin{itemize}
+    \item The formula to find number of winners:\par
+    
+Continuing this game, we will have a sequence number of winners: 
+$$1,\; 3,\; 7,\; 15,\; 31,\; 63, \dots $$
+
+If I add 1 into every terms in the sequence, I will get a new sequence:
+\begin{align*}
+    & 1+1,\; 3+1,\; 7+1,\; 15+1,\; 31+1,\; 63+1, \dots \\
+    =& 2,\; 4,\; 8,\; 16,\; 32,\; 64, \dots \\
+    =& 2^1,\; 2^2,\; 2^3,\; 2^4,\; 2^5,\; 2^6, \dots
+\end{align*}
+
+So, the sequence number of winners can be written as:
+$$2^1-1,\; 2^2-1,\; 2^3-1,\; 2^4-1,\; 2^5-1,\; 2^6-1, \dots$$
+
+Therefore, the general function to find the number of winners ($m$) with $x$ is an integer starting from $1\to \infty$:
+\begin{equation}
+    m=2^x-1 \quad\left(m,\;x\in \mathbb{N^*} \right)
+\end{equation}
+\par 
+
+
+Next, I need to find the equation for $x$ in the function (1):
+\begin{itemize}
+    \item $m=1\ \text{when}\ 1\leqslant n<3\  \Longleftrightarrow\ 2-1\leqslant n<4-1\ 
+    \Longleftrightarrow\ 2^1-1\leqslant n<2^2-1$ \par
+    
+    \item $m=3\ \text{when}\ 3\leqslant n<7\  \Longleftrightarrow\ 4-1\leqslant n<8-1\ 
+    \Longleftrightarrow\ 2^2-1\leqslant n<2^3-1$ \par
+    
+    \item $m=7\ \text{when}\ 7\leqslant n<15\ 
+    \Longleftrightarrow\ 8-1\leqslant n<16-1\ 
+    \Longleftrightarrow\ 2^3-1\leqslant n<2^4-1$ \par
+    
+    \item $m=15\ \text{when}\ 15\leqslant n<31\  \Longleftrightarrow\ 16-1\leqslant n<32-1\ 
+    \Longleftrightarrow 2^4-1\leqslant n<2^5-1$ \par
+    
+    \item \dots \par
+\end{itemize}
+
+
+The general formula: 
+\begin{align*}
+    &2^x-1\leqslant n<2^{x+1}-1 \\
+    \Longleftrightarrow\; &
+    2^x\leqslant n+1 <2^{x+1} \\
+    \Longleftrightarrow\; &
+    x\leqslant \log_2 \left(n+1\right) <x+1 \\
+    \Longleftrightarrow\; &
+    \log_2 \left(n+1\right)-1 <x \leqslant \log_2 \left(n+1\right) \\
+    \Longrightarrow\; & x = \lfloor\log_2\left(n+1\right)\rfloor \quad\left(x,\; n\in \mathbb{N^*} \right)
+\end{align*}
+
+Plugging $x$ back into function (1), the final function to find the number of winners in term of number of starting players is: $$m=2^{ \lfloor\log_2 \left(n+1 \right) \rfloor} -1 \quad \left(m,\; n\in \mathbb{N^*} \right)$$ \par
+
+
+
+    \item The formula to find number of days that the game lasts:\par
+Let's call the number of days is $d$\par
+\begin{itemize}
+    \item When $n=1, m=1$: the game lasts 1 day $\left(d=1-1+1\right)$.
+    \item When $n=2, m=1$: the game lasts 2 days $\left(d=2-1+1\right)$.
+    \item When $n=3, m=3$: the game lasts 1 day $\left(d=3-3+1\right)$.
+    \item When $n=4, m=3$: the game lasts 2 days $\left(d=4-3+1\right)$.
+    \item When $n=5, m=3$: the game lasts 3 days $\left(d=5-3+1\right)$.
+    \item When $n=6, m=3$: the game lasts 4 days $\left(d=6-3+1\right)$.
+    \item When $n=7, m=7$: the game lasts 1 day $\left(d=7-7+1\right)$.
+    \item When $n=8, m=7$: the game lasts 2 days $\left(d=8-7+1\right)$.
+    \item When $n=9, m=7$: the game lasts 3 days $\left(d=9-7+1\right)$.
+    \item When $n=10, m=7$: the game lasts 4 days $\left(d=10-7+1\right)$.
+    \item \dots
+\end{itemize}
+
+From that sequence, we can predict the formula to find number of days ($d$) that the game lasts:
+$$d=n-m+1\quad \left(d,\;n,\; m\in \mathbb{N^*} \right)$$
+
+\end{itemize}
+\par
+
+\textbf{Return to Question 2}
+
+$n=100$: \par
+Number of winners: $m=2^{\lfloor \log_2 \left(n+1 \right) \rfloor} -1= 2^{\lfloor\log_2 \left(100+1 \right) \rfloor} -1 = 2^6-1 = 63$ winners. \par
+The game lasts in: $d=n-m+1= 100- 63 +1 = 38$ days. \par
+
+
+\textbf{Question 4}
+
+Verifying: \par
+\begin{itemize}
+    \item $n=6$:
+    \begin{itemize}
+        \item $2^{\lfloor\log_2 \left(6+1 \right) \rfloor} -1 = 2^2-1=3$ winners.
+        \item $d=n-m+1=6-3+1=4$ days.
+    \end{itemize}
+    $\longrightarrow$ The result is correct.
+    
+    \item $n=10$:
+    \begin{itemize}
+        \item $2^{\lfloor\log_2 \left(10+1 \right) \rfloor} -1 = 2^3-1=7$ winners.
+        \item $d=n-m+1=10-7+1=4$ days.
+    \end{itemize}
+    $\longrightarrow$ The result is correct.
+\end{itemize}
+
+
+\end{document}
+

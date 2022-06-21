@@ -1,0 +1,674 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+
+
+%%Formatting
+\topmargin -.2in
+\textheight 9.2in
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.5in
+\parskip .1in
+
+\pagestyle{empty}
+
+\begin{document}
+
+\hrule
+\vspace{.2cm}
+
+{\Large \noindent Math 112 Honors
+\hfill
+B\'ela Bajnok}
+
+\vspace{.3cm}
+\hrule
+
+{\Large \noindent 
+Exam 5
+\hfill
+Fall 2020}
+
+\vspace{.3cm}
+\hrule
+
+
+
+\noindent NAME:  Quan Nguyen
+
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent Write and sign the full Honor Pledge here:
+
+\vspace{2mm}
+
+I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code. \par
+
+Quan Nguyen
+
+\vspace{8mm}
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent {\bf General instructions -- Please read!}
+
+\begin{itemize}
+  
+\item The purpose of this exam is to give you an opportunity to explore a complex and challenging question, gain a fuller view of calculus and its applications, and develop some creative writing, problem solving, and research skills.
+
+\item  {\bf All your assertions must be completely and fully justified.} At the same time, you should aim to be as concise as possible; avoid overly lengthy arguments and unnecessary components.  Your grade will be based on both mathematical accuracy and clarity of presentation.
+
+\item 
+Your finished exam should read as an article, consisting of complete sentences, thorough explanations, and exhibit correct grammar and punctuation.
+
+\item I encourage you to prepare your exam using LaTeX.  However, you may use instead other typesetting programs that you like, and you may use hand-writing or hand-drawing for some parts of your exam.  In any case, {\bf the final version that you submit must be in PDF format.}  
+
+\item It is acceptable (and even encouraged) to discuss the exams with other students in your class or with the PLA.  However,  {\bf  you must individually write up all parts of your exams.}
+
+\item {\bf You may use the text, your notes, and your homework, but no other sources.}
+ 
+\item You must write out a complete, honest, and detailed acknowledgment of all assistance you received and all resources you used (including other people) on all written work submitted for a grade.
+
+\item Submit your exam to me by email at bbajnok@gettysburg.edu by the deadline announced in class.
+
+
+
+
+
+
+
+\end{itemize}
+
+\noindent {\bf Good luck!}
+
+
+\newpage
+
+\begin{center}
+
+{\Large Solitaire Army} 
+
+\end{center}
+
+\vspace*{.2in}
+
+
+\noindent  The game Solitaire Army is a particular version of Peg Solitaire; it was discovered by the British mathematician John Conway in 1961.   Peg Solitaire is played on a board that has holes arranged in a rectangular grid-like fashion (like squares on an infinite chess-board).  Each hole can hold one peg.  A move consists of a jump by one peg over another peg which is next to it horizontally or vertically (but not diagonally); the peg jumped over will then be removed from the board.  Each move therefore reduces the total number of pegs by one.
+
+In the game Solitaire Army, the board is an infinite plane where one horizontal line is distinguished; it's called the demarcation line.  At the start of the game, all pegs are on one side of the demarcation line.  
+
+1.  Verify that it is possible to send one peg forward 1, 2, 3, or 4 holes into the other side of the demarcation line.  
+
+2.  Use geometric series to prove that it is impossible to get to further than that.  
+
+
+
+\newpage
+
+\begin{center}
+\underline {\Large {My work} }
+\end{center}
+
+% http://www.maths.dur.ac.uk/~bmjg46/conwaysarmy.pdf \par
+% http://recmath.org/pegsolitaire/army/index.html \par
+% https://www.chiark.greenend.org.uk/~sgtatham/solarmy/ \par
+
+%Infinite series: http://sites.science.oregonstate.edu/math/home/programs/undergrad/CalculusQuestStudyGuides/SandS/SeriesTests/test_summary.html?fbclid=IwAR1kenZT96DIzuUSKPynIELd1xKLWbMUmUNXtZ9cVDjFx7uCw4bpb06z05U
+
+
+Assuming that:
+\begin{itemize}
+    \item The cell I want to move the peg to is $1$.
+    \item $i$ (a positive number) is the value of the cell containing it.
+    \item For every cell that is further than 1, the value of that cell is multiplied by $i$.
+\end{itemize}
+
+\section{Moving the peg to the 1st row:}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    $i^2$ \\
+    \hline
+    $i$ \\
+    \hline
+    $1$ \\
+    \hline
+\end{tabular}
+
+\begin{itemize}
+    \item From the table above, I have $i+i^2=1$
+    
+    The value of $i$ (using the equation above): \par
+    
+    \begin{align*}
+        i+i^2&=1\\
+        \Longleftrightarrow
+        i^2+i-1&=0\\
+    \end{align*}
+
+    $i^2+i-1=0$ has the general quadratic equation: $ax^2+bx+c=0$, which means that $a=1$, $b=1$, and $c=-1$. The quadratic formula that is used to find the value of $i$:
+
+    \begin{align*}
+        & i = \frac{-b\pm \sqrt{b^2-4ac}}{2a} \\
+        \Longleftrightarrow\;
+        & i = \frac{-1\pm \sqrt{\left(-1\right)^2 -4\cdot 1 \cdot (-1)}}{2\cdot 1}\\
+        \Longleftrightarrow\;
+        & i_1 = \frac{-1\pm\sqrt{5}}{2}\\
+        \Longleftrightarrow\;
+        & i_1 = -1.618034
+        \quad \lor\quad i_2 = 0.618034
+    \end{align*}
+
+
+    From what I assumed at the beginning:
+    \begin{align*}
+        &
+        \begin{cases}
+            1=i^2+i \\
+            i>0
+        \end{cases}\\
+        \Longrightarrow &
+        \begin{cases}
+            1>i\\
+            1>0
+        \end{cases}\\
+        \Longrightarrow & 1>i>0\\
+        \Longrightarrow & i= i_2=0.618033
+    \end{align*}
+
+    Because $0<i<1$, $i^2$ must be smaller than $i$:
+    $$0<i^2<i<1$$
+
+    Similarly, $i^n$ with $n\to \infty$ will result in:
+    $$0<i^n<i^{n-1}<\dots<i^3<i^2<i<1$$
+\end{itemize}
+
+
+    
+\section{Moving the peg to the 2nd row:}
+
+I can move the pegs to the 2nd row with 4 pegs: 1 peg $i^2$, 2 pegs $i^3$, and 1 peg $i^4$:
+
+
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    $i^3$ &  & \\
+    \hline
+    $i^2$ & $i^3$ & $i^4$  \\
+    \hline
+    &  &  \\
+    \hline
+    $1$ &  &  \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    &  & \\
+    \hline
+    & $i^3$ & $i^4$  \\
+    \hline
+    \color{red}{$i$} &  &  \\
+    \hline
+    $1$ &  &  \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    \\
+    \hline
+    \color{red}{$i^2$} \\
+    \hline
+    $i$ \\
+    \hline
+    $1$ \\
+    \hline
+\end{tabular}
+
+*Note: Red pegs are new moves.
+
+
+\noindent Checking:
+    \begin{align*}
+        i^2+2i^3+i^4 &= i^2+i^3+i^3+i^4\\
+        &= i \left(i+i^2 \right)+i^2 \left(i+i^2 \right)\\
+        &=i+ i^2\\
+        &= 1
+    \end{align*}
+
+
+\noindent *As I can convert $i^2+i^3=i$ and $i^3+i^4=i^2$, I can now use the formula: $i^n=i^{n+1}+i^{n+2}$ for the following problems.
+    
+\section{Moving the peg to the 3rd row:}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & & $i^6$ & & & \\
+    \hline
+    & & $i^6$ & \color{blue}{$i^5$} & $i^6$ & & \\
+    \hline
+    & $i^6$ & \color{blue}{$i^5$} & \color{black}{$i^4$} & \color{blue}{$i^5$} & \color{black}{$i^6$} & \\
+    \hline
+    $i^6$ & \color{blue}{$i^5$} & \color{black}{$i^4$} & \color{blue}{$i^3$} & \color{black}{$i^4$} & \color{blue}{$i^5$} & $i^6$ \\
+    \hline
+    & & & & & &\\
+    \hline
+    & & & & & &\\
+    \hline
+    & & & $1$ & & &\\
+    \hline
+\end{tabular}
+
+\noindent From the table above, $1$ is on the 3rd row, so $i^3$ is the nearest cell. Therefore, I can only have 1 peg $i^3$, 3 pegs $i^4$, 5 pegs $i^5$, 7 pegs $i^6$, and so on.
+
+\begin{align*}
+    1&=i+i^2\\
+    &= i^2+i^3+i^3+i^4\\
+    &= \left(i^3+i^4\right)+2\left(i^4+i^5\right)+i^4\\
+    &=i^3+ \left(i^5+i^6\right)+2\left(i^4+i^5\right)+i^4\\
+    &\text{(I must convert 1 $i^4$ to keep only 3 $i^4$)}\\
+    &=i^3+ 3i^4+ 3i^5+ i^6 \quad\text{(sum $=8$ pegs)}\\
+\end{align*}
+
+Now I place the pegs on the table to check if I am correct.
+
+
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & $i^4$ & $i^5$ & $i^6$ \\
+    \hline
+    $i^5$ & $i^4$ & $i^3$ & $i^4$ & $i^5$ \\
+    \hline
+    & & & &\\
+    \hline
+    & & & &\\
+    \hline
+    & & $1$ & &\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & & $i^5$ & $i^6$ \\
+    \hline
+    $i^5$ & $i^4$ & & $i^4$ & $i^5$ \\
+    \hline
+    & & \color{red}{$i^2$} & &\\
+    \hline
+    & & & &\\
+    \hline
+    & & $1$ & &\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & \color{red}{$i^4$} \\
+    \hline
+    $i^5$ & $i^4$ & \color{red}{$i^3$}  \\
+    \hline
+    & & $i^2$ \\
+    \hline
+    & & \\
+    \hline
+    & & $1$ \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & $i^4$ \\
+    \hline
+    $i^5$ & $i^4$ & \\
+    \hline
+    & & \\
+    \hline
+    & & \color{red}{$i$}\\
+    \hline
+    & & $1$ \\
+    \hline
+\end{tabular}
+
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    $i^4$ \\
+    \hline
+    \color{red}{$i^3$}  \\
+    \hline
+    \\
+    \hline
+    $i$\\
+    \hline
+    $1$ \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    \color{red}{$i^2$}\\
+    \hline
+    $i$\\
+    \hline
+    $1$ \\
+    \hline
+\end{tabular}
+
+*Note: Red pegs are new moves.
+
+
+
+
+\section{Moving the peg to the 4th row:}
+
+\noindent Similar to the case above, the cell containing $i^4$ is the nearest cell as $1$ is on the 4th row. Therefore, I can only have 1 peg $i^4$, 3 pegs $i^5$, 5 pegs $i^6$, 7 pegs $i^7$, and so on.
+
+\begin{align*}
+    & 1 \\
+    =& i + i^2 \\
+    =& i^2+i^3 +i^3+i^4\\
+    =& i^4+i^3+i^4+ 2i^4+ 2i^5\\
+    =& i^4+ 2i^5+ 3i^4+ i^3\\
+    =& i^4+ 3i^5+ 4i^4\\
+    =& i^4+ 3i^5+ 4i^5+ 4i^6\\
+    =& i^4+ 3i^5+ 5i^6+ 3i^6+ 4i^7\\    
+    =& i^4+ 3i^5+ 5i^6+ 6i^7+ i^7+ 3i^8\\
+    =& i^4+ 3i^5+ 5i^6+ 6i^7+ 4i^8+ i^9 \;\text{(sum $=20$ egs)}\\
+\end{align*}
+
+Now I place the pegs on the table to check if I am correct.
+
+
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & $i^9$ & & $i^7$ & & \\
+    \hline
+    & & $i^8$ & $i^7$ & $i^6$ & $i^7$ & $i^8$\\
+    \hline
+    & $i^8$ & $i^7$ & $i^6$ & $i^5$ & $i^6$ & $i^7$ \\
+    \hline
+    $i^8$ & $i^7$ & $i^6$ & $i^5$ & $i^4$ & $i^5$ & $i^6$\\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & $1$ & & \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & $i^9$ & & $i^7$ & & \\
+    \hline
+    & & $i^8$ & $i^7$ & $i^6$ & $i^7$ & $i^8$\\
+    \hline
+    & $i^8$ & $i^7$ & $i^6$ & & $i^6$ & $i^7$ \\
+    \hline
+    $i^8$ & $i^7$ & $i^6$ & $i^5$ & & $i^5$ & $i^6$\\
+    \hline
+    & & & & \color{red}{$i^3$} & & \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & $1$ & & \\
+    \hline
+\end{tabular}
+
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & $i^9$ & & $i^7$ & & \\
+    \hline
+    & & $i^8$ & $i^7$ & $i^6$ & $i^7$ & $i^8$\\
+    \hline
+    & $i^8$ & $i^7$ & $i^6$ & & &\\
+    \hline
+    $i^8$ & $i^7$ & & & \color{red}{$i^4$} & &\\
+    \hline
+    & & & & $i^3$ & \color{red}{$i^4$} & \color{red}{$i^5$} \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & & & \\
+    \hline
+    & & & & $1$ & & \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & $i^9$ & & & & \\
+    \hline
+    & $i^8$ & & & $i^7$ & $i^8$\\
+    \hline
+    $i^8$ & $i^7$ & & \color{red}{$i^5$} & &\\
+    \hline
+    & \color{red}{$i^6$} & \color{red}{$i^5$} & & &\\
+    \hline
+    & & & & $i^4$ & $i^5$ \\
+    \hline
+    & & & \color{red}{$i^2$} & & \\
+    \hline
+    & & & & & \\
+    \hline
+    & & & $1$ & & \\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    $i^9$ & &\\
+    \hline
+    $i^8$ & & \color{red}{$i^6$}\\
+    \hline
+    & \color{red}{$i^6$} & $i^5$\\
+    \hline
+    $i^6$ & $i^5$ &\\
+    \hline
+    & & \color{red}{$i^3$}\\
+    \hline
+    & & $i^2$\\
+    \hline
+    & &\\
+    \hline
+    & & $1$\\
+    \hline
+\end{tabular}
+
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    \color{red}{$i^7$} & $i^6$ &\\
+    \hline
+    $i^6$ & $i^5$ & \color{red}{$i^4$}\\
+    \hline
+    & &\\
+    \hline
+    & &\\
+    \hline
+    & & \color{red}{$i$}\\
+    \hline
+    & & $1$\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    & & \color{red}{$i^5$}\\
+    \hline
+    $i^6$ & $i^5$ & $i^4$\\
+    \hline
+    & &\\
+    \hline
+    & &\\
+    \hline
+    & & $i$\\
+    \hline
+    & & $1$\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    $i^6$ & $i^5$ &\\
+    \hline
+    & & \color{red}{$i^3$}\\
+    \hline
+    & &\\
+    \hline
+    & & $i$\\
+    \hline
+    & & $1$\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    \color{red}{$i^4$}\\
+    \hline
+    $i^3$\\
+    \hline
+    \\
+    \hline
+    $i$\\
+    \hline
+    $1$\\
+    \hline
+\end{tabular}
+$\longrightarrow$
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+    \hline
+    \color{red}{$i^2$}\\
+    \hline
+    $i$\\
+    \hline
+    $1$\\
+    \hline
+\end{tabular}
+
+*Note: Red pegs are new moves.
+
+
+
+
+    
+    
+    
+    
+        
+\section{Moving the peg to the 5th row:}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|r|}
+        (\dots) & (E') & (D') & (C') & (B') & (A) & (B) & (C) & (D) & (E) & (\dots)\\
+        \hline
+        \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots & \dots \\
+            
+        \hline
+        \dots & $i^{12}$ & $i^{11}$ & $i^{10}$ & $i^9$ & $i^8$ & $i^9$ & $i^{10}$ & $i^{11}$ & $i^{12}$ & \dots\\
+            
+        \hline
+        \dots & $i^{11}$ & $i^{10}$ & $i^9$ & $i^8$ & $i^7$ & $i^8$ & $i^9$ & $i^{10}$ & $i^{11}$ & \dots\\
+            
+        \hline
+        \dots & $i^{10}$ & $i^9$ & $i^8$ & $i^7$ & $i^6$ & $i^7$ & $i^8$ & $i^9$ & $i^{10}$ & \dots\\
+            
+        \hline
+        \dots & $i^9$ & $i^8$ & $i^7$ & $i^6$ & $i^5$ & $i^6$ & $i^7$ & $i^8$ & $i^9$ & \dots\\
+            
+        \hline
+        & & & & & & & & & &\\
+        \hline
+        & & & & & & & & & &\\
+        \hline
+        & & & & & & & & & &\\
+        \hline
+        & & & & & & & & & &\\
+        \hline
+        & & & & & $1$ & & & & &\\
+        \hline
+    \end{tabular}
+
+
+\noindent Assuming that I have infinite number of pegs.
+\begin{itemize}
+    \item The sum of the pegs in the column (A):
+
+\begin{align*}
+    \text{Sum} &= i^5+ i^6+ i^7+ i^8+ i^9+ \dots\\
+    \Longleftrightarrow
+    \sum_{n=5}^{\infty}i^n &= i^5+ \left(i^5\cdot i\right)+ \left(i^5\cdot i^2\right)+ \left(i^5\cdot i^3\right)+ \left(i^5\cdot i^4\right)+ \dots\\
+\end{align*}
+
+This is a Geometric Series because it has $a=i^5$ and $r=i$ and follows the general formula of this series: $a+ar+ar^2+ar^3+\dots$. Therefore, this series is finite. Its exact value can be calculated using $\left(\frac{a}{1-r} \right)$ formula:
+
+\begin{align*}
+    \sum_{n=5}^{\infty}i^n &= \frac{a}{1-r}\\
+    &= \frac{i^5}{1-i}\\
+    &= \frac{i^5}{i^2} \quad\left(i+i^2=1\Longleftrightarrow i^2=1-i\right)\\
+    &= i^3
+\end{align*}
+
+    \item The sum of pegs in the column (B), using a similar method to column (A):
+
+\begin{align*}
+    \text{Sum} &= i^6+ i^7+ i^8+ i^9+ i^{10}+ \dots\\
+    \Longleftrightarrow
+    \sum_{n=6}^{\infty}i^n &= i^6+ \left(i^6\cdot i\right)+ \left(i^7\cdot i^2\right)+ \left(i^6\cdot i^3\right)+ \left(i^6\cdot i^4\right)+ \dots\\
+    &= \frac{i^6}{1-i}\\
+    &= \frac{i^6}{i^2}\\
+    &= i^4
+\end{align*}
+
+    
+    \item The sum of pegs in column (C) is similar to the first two columns, but starts with $a=i^7$:
+    $$\sum_{n=7}^{\infty}i^n = \frac{i^7}{i^2} = i^5$$
+    
+    \item The column (D) with $a=i^8$:
+    $$\sum_{n=8}^{\infty}i^n = \frac{i^8}{i^2} = i^6$$
+    
+    \item Noticing that as columns are getting further than the column (A), the sum is equals to the sum of the left hand side column multiplying by $i$. Therefore, I have a sequence of sum of each column (from column A to D): $i^3, i^4, i^5, i^6$. \par
+    Knowing that, I can predict the sum of next columns: $i^7, i^8, i^9, i^{10},\dots $
+
+    
+    
+    \item Since the columns are symmetric about the column (A) as (B)=(B'), (C)=(C'), \dots, the total sum of all the pegs equals to sum of column (A) and two times of the rest columns:
+    \begin{align*}
+        \sum &= i^3+ 2\left(i^4+ i^5+ i^6+ i^7+ i^8+ i^9+ \dots \right)\\
+        &= i^3+ 2\left[i^4+ \left(i^4\cdot i\right)+ \left(i^4\cdot i^2\right)+ \left(i^4\cdot i^3\right)+ \left(i^4\cdot i^4\right)+ \left(i^4\cdot i^5\right)+ \dots \right]
+        \qquad (1)\\
+    \end{align*}
+    
+    The series $\left(i^4+ \left(i^4\cdot i\right)+ \left(i^4\cdot i^2\right)+ \left(i^4\cdot i^3\right)+ \left(i^4\cdot i^4\right)+ \left(i^4\cdot i^5\right)+ \dots\right) $ is the Geometric Series with $a=i^4$ and $r=i$. The sum of this series:
+    
+    $$ i^4+ \left(i^4\cdot i\right)+ \left(i^4\cdot i^2\right)+ \left(i^4\cdot i^3\right)+ \left(i^4\cdot i^4\right)+ \dots =\frac{i^4}{1-i} =\frac{i^4}{i^2} =i^2 \qquad (2)$$
+    
+    From (1) and (2), the total sum of all the pegs:
+    \begin{align*}
+        \sum &= i^3+ 2\left[i^4+ \left(i^4\cdot i\right)+ \left(i^4\cdot i^2\right)+ \left(i^4\cdot i^3\right)+ \left(i^4\cdot i^4\right)+ \left(i^4\cdot i^5\right)+ \dots \right] \\
+        &= i^3+ 2\cdot i^2\\
+        &= \left(i^3+ i^2\right) + i^2\\
+        &= i+ i^2\\
+        &= 1
+    \end{align*}
+    
+    Therefore, it is possible to move the pegs to the 5th row if I have infinite number of pegs.
+    
+    
+    \item In conclusion: \par
+    If I have an infinitive number of pegs, I can move the peg to the 5th row. \par
+    However, I just have a finite number of pegs in reality, so I definitely can not move the peg the the 5th row, which means that moving the peg to 4th row is the limit.
+    
+\end{itemize}    
+    
+    
+
+    
+\end{document}

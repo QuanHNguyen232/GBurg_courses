@@ -1,0 +1,631 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+%%Formatting
+\topmargin -.2in
+\textheight 9.2in
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.5in
+\parskip .1in
+
+\pagestyle{empty}
+
+\begin{document}
+
+\hrule
+\vspace{.2cm}
+
+{\Large \noindent Math 112 Honors
+\hfill
+B\'ela Bajnok}
+
+\vspace{.3cm}
+\hrule
+
+{\Large \noindent 
+Exam 6
+\hfill
+Fall 2020}
+
+\vspace{.3cm}
+\hrule
+
+\noindent NAME:  Quan Nguyen
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent Write and sign the full Honor Pledge here:
+
+\vspace{2mm}
+
+I affirm that I have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code. \par
+
+Quan Nguyen
+
+\vspace{8mm}
+
+\noindent \hrulefill\rule{0pt}{4pt}
+
+\noindent {\bf General instructions -- Please read!}
+
+\begin{itemize}
+  
+\item The purpose of this exam is to give you an opportunity to explore a complex and challenging question, gain a fuller view of calculus and its applications, and develop some creative writing, problem solving, and research skills.
+
+\item  {\bf All your assertions must be completely and fully justified.} At the same time, you should aim to be as concise as possible; avoid overly lengthy arguments and unnecessary components.  Your grade will be based on both mathematical accuracy and clarity of presentation.
+
+\item 
+Your finished exam should read as an article, consisting of complete sentences, thorough explanations, and exhibit correct grammar and punctuation.
+
+\item I encourage you to prepare your exam using LaTeX.  However, you may use instead other typesetting programs that you like, and you may use hand-writing or hand-drawing for some parts of your exam.  In any case, {\bf the final version that you submit must be in PDF format.}  
+
+\item It is acceptable (and even encouraged) to discuss the exams with other students in your class or with the PLA.  However,  {\bf  you must individually write up all parts of your exams.}
+
+\item {\bf You may use the text, your notes, and your homework, but no other sources.}
+ 
+\item You must write out a complete, honest, and detailed acknowledgment of all assistance you received and all resources you used (including other people) on all written work submitted for a grade.
+
+\item Submit your exam to me by email at bbajnok@gettysburg.edu by the deadline announced in class.
+
+
+
+
+
+
+
+\end{itemize}
+
+\noindent {\bf Good luck!}
+
+
+\newpage
+
+\begin{center}
+
+{\Large Some Serious Series} 
+
+\end{center}
+
+\vspace*{.2in}
+
+Let us define the sequence $${\displaystyle (a_n)_{n=1}^{\infty} = \left(\frac{1}{10},-\frac{\pi^2}{100},+\frac{\pi^4}{1000},-\frac{\pi^6}{10000},+- \cdots \right)}$$ and the function $${\displaystyle f(x)=\frac{1}{10+x^2}}.$$
+
+\begin{enumerate}
+  
+\item  
+
+\begin{enumerate}
+
+\item Find an explicit formula for $a_n$.  (Make sure that $a_1=1/10$.)
+
+
+
+
+\item Find $\lim_{n \rightarrow \infty} a_n$.
+
+
+
+\item Find the exact value of $\sum_{n=1}^{\infty} a_n$.
+
+
+
+\end{enumerate}
+
+
+\item  
+
+\begin{enumerate}
+
+\item Use a known series to find the infinite Maclaurin series $P_{\infty}(x)$ for $f(x)$.
+
+
+
+\item Verify your answer to part (a) by finding the quartic (degree four) Maclaurin polynomial $P_{4}(x)$ for $f(x)$ using differentiation.
+
+\item How is this problem related to Problem 1 above?
+
+
+\end{enumerate}
+
+\item  
+
+
+\begin{enumerate}
+
+\item Use integration rules to find ${\displaystyle \int f(x) \mathrm{d} x}.$
+
+\item Use Problem 2 above to find ${\displaystyle \int f(x) \mathrm{d} x}.$
+
+
+\item Use part (a) above to find the exact value of ${\displaystyle \int_0^{\pi} f(x) \mathrm{d} x}.$
+
+\item Use part (b) above to approximate ${\displaystyle \int_0^{\pi} f(x) \mathrm{d} x}.$  Compare your answer to part (c).
+
+\item Use part (a) above to find the exact value of ${\displaystyle \int_0^{\infty} f(x) \mathrm{d} x}.$  Use your calculator to verify your answer.
+
+\item Explain why part (b) cannot be used for ${\displaystyle \int_0^{\infty} f(x) \mathrm{d} x}.$
+
+
+
+\end{enumerate}
+       
+\end{enumerate}
+
+
+\newpage
+
+\begin{center}
+\underline {\Large {My work} }
+\end{center}
+
+
+%-----Question 1----------------
+\section*{Question 1:}
+\subsection*{(a) Find an explicit formula for $a_n$:}
+The sequence of $a$:
+\begin{align*}
+    a &= \left(\frac{1}{10},-\frac{\pi^2}{100},\frac{\pi^4}{1000},-\frac{\pi^6}{10000}, \cdots \right) \\
+    &= \left[\frac{1}{10},
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right),
+    \frac{1}{10}\cdot \left(\frac{\pi^4}{100} \right),
+    \frac{1}{10}\cdot \left(\frac{-\pi^6}{1000} \right),
+    \cdots \right] \\
+    &=\left[
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^0,
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^1,
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^2,
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^3,
+    \cdots \right] \\
+    &=\left[
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{1-1},
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{2-1},
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{3-1},
+    \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{4-1},
+    \cdots \right] \\
+\end{align*}
+Thus, the general formula for $a_n$ is:
+$$(a_n)_{n=1}^{\infty} = \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{n-1}$$
+
+
+\subsection*{(b) Find $\displaystyle \lim_{n \rightarrow \infty} a_n$:}
+\begin{align*}
+    \lim_{n\to \infty} a_n &= \lim_{n\to \infty} \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{n-1} \\
+    &=\frac{1}{10} \lim_{n\to \infty} \left(\frac{-\pi^2}{10} \right)^{n-1} \\
+\end{align*}
+
+Because:
+\begin{align*}
+    &\pi^2 = 9.8696 < 10\\
+    \Longleftrightarrow & \frac{\pi^2}{10} < 1 \\
+    \Longleftrightarrow & -1<\frac{-\pi^2}{10} < 1
+\end{align*}
+
+So:
+\begin{align*}
+    \lim_{n\to \infty} a_n &= 
+    \frac{1}{10} \lim_{n\to \infty} \left(\frac{-\pi^2}{10} \right)^{n-1} \\
+    &= \frac{1}{10}\cdot 0 \\
+    &= 0
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{(c) Find the exact value of $\displaystyle \sum_{n=1}^{\infty} a_n$:}
+\begin{align*}
+    \sum_{n=1}^{\infty} a_n
+    &= \sum_{n=1}^{\infty} \frac{1}{10}\cdot \left( \frac{-\pi^2}{10} \right)^{n-1} \\
+    &= \frac{1}{10} + \frac{-\pi^2}{100}+ \frac{\pi^4}{1000}+ \frac{-\pi^3}{10000}+ \cdots\\
+\end{align*}
+
+The sum of $a_n$ with $n$ from $1\to \infty$ is a Geometric Series $\left(a= \frac{1}{10}, r=\frac{-\pi^2}{10}\right)$, so I can use the formula to calculate the exact value of this series:
+\begin{align*}
+    \sum_{n=1}^{\infty} a_n &= \frac{a}{1-r}= a \div \left(1- r \right)\\
+    &= \frac{1}{10}\div \left[ 1-\left( \frac{-\pi^2}{10} \right) \right]\\
+    &= \frac{1}{10}\div \left(\frac{10+ \pi^2}{10} \right)\\
+    &= \frac{1}{10+\pi^2}\\
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+%-----Question 2----------------
+\newpage
+\section*{Question 2:}
+\subsection*{(a) Find Maclaurin Series for $f(x)$:}
+Maclaurin series general formula from an function $f(x)$ at $x=a$:
+$$\displaystyle \frac{f^{(n)}(a)}{n!} \left(x-a \right)^n $$
+
+
+A known Maclaurin Series at $a=0$:
+\begin{align*}
+    \frac{1}{1-x} &= \sum_{n=0}^{\infty} x^n\\
+    &= 1+ x+ x^2+ x^3+ x^4+ \dots\\
+    &= \frac{1}{0! \left(1- 0 \right)}
+    + \frac{\left(x- 0 \right)}{1! \left(1- 0 \right)^2}
+    + \frac{2 \left(x- 0 \right)^2}{2! \left(1- 0 \right)^3}
+    + \frac{6 \left(x- 0 \right)^3}{3! \left(1- 0 \right)^4}
+    + \cdots
+\end{align*}
+
+If I replace $1$ in the denominator with $10$, and $x$ with $-x^2$, I will get the Maclaurin Series of function $f(x)$:
+\begin{align*}
+    \frac{1}{10-x^2} &= 
+    \frac{1}{0! \left(10- 0 \right)}
+    + \frac{\left(-x^2- 0 \right)}{1! \left(10- 0 \right)^2}
+    + \frac{2 \left(-x^2- 0 \right)^2}{2! \left(10- 0 \right)^3}
+    + \frac{6 \left(-x^2- 0 \right)^3}{3! \left(10- 0 \right)^4}
+    + \cdots\\
+    &= \frac{1}{10}
+    + \frac{\left(-x^2 \right)}{10^2}
+    + \frac{\left(-x^2 \right)^2}{10^3}
+    + \frac{\left(-x^2 \right)^3}{10^4}
+    + \cdots\\
+    P(x)&= \frac{1}{10}
+    - \frac{x^2}{10^2}
+    + \frac{x^4}{10^3}
+    - \frac{x^6}{10^4}
+    + \cdots\\
+\end{align*}
+
+
+\subsection*{(b) Verify the answer:}
+
+\begin{align*}
+    &f(x)=\frac{1}{10+x^2}\\
+    \Longrightarrow
+    &f'(x)= \frac{-2x}{\left(10+x^2 \right)^2}\\
+    \Longrightarrow
+    &f''(x)= \frac{6x^2- 20}{\left(10+x^2 \right)^3}\\
+    \Longrightarrow
+    &f'''(x)= \frac{-24x\left(x^2-10 \right)}{\left(10+x^2 \right)^4}\\
+    \Longrightarrow
+    &f''''(x)= \frac{120x^4- 2400x^2+ 2400}{\left(10+x^2 \right)^5}
+\end{align*}
+*\textit{The calculation of differentiation is in the Appendix section}
+
+
+\noindent The Maclaurin Series has a general formula:
+$$a_0+ a_1x+ a_2x^2+ a_3x^3+ a_4x^4+ a_5x^5+ a_6x^6+ \cdots$$
+
+
+\subsubsection*{With $\displaystyle f(x)=\frac{1}{10+x^2}$, and $x=0$:}
+
+\begin{align*}
+    f(0)=\frac{1}{10+0} &= a_0+ a_1x+ a_2x^2+ a_3x^3+ a_4x^4+ a_5x^5+ a_6x^6+ \cdots\\
+    \Longleftrightarrow
+    \frac{1}{10} &= a_0+ a_1\cdot 0+ a_2\cdot 0+ a_3\cdot 0+ a_4\cdot 0+ a_5\cdot 0+ a_6\cdot 0+ \cdots\\
+    \Longleftrightarrow a_0 &= \frac{1}{10}
+\end{align*}
+
+
+\subsubsection*{With $\displaystyle f'(x)= \frac{-2x}{\left(10+x^2 \right)^2}$, and $x=0$:}
+\begin{align*}
+    f'(0)=\frac{0}{\left(10+0\right)^2} &= a_1+ 2a_2x+ 3a_3x^2+ 4a_4x^3+ 5a_5x^4+ 6a_6x^5+ \cdots\\
+    0 &= a_1+ 2a_2\cdot 0+ 3a_3\cdot 0+ 4a_4\cdot 0+ 5a_5\cdot 0+ 6a_6\cdot 0+ \cdots\\
+    \Longrightarrow a_1 &= 0
+\end{align*}
+
+
+
+\subsubsection*{With $\displaystyle f''(x)= \frac{6x^2- 20}{\left(10+x^2 \right)^3}$, and $x=0$:}
+
+\begin{align*}
+    f''(0)= \frac{6\cdot 0- 20}{\left(10+ 0 \right)^3}
+    &= 2a_2+ 6a_3x+ 12a_4x^2+ 20a_5x^3+ 30a_6x^4+ \cdots\\
+    - \frac{20}{10^3} &= 2a_2+ 6a_3\cdot 0+ 12a_4\cdot 0+ 20a_5\cdot 0+ 30a_6\cdot 0+ \cdots\\
+    \Longrightarrow a_2 &=- \frac{10}{10^3}=- \frac{1}{10^2}
+\end{align*}
+
+
+
+\subsubsection*{With $\displaystyle f'''(x)= \frac{-24x\left(x^2-10 \right)}{\left(10+x^2 \right)^4}$, and $x=0$:}
+
+\begin{align*}
+    f'''(0)= \frac{-24\cdot 0\left(0- 10 \right)}{\left(10+ 0 \right)^4}
+    &= 6a_3+ 24a_4x+ 60a_5x^2+ 120a_6x^3+ \cdots\\
+    0 &= 6a_3+ 24a_4\cdot 0+ 60a_5\cdot 0+ 120a_6\cdot 0+ \cdots\\
+    \Longrightarrow a_3 &= 0
+\end{align*}
+
+
+\subsubsection*{With $\displaystyle f''''(x)= \frac{120x^4- 2400x^2+ 2400}{\left(10+x^2 \right)^5}$, and $x=0$:}
+
+\begin{align*}
+    f''''(0)= \frac{120\cdot 0- 2400\cdot 0+ 2400}{\left(10+ 0 \right)^5}
+    &= 24a_4+ 120a_5x+ 360a_6x^2+ \cdots\\
+    \frac{2400}{10^5} &= 24a_4+ 120a_5\cdot 0+ 360a_6\cdot 0+ \cdots\\
+    \Longrightarrow a_4 &= \frac{100}{10^5}= \frac{1}{10^3}
+\end{align*}
+
+\subsubsection*{Conclusion:}
+\noindent From the calculations above, I have $\displaystyle a_0=\frac{1}{10},\; a_2=\frac{-1}{10^2},\; \text{and}\; a_4=\frac{1}{10^3}$. For every 2 $a$, the value is multiplied by $\displaystyle \frac{-1}{10}$, so the following values of $a$ will be: $\displaystyle a_6=\frac{-1}{10^4},\; a_8=\frac{1}{10^5},\; a_{10}=\frac{-1}{10^6},\; \dots$
+
+\noindent Therefore, after plugging $a$ back into the Maclaurin Series, it will be:
+
+\begin{align*}
+    & a_0+ a_1x+ a_2x^2+ a_3x^3+ a_4x^4+ a_5x^5+ a_6x^6+ \cdots\\
+    &= \frac{1}{10}
+    + 0
+    + \left(\frac{-1}{10^2} \right) x^2
+    + 0
+    + \left(\frac{1}{10^3} \right) x^4
+    + 0
+    + \left(\frac{-1}{10^4} \right) x^6
+    + \cdots\\
+    &= \frac{1}{10}
+    + \frac{-x^2}{10^2}
+    + \frac{x^4}{10^3}
+    + \frac{-x^6}{10^4}
+    + \cdots\\
+\end{align*}
+
+The result of using a known series to find the Maclaurin series of $f(x)$ is the same as using derivative, so the series found in part (a) is correct.
+
+
+\subsection*{(c) Relation of this problem to Problem 1:}
+\noindent In the Problem 1, $a_n$ is a sequence with the formula: $$\displaystyle (a_n)_{n=1}^{\infty} = \frac{1}{10}\cdot \left(\frac{-\pi^2}{10} \right)^{n-1}= 
+\frac{1}{10},-\frac{\pi^2}{100},\frac{\pi^4}{1000},-\frac{\pi^6}{10000}, \cdots $$
+
+
+\noindent From the Problem 2, I have $f(x)$ with $f(\pi)$ is the sum of all terms in sequence $a_n$:
+
+\begin{align*}
+    & f(x)=\frac{1}{10} \sum_{n=1}^\infty \left(- \frac{x^2}{10} \right)^{n-1}= \frac{1}{10}
+    - \frac{x^2}{10^2}
+    + \frac{x^4}{10^3}
+    - \frac{x^6}{10^4}
+    + \cdots\\
+    \Longrightarrow
+    & f(\pi)= \frac{1}{10}
+    - \frac{\pi^2}{10^2}
+    + \frac{\pi^4}{10^3}
+    - \frac{\pi^6}{10^4}
+    + \cdots\\
+\end{align*}
+
+
+
+
+
+
+
+
+
+    
+    
+%-----Question 3----------------
+\newpage
+\section*{Question 3:}
+\subsection*{(a) Find ${\displaystyle \int f(x) \;\mathrm{d}x}$ using Integration Rules:}
+\begin{align*}
+    \int f(x) \;\mathrm{d}x &= \int \frac{1}{10+x^2} \;\mathrm{d}x\\
+    &= \int \frac{1}{10\left(1+ \frac{x^2}{10} \right)} \;\mathrm{d}x\\
+    &= \frac{1}{10} \int \frac{1}{1+ \left(\frac{x}{\sqrt{10}} \right)^2} \;\mathrm{d}x\\
+    &= \frac{1}{10}\cdot \frac{\sqrt{10}}{1} \int \frac{\frac{1}{\sqrt{10}}}{1+ \left(\frac{x}{\sqrt{10}} \right)^2} \;\mathrm{d}x\\
+    &= \frac{1}{\sqrt{10}}\cdot \arctan{\frac{x}{\sqrt{10}}} +C \\
+\end{align*}
+
+
+
+
+
+
+\subsection*{(b) Find ${\displaystyle \int f(x) \;\mathrm{d}x}$ using Problem 2:}
+
+$$
+P(x) = \frac{1}{10}
+- \frac{x^2}{10^2}
++ \frac{x^4}{10^3}
+- \frac{x^6}{10^4}
++ \cdots\\
+$$
+
+\begin{align*}
+    \Longrightarrow
+    \int P(x)\;\mathrm{d}x
+    &= \int \left( \frac{1}{10}
+    - \frac{x^2}{10^2}
+    + \frac{x^4}{10^3}
+    - \frac{x^6}{10^4}
+    + \cdots \right) \;\mathrm{d}x\\
+    &= \frac{x}{10}
+    - \frac{x^3}{3\cdot 10^2}
+    + \frac{x^5}{5\cdot 10^3}
+    - \frac{x^7}{7\cdot 10^4}
+    + \cdots\\
+    &= \frac{x}{1\cdot 10}
+    + \frac{x}{3\cdot 10} \left(\frac{-x^2}{10} \right)
+    + \frac{x}{3\cdot 10} \left(\frac{-x^2}{10} \right)^2
+    + \frac{x}{3\cdot 10} \left(\frac{-x^2}{10} \right)^3
+    + \cdots\\
+    &= \frac{x}{10} \sum_{n=0}^\infty \left(\frac{1}{2n+1}  \right) \left(\frac{-x^2}{10} \right)^n
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{(c) Find the exact value of ${\displaystyle \int_0^{\pi} f(x) \;\mathrm{d}x}$ using part (a):}
+\begin{align*}
+    \int_0^{\pi} f(x) \;\mathrm{d}x &= \int_0^{\pi} \frac{1}{10+x^2} \;\mathrm{d}x\\
+    &= \frac{1}{\sqrt{10}} \left( \arctan{\frac{x}{\sqrt{10}}} \right)_0^{\pi}\\
+    &= \frac{1}{\sqrt{10}} \left( \arctan{\frac{\pi}{\sqrt{10}}}
+    -\arctan{0}\right)\\
+    &= \frac{1}{\sqrt{10}}\cdot \arctan{\frac{\pi}{\sqrt{10}}}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{(d) Approximate $\displaystyle \int_0^{\pi} f(x) \;\mathrm{d}x$ using part (b):}
+
+From (b):
+\begin{align*}
+    \int P(x)\;\mathrm{d}x
+    &= \frac{x}{10}
+    - \frac{x^3}{3\cdot 10^2}
+    + \frac{x^5}{5\cdot 10^3}
+    - \frac{x^7}{7\cdot 10^4}
+    + \frac{x^9}{9\cdot 10^5}
+    - \cdots\\
+    \Longrightarrow
+    \int_0^{\pi} P(x) \;\mathrm{d}x
+    &=\left( \frac{\pi}{10}
+    - \frac{\pi^3}{3\cdot 10^2}
+    + \frac{\pi^5}{5\cdot 10^3}
+    - \frac{\pi^7}{7\cdot 10^4}
+    + \frac{\pi^9}{9\cdot 10^5}
+    - \frac{\pi^{11}}{11\cdot 10^6}
+    + \cdots\right)-0\\
+    & \approx 0.23524
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{(e) Find the exact value of ${\displaystyle \int_0^{\infty} f(x) \;\mathrm{d}x}$ using part (a):}
+\begin{align*}
+    \int_0^{\infty} f(x) \;\mathrm{d}x &= \int_0^{\infty} \frac{1}{10+x^2} \;\mathrm{d}x\\
+    &= \frac{1}{\sqrt{10}} \left( \arctan{\frac{x}{\sqrt{10}}} \right)_0^{\infty}\\
+    &= \frac{1}{\sqrt{10}} \left( \arctan{\frac{\infty}{10}} -\arctan{0} \right)\\
+    &= \frac{1}{\sqrt{10}} \left( \frac{\pi}{2} -0 \right)\\
+    &= \frac{1}{\sqrt{10}}\cdot \frac{\pi}{2} \\
+    &= \frac{\pi}{2\sqrt{10}}\\
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{(f) Why part (b) cannot be used for ${\displaystyle \int_0^{\infty} f(x) \;\mathrm{d}x}$:}
+
+\noindent The function $\displaystyle P(x)=\frac{1}{10}- \frac{x^2}{10^2}+ \frac{x^4}{10^3}- \frac{x^6}{10^4}+ \cdots$ is only approximate to $\displaystyle f(x)=\frac{1}{10+ x^2}$ when $\displaystyle x\in \left(-\sqrt{10},\; \sqrt{10} \right)$. This means that when $x$ in $P(x)$ is getting closer to $\displaystyle -\sqrt{10}$ or $\displaystyle \sqrt{10}$, the value increases to infinity, and there is no value at $x= \sqrt{10}$. \par
+\noindent Therefore, integral of part (b) can only be used in range $\displaystyle \left(-\sqrt{10}, \sqrt{10} \right)$. However:
+\begin{align*}
+    \int_0^\infty P(x) \;\mathrm{d}x
+    = \int_0^{\sqrt{10}} P(x) \;\mathrm{d}x
+    + \int_{\sqrt{10}}^{\infty} P(x) \;\mathrm{d}x
+\end{align*}
+
+\noindent Since the function $P(x)$ does not exist in the range from $\displaystyle \sqrt{10}$ to infinity, the integral of $P(x)$: $\displaystyle \int_{\sqrt{10}}^{\infty} P(x) \;\mathrm{d}x$ can not be calculated.
+
+
+%---------Appendix----------
+\newpage
+\begin{center}
+    \section*{The Appendix}
+\end{center}
+ \begin{itemize}
+    \item 
+    \begin{align*}
+        f(x) &= \frac{1}{10+x^2} = \left(10+x^2 \right)^{-1}
+    \end{align*}
+    
+    \item
+    \begin{align*}
+        f'(x) &= \left[\left(10+x^2 \right)^{-1} \right]'\\
+        &= \left(-1 \right) \left(10+x^2 \right)^{-2} \left(2x \right)\\
+        &= \left(-2x \right) \left(10+x^2 \right)^{-2}\\
+        &= \frac{-2x}{\left(10+x^2 \right)^2}
+    \end{align*}
+    
+    \item
+    \begin{align*}
+        f''(x) &= \left(f'(x) \right)'\\
+        &= \left[ \left(-2x \right) \left(10+x^2 \right)^{-2}\right]'\\
+        &= \left(-2x \right)'\left(10+x^2 \right)^{-2}
+        + \left(-2x \right) \left[\left(10+x^2 \right)^{-2} \right]'\\
+        &= -2\left(10+x^2 \right)^{-2}
+        + \left(-2 \right) \left(-2x \right) \left(10+x^2 \right)^{-3} \left(2x \right)\\
+        &= \frac{-2}{\left(10+x^2 \right)^{2}}
+        + \frac{8x}{\left(10+x^2 \right)^{3}}\\
+        &= \frac{-2\left(10+x^2 \right)+ 8x^2}{\left(10+x^2 \right)^{3}}\\
+        &= \frac{6x^2- 20}{\left(10+x^2 \right)^{3}}
+    \end{align*}
+    
+    \item
+    \begin{align*}
+        f'''(x) &= \left(f''(x) \right)'\\
+        &= \left[\left(6x^2- 20 \right) \left(10+ x^2 \right)^{-3} \right]'\\
+        &= \left(6x^2- 20 \right)'\left(10+x^2 \right)^{-3}
+        + \left(6x^2- 20 \right) \left[\left(10+x^2 \right)^{-3} \right]'\\
+        &= 12x \left(10+x^2 \right)^{-3}+ \left(-3 \right)\left(6x^2- 20 \right) \left(10+x^2 \right)^{-4} \left(2x \right)\\
+        &= \frac{12x \left(10+ x^2 \right)- 6x\left(6x^2- 20 \right)}{\left(10+x^2 \right)^4}\\
+        &= \frac{120x+ 12x^3+ 120x- 36x^3}{\left(10+x^2 \right)^4}\\
+        &= \frac{-24x^3+ 240x}{\left(10+x^2 \right)^4}\\
+        &= \frac{-24x\left(x^2- 10 \right)}{\left(10+x^2 \right)^4}\\
+    \end{align*}
+    
+    
+    
+    \item
+    \begin{align*}
+        f''''(x) &= \left(f'''(x) \right)'\\
+        &= \left[\left(-24x^3+ 240x \right) \left(10+ x^2 \right)^{-4} \right]'\\
+        &= \left(-24x^3+ 240x \right)' \left(10+ x^2 \right)^{-4}+ \left(-24x^3+ 240x \right) \left[ \left(10+ x^2 \right)^{-4} \right]'\\
+        &= \left(-72x^2+ 240 \right) \left(10+ x^2 \right)^{-4}+ \left(-4 \right) \left(-24x^3+ 240x \right) \left(10+ x^2 \right)^{-5} \left(2x \right)\\
+        &= \frac{\left(-72x^2+ 240 \right) \left(10+ x^2 \right)- 8x\left(-24x^3+ 240x \right)}{\left(10+ x^2 \right)^5}\\
+        &= \frac{-72x^4- 480x^2+ 2400+ 192x^4- 1920x^2}{\left(10+ x^2 \right)^5}\\
+        &= \frac{120x^4- 2400x^2+ 2400}{\left(10+ x^2 \right)^5}\\
+    \end{align*}
+    
+    
+ \end{itemize}
+
+
+
+
+
+\end{document}
