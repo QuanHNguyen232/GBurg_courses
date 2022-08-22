@@ -1,0 +1,17 @@
+Note: Download Anaconda from their website: https://www.anaconda.com/products/distribution#Downloads
+
+   ... ...
+   91  cd Downloads/
+   92  ls
+   93  clear
+   94  ls -l Anaconda3-2022.05-Linux-x86_64.sh 
+   95  chmod
+   96  chmod u+x Anaconda3-2022.05-Linux-x86_64.sh 
+   97  ls -l Anaconda3-2022.05-Linux-x86_64.sh 
+   98  ./Anaconda3-2022.05-Linux-x86_64.sh 
+   99  anaconda-navigator
+  100  git --version
+  101  ls
+  ...  ...
+  117  more .bash_history
+  118  history > history.txt
