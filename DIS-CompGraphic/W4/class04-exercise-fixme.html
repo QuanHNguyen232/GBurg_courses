@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello WebGL</title>
+    <style></style>
+    <script type="vertex-shader" id="vertexShader">
+        attribute vec2 a_position;
+        attribute vec3 a_color;
+
+        varying vec3 vColor;
+
+        void main() {
+        	gl_Position = vec4(a_position, 0, 1);
+        	vColor = a_color;
+        }
+    </script>
+    <script type="fragment-shader" id="fragmentShader">
+        precision highp float;
+
+        varying vec3 vColor;
+
+        void main()
+        {
+            gl_FragColor = vec4(vColor,1);
+        }
+    </script>
+</head>
+<body>
+	<canvas width="500" height="500" id="webgl-canvas"></canvas>
+    <br />
+    <script src="webgl-debug.js"></script>
+    <script type="text/javascript">
+        "use strict";
+
+        // -----------------------------------------
+        // Global variables
+        // -----------------------------------------
+        var gl;
+        var canvas;
+        var shaderProgram;
+
+        var triangle = {};
+
+        var quad = {};
+
+        // -----------------------------------------
+        // Functions
+        // -----------------------------------------
+        function setup(){
+            canvas = document.getElementById("webgl-canvas");
+            gl = canvas.getContext("webgl"); // WebGLRenderingContext
+            // post error if not supported
+            if(!gl){ console.error("WebGL context is not available."); }
+
+            gl = WebGLDebugUtils.makeDebugContext(gl); // enable debugging
+
+            gl.clearColor(0.85, 0.95, 0.9, 1); // set clear color (RGBA)
+            gl.clear(gl.COLOR_BUFFER_BIT); // clear color buffers
+        }
+
+        function createDOMShaderProgram(vertexShaderID, fragmentShaderID){
+            // fetch shader program text from DOM
+            let vertexShaderElement = document.getElementById("vertexShader");
+            let fragmentShaderElement = document.getElementById("fragmentShader");
+            if ( !vertexShaderElement ) {
+                console.error( "Unable to load vertex shader " + vertexShaderId );
+                return -1;
+            }
+            if ( !fragmentShaderElement ) {
+                console.error( "Unable to load fragment shader " + fragmentShaderId );
+                return -1;
+            }
+            // create shaders, set source code and compile them
+            let vertexShader = gl.createShader(gl.VERTEX_SHADER);
+            let fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+            gl.shaderSource(vertexShader, vertexShaderElement.text);
+            gl.shaderSource(fragmentShader, fragmentShaderElement.text);
+            gl.compileShader(vertexShader);
+            gl.compileShader(fragmentShader);
+            // check for compiler errors in vertex and fragment shader
+            if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+                console.error('ERROR could not compile vertex shader.', gl.getShaderInfoLog(vertexShader));
+                return -1;
+            }
+            if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+                console.error('ERROR could not compile fragment shader.', gl.getShaderInfoLog(fragmentShader));
+                return -1;
+            }
+            // create shader program and attach vertex and fragment shader
+            let shaderProgram = gl.createProgram();
+            gl.attachShader(shaderProgram, vertexShader);
+            gl.attachShader(shaderProgram, fragmentShader);
+            // Link Program, completing its preparation and uploading to the GPU
+            gl.linkProgram(shaderProgram);
+            if(!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)){
+                console.error('ERROR linking program!', gl.getProgramInfoLog(shaderProgram));
+                return -1;
+            }
+            // Validate that everything worked and the program is now ready to run on the GPU
+            gl.validateProgram(shaderProgram);
+            if(!gl.getProgramParameter(shaderProgram, gl.VALIDATE_STATUS)){
+                console.error('ERROR validating program!', gl.getProgramInfoLog(shaderProgram));
+                return -1;
+            }
+            return shaderProgram;
+        }
+
+        // takes any array, creates a Float32Array from it, moves the data into a buffer
+        // and then returns that buffer
+        function createArrayBuffer(array){
+            // convert to typed array
+            let floatArray = new Float32Array(array);
+            // create buffer id
+            let buffer = gl.createBuffer();
+            // set id to the current active array buffer (only one can be active)
+            gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+            // upload buffer data
+            gl.bufferData(gl.ARRAY_BUFFER, floatArray, gl.STATIC_DRAW);
+            return buffer;
+        }
+
+        let init = function(){
+
+            triangle.positionBuffer = createArrayBuffer([
+                0.0,-0.5,
+                1.0,-0.5,
+                0.5, 0.5
+            ]);
+
+            quad.positionBuffer = createArrayBuffer([
+                -0.5, 0.0,
+                 0.0, 0.0,
+                 0.0, 0.8,
+                 0.0, 0.8,
+                -0.5, 0.8,
+                -0.5, 0.0
+            ]);
+
+            triangle.colorBuffer = createArrayBuffer([
+                1.0, 0.0, 0.0,
+                0.0, 0.0, 1.0,
+                0.0, 0.0, 1.0
+            ]);
+
+            quad.colorBuffer = createArrayBuffer([
+                0.0, 1.0, 0.0,
+                0.0, 0.6, 0.0,
+                0.0, 0.2, 0.0,
+                0.0, 0.2, 0.0,
+                0.0, 0.6, 0.0,
+                0.0, 1.0, 0.0
+            ]);
+
+            triangle.vertexCount = 3;
+            quad.vertexCount = 4;
+
+            shaderProgram = createDOMShaderProgram("vertexShader", "fragmentShader");
+
+            console.log("initializing complete");
+        }
+
+        let draw = function () {
+            gl.clearColor(0.85, 0.95, 0.9, 1);
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+            // set active shader
+            gl.useProgram(shaderProgram);
+
+            let posAttribLoc = gl.getAttribLocation(shaderProgram, "a_position");
+            let colAttribLoc = gl.getAttribLocation(shaderProgram, "a_color");
+            gl.enableVertexAttribArray(posAttribLoc); //attributes are disabled by default
+            gl.enableVertexAttribArray(colAttribLoc);
+
+            // Draw Shape 1
+            // hook up position buffer
+            gl.bindBuffer(gl.ARRAY_BUFFER, triangle.colorBuffer);
+            gl.vertexAttribPointer(posAttribLoc, 2, gl.FLOAT, false, 0, 0);
+            // hook up color buffer
+            gl.bindBuffer(gl.ARRAY_BUFFER, triangle.positionBuffer);
+            gl.vertexAttribPointer(colAttribLoc, 3, gl.FLOAT, false, 0, 0);
+            // draw geometry
+            gl.drawArrays(gl.TRIANGLES, 0, triangle.vertexCount);
+
+            // Draw Shape 2
+            // hook up position buffer
+            gl.bindBuffer(gl.ARRAY_BUFFER, quad.positionBuffer);
+            gl.vertexAttribPointer(posAttribLoc, 2, gl.FLOAT, false, 0, 0);
+            // hook up color buffer
+            gl.vertexAttribPointer(colAttribLoc, 3, gl.FLOAT, false, 0, 0);
+            // draw geometry
+            gl.drawArrays(gl.TRIANGLES, 0, quad.vertexCount);
+        }
+
+        setup();
+        init();
+        draw();
+
+    </script>
+</body>
+</html>
