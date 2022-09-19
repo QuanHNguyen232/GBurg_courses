@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" >
+        "use strict";
+
+        class Rect {
+            constructor(row, col){
+                this.row = row;
+                this.col = col;
+            }
+
+            drawRectangle() {
+                let ret_val = []
+                for (let i = 0; i < this.row; i++){
+                    for (let j = 0; j < this.col; j++) {
+                        //Check boundary
+                        const val = [0, this.row - 1].includes(i) || [0, this.col - 1].includes(j) ? "+" : "-";
+                        ret_val.push(val);
+                    }
+                    ret_val.push("\n");
+                }
+                return ret_val.join("");
+            }
+
+            toString() {
+                return this.drawRectangle();
+            }
+        }
+
+
+        console.log(`${new Rect(2, 2)}`);
+        console.log(`${new Rect(4, 10)}`);
+
+    </script>
+</body>
+</html>

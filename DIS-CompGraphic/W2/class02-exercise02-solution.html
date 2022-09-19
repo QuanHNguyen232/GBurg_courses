@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Class 02 Mini Exercise 01</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        "use strict";
+        // problem: why does Ralph only bark once?
+        // fix it to make Ralph bark twice!
+        class Dog {
+            constructor(name){
+                this.name = name;
+            }
+            bark() {
+                console.log(this.name);
+            }
+        }
+        // make a new instance of a Dog
+        var ralph = new Dog('Ralph');
+        // make Ralph bark once immediately
+        ralph.bark();
+        // in 1 second we want Ralph to bark again
+        setTimeout( function(){
+                      ralph.bark();
+                    }, 1000);
+        </script>
+    </body>
+</html>
