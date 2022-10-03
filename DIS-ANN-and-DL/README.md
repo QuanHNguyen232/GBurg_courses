@@ -1,0 +1,1 @@
+DIS core course: Artificial Neural Network and Deep Learning (Fall 2022)
