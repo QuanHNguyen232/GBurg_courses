@@ -5,8 +5,9 @@
     <title>Hello WebGL</title>
     <script type="vertex-shader" id="vertexShader">
         attribute vec2 a_position;
+        uniform vec2 offset;
         void main() {
-        	gl_Position = vec4(a_position, 0, 1);
+        	gl_Position = vec4(a_position + offset, 0, 1);
         }
     </script>
     <script type="fragment-shader" id="fragmentShader">
@@ -113,12 +114,26 @@
         // Create Buffer and upload position data
         // -----------------------------------------
 
-        // position data as Float32Array
-        let positionArray = new Float32Array([
-            0.0, 0.0, // first point
-            0.5, 0.0, // second point
-            0.5, 0.5, // third point
-        ]);
+        const createCircleArray = (noOfTriangles, radius) => {
+            //Angle for each isocelete triangles
+            const radToDeg = 180 / Math.PI
+            const alpha = 2 * Math.PI / noOfTriangles;
+
+            //Array contains the center of the circle at (0, 0)
+            //First vertex
+            const array =  [0, 0];
+
+            //Second vertex and the rest
+            for (let i = 0; i <= noOfTriangles; i ++) {
+                const x = radius * Math.cos(alpha * i);
+                const y = radius * Math.sin(alpha * i);
+                array.push(x)
+                array.push(y)
+            }
+
+            return new Float32Array(array);
+        }
+
 
         // TODO: create buffer object
         // functions to use:    gl.createBuffer()
@@ -159,8 +174,13 @@
         // TODO: execute Draw Call
         // functions to use:    gl.drawArrays()
 
-        const draw = () => {
+        const processOffsetAndWriteVertices = (x, y, positionArray) => {
+            //Must use program before writing uniform
+            gl.useProgram(program);
             const attributeLocation = gl.getAttribLocation(program, "a_position")
+            const offsetLocation    = gl.getUniformLocation(program, "offset")
+
+            gl.uniform2fv(offsetLocation, [x, y])
             createArrayBuffer(positionArray);
             gl.enableVertexAttribArray(attributeLocation);
             gl.vertexAttribPointer(
@@ -171,12 +191,72 @@
                 2 * Float32Array.BYTES_PER_ELEMENT,
                 0
             )
-
-            gl.useProgram(program);
-            gl.drawArrays(gl.TRIANGLES, 0, 3);
         }
 
-        draw()
+        const drawCircle = (x, y, radius) => {
+            let positionArray = createCircleArray(1000, radius);
+            //Program must be used before creating uniform
+            processOffsetAndWriteVertices(x, y, positionArray)
+            gl.drawArrays(gl.TRIANGLE_FAN, 0, positionArray.length/ 2);
+        }
+
+        const drawQuad = (x, y) => {
+
+            // position data as Float32Array
+            let positionArray = new Float32Array([
+                0.0, 0.0, // first point
+                0.5, 0.0, // second point
+                0.5, 0.5, // third point
+                0.0, 0.0, // first point
+                0.0, 0.5, // second point
+                0.5, 0.5, // third point
+            ]);
+
+            processOffsetAndWriteVertices(x, y, positionArray)
+            gl.drawArrays(gl.TRIANGLES, 0, positionArray.length/2);
+        }
+
+        const drawTriangle = (x, y) => {
+
+            // position data as Float32Array
+            let positionArray = new Float32Array([
+                0.0, 0.0, // first point
+                0.5, 0.0, // second point
+                0.5, 0.5, // third point
+            ]);
+
+            processOffsetAndWriteVertices(x, y, positionArray)
+            gl.drawArrays(gl.TRIANGLES, 0, positionArray.length/2);
+        }
+
+        const drawStrangeShape = (x, y, r1, r2) => {
+            // //mid
+            // drawCircle(-0.5, 0.3, 0.2)
+            // //right
+            // drawCircle(-0.7, 0.3, 0.1)
+            // //left
+            // drawCircle(-0.3, 0.3, 0.1)
+            // //Down
+            // drawCircle(-0.5, 0.1, 0.1)
+            // //Up
+            // drawCircle(-0.5, 0.5, 0.1)
+            
+            //mid
+            drawCircle(x, y - r1, r1)
+            //right
+            drawCircle(x - r1, y - r1, r2)
+            //left
+            drawCircle(x + r1, y - r1, r2)
+            //Down
+            drawCircle(x, y - 2*r1, r2)
+            //Up
+            drawCircle(x, y, r2)
+        }
+
+        drawTriangle(0.2, -0.4)
+        drawQuad(0.2, 0.4)
+        drawStrangeShape(-0.4, 0.5, 0.2, 0.2)
+        drawCircle(-0.4, -0.6, 0.3)
 
     </script>
 </body>
