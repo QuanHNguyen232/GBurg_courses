@@ -1,0 +1,26 @@
+INDEX VERSION 1.131+/Accounts/turing/students/s24/nguyqu03/Code-Workspace/GBurg_courses/CS371/.metadata/.plugins/org.eclipse.jdt.core
+3431655839.index
+2222083709.index
+596489913.index
+110870549.index
+2286558456.index
+3737938386.index
+3165855975.index
+2812939428.index
+3242567739.index
+3226088903.index
+3935416423.index
+3188409623.index
+2117822469.index
+265234669.index
+3092008450.index
+889672953.index
+1343781516.index
+1992429966.index
+2003458630.index
+3504054976.index
+1058815908.index
+2709548184.index
+458768782.index
+2921740713.index
+3019254827.index

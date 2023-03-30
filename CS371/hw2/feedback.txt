@@ -1,0 +1,36 @@
+Testing initiated. Tue 31 Jan 2023 05:36:16 PM EST
+README submitted.
+AStarComparator.java submitted.
+BestFirstSearcher.java submitted.
+GridNavigationNode.java submitted.
+HPancakeSortNode.java submitted.
+HSearcher.java submitted.
+HSearchNode.java submitted.
+Searcher.java submitted.
+SearchNode.java submitted.
+Compilation of all java files succeeded.
+Testing GridNavigationNode:
+JUnit version 4.12
+.Testing for random maze with random walls deleted of size 123 x 107.
+Testing for random maze with random walls deleted of size 112 x 80.
+Testing for random maze with random walls deleted of size 99 x 87.
+Testing for random maze with random walls deleted of size 105 x 91.
+Testing for random maze with random walls deleted of size 110 x 76.
+Testing for random maze with random walls deleted of size 120 x 109.
+Testing for random maze with random walls deleted of size 92 x 123.
+Testing for random maze with random walls deleted of size 104 x 98.
+Testing for random maze with random walls deleted of size 121 x 81.
+Testing for random maze with random walls deleted of size 117 x 84.
+
+Time: 1.425
+
+OK (1 test)
+
+Testing HPancakeSortNode:
+JUnit version 4.12
+.
+Time: 8.576
+
+OK (1 test)
+
+Testing completed. Tue 31 Jan 2023 05:36:27 PM EST

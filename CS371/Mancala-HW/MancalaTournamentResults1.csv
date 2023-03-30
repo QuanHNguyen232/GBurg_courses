@@ -1,0 +1,15 @@
+"TOURNAMENT RESULTS:"
+"First Player (Win:Loss) Ratios:"
+,"Second Player"
+"First Player","0-QuDo2","1-Simple"
+"0-QuDo2",,"(0:5)"
+"1-Simple","(0:5)",
+
+
+"SUMMARY STATISTICS"
+"The winner of this table is determined by most winning matches."
+"Ties are broken according to total game wins."
+"Further ties are broken according to total points across all games."
+,"Match Wins","Total Game Wins","Total Points"
+0-QuDo2,1,5,220
+1-Simple,1,5,260

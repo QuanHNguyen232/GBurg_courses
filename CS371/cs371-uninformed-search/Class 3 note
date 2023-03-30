@@ -1,0 +1,8 @@
+1/24/2023 (no repeated state detection)
+
+- disallow repeat of current state (typically expand)
+- disallow child of node == parent of node
+	... up to n ancestors
+	... all ancestors
+- disallow n most recent nodes
+- disallow any prior node

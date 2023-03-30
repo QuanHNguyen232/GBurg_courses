@@ -1,0 +1,44 @@
+Names: Quan Nguyen and Douglas Harsha
+IDs: 6116885 and 6074120
+
+Honor Pledge: We affirm that we have upheld the highest principles of honesty and integrity in my academic work and have not witnessed a violation of the Honor Code.
+
+2.4 (problem 3)
+1. The state space is s(i,j,k), where i is the total score, j is the number of completed turns, and k is the current turn score.
+2. Equation of optimal play: (1/6) * [pWin(i, j, k+2) +  pWin(i,j,k+3) +  pWin(i,j,k+4) +  pWin(i,j,k+5) +  pWin(i,j,k+6) + pWin(i, j+1, 0)] if roll and pWin(i+k,j+1,0) if hold
+3. The state space is acyclic because it is impossible to take back a turn; no matter what action the player chooses the game will eventually conclude. P(0,0,0)'s j value will always increase, creating new states.
+4. The policy examines the difference between our current score and goal score and compares it with the amount of turns remaining. If we have a large difference between our current score and the goal score, we roll an increasing number of times, scaling with how few turns we have remaining. If we only have one or two turns remaining, for example, we would roll many times to make up our score deficit. Conversely, if we are close to our goal score, or have a large amount of turns remaining, the policy is more conservative, only rolling a few times each turn to minimize risk.
+5. (visualize: prob.png) The policy chooses to roll an increasing number of times the further the total score is from the goal score, as the amount of turns remaining decreases
+6. n = 11. At p[0][0][0] (starting of the game) when n=11, the probability of winning is > 0.5
+
+
+3.5 (problem 6)
+1. The state space is an area bounded by i, our total score, j, our opponents score, and k, the current turn's score. The state space is also limited by the goal score of 100.
+2. Equation of optimal play: (1/6) * [pWin(i, j, k+2) +  pWin(i,j,k+3) +  pWin(i,j,k+4) +  pWin(i,j,k+5) +  pWin(i,j,k+6) + 1.0 - pWin(j, i, 0)] if roll and 1.0 - pWin(j, i + k, 0) if hold
+3. If both player play optimally, the average probability of player 1 winning is 0.6171238751115804.
+4. (visualize: prob2.png) In our visualization, the x axis represents our opponents total score, where a higher score is more to the right. The y axis represents our total score, where the lower it is the higher the score. The "cooler" blue colors indicate situations where one should roll fewer times as to minimize their risk, and the "hotter" red colors represent situations where one should roll many times. Our visualization shows that there are two major sub-areas within the state space. The rightmost area below the apparent curve follows a continually increasing gradient. This indicates that optimal play is to consistently increase the number of rolls to catch up as the score difference between the players increases. However, if the total scores are both far from the goal score, and score difference is small, the mottled blue area indicates the best policy is to roll conservatively, varying slightly the amount of rolls as to keep pace with one's opponent.
+
+
+3.5 (2 dice)
+1. The state space is an area bounded by i, our total score, j, our opponents score, and k, the current turn's score. The state space is also limited by the goal score of 100.
+2. Equation of optimal play:
+	double pRoll= 0.0;
+	for (int roll1=1; roll1<=6; roll1++) {
+		for (int roll2=1; roll2<=6; roll2++) {
+			if (roll1 == 1 && roll2 == 1)
+				pRoll += 1.0 - pWin(j, 0, 0);
+			else if (roll1 == 1 || roll2 == 1)
+				pRoll += 1.0 -  pWin(j, i, 0);
+			else
+				pRoll += pWin(i, j, k + roll1 + roll2);
+		}
+	}
+	pRoll /= 36.0; (if roll)
+	And 1.0 - pWin(j, i + k, 0) if hold
+3. If both player play optimally, the average probability of player 1 winning is 0.5987489376695784.
+4. (visualize: prob3.png) In our visualization, the x axis represents our opponents total score, where a higher score is more to the right the y axis represents our total score, where the lower it is the higher the score. The "cooler" blue colors indicate situations where one should roll fewer times as to minimize their risk, and the "hotter" red colors represent situations where one should roll many times. 
+Our visualization is very similar to problem 2s, where there are two major sub-areas within the state space. The rightmost area below the apparent curve follows a continually increasing gradient. This indicates that optimal play is to consistently increase the number of rolls to catch up as the score difference between the players increases. However, if the total scores are both far from the goal score, and score difference is small, the mottled blue area indicates the best policy is to roll conservatively, varying slightly the amount of rolls as to keep pace with one's opponent. The main differences are in the shape of the apparent curve, and that the area of low, conservative rolls is far more even in comparison to problem 2.
+
+
+
+**NOTE** Visualization reading: the x axis represents our opponents total score, where a higher score is more to the right. The y axis represents our total score, where the lower it is the higher the score. The "cooler" blue colors indicate situations where one should roll fewer times as to minimize their risk, and the "hotter" red colors represent situations where one should roll many times (red is 100; dark blue is 1; white is around 50)

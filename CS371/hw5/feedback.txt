@@ -1,0 +1,31 @@
+Testing initiated. Tue 28 Mar 2023 02:15:46 PM EDT
+NOTE: Written questions will be evaluated manually.
+README submitted.
+PigSolitaireSolver.java submitted.
+PigSolver.java submitted.
+TwoDicePigSolver.java submitted.
+Compilation of all java files succeeded.
+Testing PigSolitaireSolver:
+JUnit version 4.12
+..
+Time: 0.123
+
+OK (2 tests)
+
+Testing PigSolver:
+JUnit version 4.12
+..
+Time: 16.218
+
+OK (2 tests)
+
+Testing TwoDicePigSolver:
+JUnit version 4.12
+.Testing solution for goal 50.
+Testing solution for goal 100.
+
+Time: 18.873
+
+OK (1 test)
+
+Testing completed. Tue 28 Mar 2023 02:16:23 PM EDT
