@@ -1,0 +1,177 @@
+Testing initiated. Tue 11 Apr 2023 11:43:12 AM EDT
+NOTE: Written questions will be evaluated manually.
+README submitted.
+ClueReasoner.java submitted.
+SATExerciseSolver.java submitted.
+SATSolver.java submitted.
+SAT4JSolver.java submitted.
+Compilation of all java files succeeded.
+Testing ClueReasoner:
+JUnit version 4.12
+.
+Testing game with new ClueReasoner:
+
+Hand: sc wh kn ca
+Suggest: sc pl wr st mu st
+Suggest: mu pe ca ba pe null
+Suggest: wh gr re co pe null
+Suggest: gr wh pi bi pl null
+Suggest: pe wh kn ha pl null
+Suggest: pl wh pi st sc wh
+Suggest: sc mu wr di wh wr
+Suggest: mu pe ro ki gr null
+Suggest: wh pe pi lo pl null
+Suggest: gr sc re ki pe null
+Suggest: pe mu kn ki sc kn
+Suggest: pl pe ca ba sc ca
+Suggest: sc sc ro ki wh sc
+Suggest: mu mu re co wh null
+Suggest: wh pl re lo gr null
+Suggest: gr sc ro ki wh null
+Suggest: pe wh wr co sc wh
+Accuse: pe pl wr co false
+Suggest: pl gr re co wh null
+Suggest: sc gr pi li mu li
+Suggest: mu mu pi di gr null
+Suggest: wh mu ro ki gr null
+Suggest: gr wh ro st sc wh
+Suggest: pl pe ro lo mu null
+Accuse: sc pe pi bi false
+Suggest: sc pe pi ba pe ba
+Suggest: mu pe wr bi wh null
+Suggest: wh pe ro bi null null
+Accuse: wh pe ro bi true
+
+Testing game with new ClueReasoner:
+
+Hand: pl pi ha di
+Suggest: sc pl wr st mu null
+Suggest: mu pe ca ba pe null
+Suggest: wh gr re co pe null
+Suggest: gr wh pi bi pl pi
+Suggest: pe wh kn ha pl ha
+Suggest: pl wh pi st sc wh
+Suggest: sc mu wr di wh null
+Suggest: mu pe ro ki gr null
+Suggest: wh pe pi lo pl pi
+Suggest: gr sc re ki pe null
+Suggest: pe mu kn ki sc null
+Suggest: pl pe ca ba sc ca
+Suggest: sc sc ro ki wh null
+Suggest: mu mu re co wh null
+Suggest: wh pl re lo gr null
+Suggest: gr sc ro ki wh null
+Suggest: pe wh wr co sc null
+Accuse: pe pl wr co false
+Suggest: pl gr re co wh co
+Suggest: sc gr pi li mu null
+Suggest: mu mu pi di gr null
+Suggest: wh mu ro ki gr null
+Suggest: gr wh ro st sc null
+Suggest: pl pe ro lo mu lo
+Accuse: sc pe pi bi false
+Suggest: sc pe pi ba pe null
+Suggest: mu pe wr bi wh null
+Suggest: wh pe ro bi null null
+Accuse: wh pe ro bi true
+
+Testing game with new ClueReasoner:
+
+Suggest: sc pl wr st mu null
+Suggest: mu pe ca ba pe null
+Suggest: wh gr re co pe null
+Suggest: gr wh pi bi pl null
+Suggest: pe wh kn ha pl null
+Suggest: pl wh pi st sc null
+Suggest: sc mu wr di wh null
+Suggest: mu pe ro ki gr null
+Suggest: wh pe pi lo pl null
+Suggest: gr sc re ki pe null
+Suggest: pe mu kn ki sc null
+Suggest: pl pe ca ba sc null
+Suggest: sc sc ro ki wh null
+Suggest: mu mu re co wh null
+Suggest: wh pl re lo gr null
+Suggest: gr sc ro ki wh null
+Suggest: pe wh wr co sc null
+Accuse: pe pl wr co false
+Suggest: pl gr re co wh null
+Suggest: sc gr pi li mu null
+Suggest: mu mu pi di gr null
+Suggest: wh mu ro ki gr null
+Suggest: gr wh ro st sc null
+Suggest: pl pe ro lo mu null
+Accuse: sc pe pi bi false
+Suggest: sc pe pi ba pe null
+Suggest: mu pe wr bi wh null
+Suggest: wh pe ro bi null null
+Accuse: wh pe ro bi true
+Total runtime(ms): 10138
+
+Time: 10.141
+
+OK (1 test)
+
+Testing SATExerciseSolver:
+JUnit version 4.12
+.
+Testing Exercise 2...
+Clauses:
+[1, -1]
+[-1, 3]
+[-1, -3, 1]
+[-2, -3]
+[3, 2]
+[-3, 2, -1]
+[-2, 3]
+[1, 3]
+[-1, 1]
+1: false
+2: false
+3: true
+
+Testing Exercise 5...
+Clauses:
+[-1, 2]
+[-1, 3]
+[-1, 4]
+[-1, 5]
+[-1, 6]
+[-1, -2, 3]
+[1, 2, 3, -4]
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5, 6]
+[-2, -3, -4, -5, -6, 1]
+[-2, -3]
+[-2, -4]
+[-2, -5]
+[-2, -6]
+[3, 4, 5, 6, 2]
+[-3, 1]
+[-3, 2]
+[-3, 4]
+[4, -1]
+[4, -2]
+[4, -3]
+[-4, 1, 2, 3]
+[-5, -1]
+[-5, -2]
+[-5, -3]
+[-5, -4]
+[-6, -1]
+[-6, -2]
+[-6, -3]
+[-6, -4]
+[-6, -5]
+1: false
+2: false
+3: false
+4: false
+5: true
+6: false
+
+Time: 0.031
+
+OK (1 test)
+
+Testing completed. Tue 11 Apr 2023 11:43:24 AM EDT

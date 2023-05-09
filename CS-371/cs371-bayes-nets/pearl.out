@@ -1,0 +1,57 @@
+BNNode a:
+  value: false
+  parents: (none)
+  children: b c
+  CPT: 0.2
+BNNode b:
+  value: false
+  parents: a
+  children: d
+  CPT: 0.2 0.8
+BNNode c:
+  value: false
+  parents: a
+  children: d e
+  CPT: 0.05 0.2
+BNNode d:
+  EVIDENCE
+  value: false
+  parents: b c
+  children: (none)
+  CPT: 0.05 0.8 0.8 0.8
+BNNode e:
+  EVIDENCE
+  value: true
+  parents: c
+  children: (none)
+  CPT: 0.6 0.8
+						
+After iteration 200000:
+Varaible, Avg. Cond. Prob., Fraction True
+a, 0.097181, 0.097290
+b, 0.097297, 0.096965
+c, 0.031155, 0.031230
+						
+After iteration 400000:
+Varaible, Avg. Cond. Prob., Fraction True
+a, 0.097386, 0.097415
+b, 0.097332, 0.097460
+c, 0.031197, 0.031238
+						
+After iteration 600000:
+Varaible, Avg. Cond. Prob., Fraction True
+a, 0.097174, 0.096933
+b, 0.097113, 0.096997
+c, 0.031093, 0.031162
+						
+After iteration 800000:
+Varaible, Avg. Cond. Prob., Fraction True
+a, 0.097329, 0.097070
+b, 0.097179, 0.097354
+c, 0.031128, 0.031098
+						
+After iteration 1000000:
+Varaible, Avg. Cond. Prob., Fraction True
+a, 0.097333, 0.097144
+b, 0.097232, 0.097320
+c, 0.031125, 0.031182

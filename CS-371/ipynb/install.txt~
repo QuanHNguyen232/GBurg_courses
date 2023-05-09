@@ -1,0 +1,20 @@
+To create a new Python conda environment (e.g. "cs371") and then makeit available to jupyter notebooks, execute the following:
+
+conda create --name cs371 pip ipykernel
+python3 -m ipykernel install --user --name=cs371
+
+At the end, we included two packages ("pip" and "ipykernel") to install, and you can include others.  Often, we find that we want to install others after the fact.  We do so by activating the conda environment, installing (usually via pip) each package while the environment is activated, and then deactivating the environment, e.g.:
+
+conda activate cs371
+pip install numpy pandas matplotlib
+conda deactivate
+
+Other packages you'll likely want:
+scikit-learn
+seaborn
+plotly
+catboost (at time of writing not supported for Python 3.11)
+
+
+
+Open VS Code with command "code &".
